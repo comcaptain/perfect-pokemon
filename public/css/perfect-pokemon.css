@@ -40,6 +40,9 @@ body {
 }
 
 .pokemon-image {
-    max-height: 90px;
-    max-width: 122px;
+    height: 90px;
+    width: 122px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

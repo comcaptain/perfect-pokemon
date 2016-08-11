@@ -54,8 +54,8 @@ function renderPokemon(pokemon) {
 	var template = document.getElementById("pokemonTemplate");
 	var pokemonNode = document.importNode(template.content, true);
 	var pokemonID = leftPadZero(pokemon.pokemon_id, 3);
-	pokemonNode.querySelector(".pokemon-id").textContent = pokemonID;
-	pokemonNode.querySelector(".pokemon-image").src = "./images/" + pokemonID + ".png";
+	pokemonNode.querySelector(".pokemon-name").textContent = pokemonNames[pokemon.pokemon_id];
+	pokemonNode.querySelector(".pokemon-image").style.backgroundImage = "url(./images/" + pokemonID + ".png)";
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
 	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = calculateIVPerfection(pokemon) + "%";
 	return pokemonNode;
