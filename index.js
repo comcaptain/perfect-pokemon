@@ -1,6 +1,9 @@
 const pogobuf = require('../pogobuf/pogobuf'),
     POGOProtos = require('node-pogo-protos');
 
+const ClientCache = require('./ClientCache'),
+	clientCache = new ClientCache();
+
 const googleLogin = new pogobuf.GoogleLogin()
 
 var express = require('express');
@@ -30,15 +33,8 @@ app.post('/login', function (req, res) {
 	    return client.init();
 	})
 	.then(() => {
-	    return client.getInventory(0);
-	})
-	.then(inventory => {
-	    if (!inventory.success) throw Error('success=false in inventory response');
-
-	    // Split inventory into individual arrays and log them on the console
-	    inventory = pogobuf.Utils.splitInventory(inventory);
-	    req.session.pogoData = inventory;
-	    res.send(inventory);
+	    req.session.clientKey = clientCache.addClient(client);
+	    return refreshData(req, res, client);
 	})
 	.catch(error => {
 		console.error(error);
@@ -46,10 +42,27 @@ app.post('/login', function (req, res) {
 	});
 });
 
+function refreshData(req, res, client) {
+	if (client === undefined) client = clientCache.getClient(req.session.clientKey);
+	if (!client) return;
+	return client.getInventory(0).then(inventory => {
+	    if (!inventory.success) throw Error('success=false in inventory response');
+
+	    // Split inventory into individual arrays and log them on the console
+	    inventory = pogobuf.Utils.splitInventory(inventory);
+	    req.session.pogoData = inventory;
+	    res.send(inventory);
+	})
+}
+
+app.get('/refresh', function (req, res) {
+	refreshData(req, res);
+});
+
 app.get('/pogoData', function (req, res) {
 	res.send(req.session.pogoData);
 });
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Pefect pokemon started!');
 });

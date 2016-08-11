@@ -10,14 +10,21 @@ $(document).ready(function() {
 			renderPage(data);
 		});
 	});
-	$("#reload").click(function() {
+	$("#refresh").click(function() {
 		$.ajax({
-			url: "pogoData",
-			dataType: "json"
+			url: "refresh",
+			dataType: "json",
 		})
 		.done(function(data) {
-			if (data)renderPage(data);
+			renderPage(data);
 		});
+	});
+	$.ajax({
+		url: "pogoData",
+		dataType: "json"
+	})
+	.done(function(data) {
+		renderPage(data);
 	});
 })
 
