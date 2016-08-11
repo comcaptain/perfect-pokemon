@@ -56,7 +56,10 @@ function refreshData(req, res, client) {
 }
 
 app.get('/refresh', function (req, res) {
-	refreshData(req, res);
+	refreshData(req, res).catch(error => {
+		console.error(error);
+		res.send({expired: true})
+	});
 });
 
 app.get('/pogoData', function (req, res) {

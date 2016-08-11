@@ -16,6 +16,10 @@ $(document).ready(function() {
 			dataType: "json",
 		})
 		.done(function(data) {
+			if (data.expired) {
+				alert("Client is expired, please login again");
+				return;
+			}
 			renderPage(data);
 		});
 	});
