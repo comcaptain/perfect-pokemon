@@ -1,8 +1,7 @@
 const pogobuf = require('../pogobuf/pogobuf'),
     POGOProtos = require('node-pogo-protos');
 
-const googleLogin = new pogobuf.GoogleLogin(),
-    client = new pogobuf.Client();
+const googleLogin = new pogobuf.GoogleLogin()
 
 var express = require('express');
 var session = require('express-session')
@@ -25,6 +24,7 @@ app.use(session({
 }));
 
 app.post('/login', function (req, res) {
+	var client = new pogobuf.Client();
 	googleLogin.loginWithAuthCode(req.body.googleAuthCode).then(token => {
 	    client.setAuthInfo('google', token);
 	    return client.init();
