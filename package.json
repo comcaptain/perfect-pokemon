@@ -1,0 +1,23 @@
+{
+  "name": "perfect-pogo",
+  "version": "0.0.1",
+  "description": "Show pokemon's IV perfection",
+  "main": "index.js",
+  "keywords": [
+    "pokemon",
+    "pokemongo",
+    "pogo",
+    "perfection",
+    "niantic"
+  ],
+  "author": "Tony",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "express": "^4.14.0",
+    "pogobuf-sgq-fork": "^1.5.0"
+  }
+}
