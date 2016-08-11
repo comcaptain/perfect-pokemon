@@ -19,6 +19,12 @@ $(document).ready(function() {
 			renderPage(data);
 		});
 	});
+	$("#sortByIVPerfection").click(function() {
+		sortByIVPerfection(window.pokemonsData);
+	});
+	$("#sortByCP").click(function() {
+		sortByCP(window.pokemonsData);
+	});
 	$.ajax({
 		url: "pogoData",
 		dataType: "json"
@@ -29,6 +35,7 @@ $(document).ready(function() {
 })
 
 function renderPage(data) {
+	window.pokemonsData = data;
 	var pokemonsNode = document.querySelector("#pokemons");
 	pokemonsNode.innerHTML = "";
 	data.pokemon.map(renderPokemon).filter(function(p){return p;}).forEach(function(p) {pokemonsNode.appendChild(p)});
@@ -43,14 +50,29 @@ function renderPokemon(pokemon) {
 	pokemonNode.querySelector(".pokemon-id").textContent = pokemonID;
 	pokemonNode.querySelector(".pokemon-image").src = "./images/" + pokemonID + ".png";
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
-	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = 
-		((pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina) / 45 * 100).toFixed(2) + "%";
+	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = (calculateIVPerfection(pokemon) * 100).toFixed(2) + "%";
 	return pokemonNode;
 }
+
+function calculateIVPerfection(pokemon) {
+	return ((pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina) / 45).toFixed(4)
+}
+
 
 function leftPadZero(integer, minLength) {
 	var result = integer + "";
 	var toBeAddedCount = minLength - result.length;
 	for (var i = 0; i < toBeAddedCount; i++) result = "0" + result;
 	return result;
+}
+
+//descending
+function sortByIVPerfection(data) {
+	data.pokemon.sort(function(a, b) {return calculateIVPerfection(b) - calculateIVPerfection(a)});
+	renderPage(data);
+}
+//descending
+function sortByCP(data) {
+	data.pokemon.sort(function(a, b) {return b.cp - a.cp});
+	renderPage(data);
 }
