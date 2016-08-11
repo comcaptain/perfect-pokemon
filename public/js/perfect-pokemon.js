@@ -32,9 +32,18 @@ function renderPokemon(pokemon) {
 	if (pokemon.cp == 0) return;
 	var template = document.getElementById("pokemonTemplate");
 	var pokemonNode = document.importNode(template.content, true);
-	pokemonNode.querySelector(".pokemon-id").textContent = pokemon.pokemon_id;
+	var pokemonID = leftPadZero(pokemon.pokemon_id, 3);
+	pokemonNode.querySelector(".pokemon-id").textContent = pokemonID;
+	pokemonNode.querySelector(".pokemon-image").src = "./images/" + pokemonID + ".png";
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
 	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = 
 		((pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina) / 45 * 100).toFixed(2) + "%";
 	return pokemonNode;
+}
+
+function leftPadZero(integer, minLength) {
+	var result = integer + "";
+	var toBeAddedCount = minLength - result.length;
+	for (var i = 0; i < toBeAddedCount; i++) result = "0" + result;
+	return result;
 }
