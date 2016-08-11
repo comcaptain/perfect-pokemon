@@ -7,9 +7,13 @@
     "pokemon",
     "pokemongo",
     "pogo",
-    "perfection",
+    "IV perfection",
     "niantic"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comcaptain/perfect-pokemon.git"
+  },
   "author": "Tony",
   "license": "MIT",
   "engines": {
