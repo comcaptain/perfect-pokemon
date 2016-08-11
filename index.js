@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 
 app.use(express.static("public"));
+app.use('/', express.static('public/index.html'));
 
 app.use(session({
 	resave: false,
@@ -36,6 +37,7 @@ app.post('/login', function (req, res) {
 
 	    // Split inventory into individual arrays and log them on the console
 	    inventory = pogobuf.Utils.splitInventory(inventory);
+	    req.session.pogoData = inventory;
 	    res.send(inventory);
 	})
 	.catch(error => {
@@ -44,9 +46,8 @@ app.post('/login', function (req, res) {
 	});
 });
 
-app.get('/setValue', function (req, res) {
-	req.session.sessionValue = "sessionValue"
-	res.send('Below value is stored: ' + req.session.sessionValue);
+app.get('/pogoData', function (req, res) {
+	res.send(req.session.pogoData);
 });
 
 app.listen(3000, function () {
