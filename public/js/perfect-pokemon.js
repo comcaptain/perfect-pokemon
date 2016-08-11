@@ -25,6 +25,9 @@ $(document).ready(function() {
 	$("#sortByCP").click(function() {
 		sortByCP(window.pokemonsData);
 	});
+	$("#showUselessPokemons").click(function() {
+		showUselessPokemons(window.pokemonsData);
+	});
 	$.ajax({
 		url: "pogoData",
 		dataType: "json"
@@ -50,12 +53,12 @@ function renderPokemon(pokemon) {
 	pokemonNode.querySelector(".pokemon-id").textContent = pokemonID;
 	pokemonNode.querySelector(".pokemon-image").src = "./images/" + pokemonID + ".png";
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
-	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = (calculateIVPerfection(pokemon) * 100).toFixed(2) + "%";
+	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = calculateIVPerfection(pokemon) + "%";
 	return pokemonNode;
 }
 
 function calculateIVPerfection(pokemon) {
-	return ((pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina) / 45).toFixed(4)
+	return ((pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina) / 45 * 100).toFixed(2)
 }
 
 
@@ -75,4 +78,35 @@ function sortByIVPerfection(data) {
 function sortByCP(data) {
 	data.pokemon.sort(function(a, b) {return b.cp - a.cp});
 	renderPage(data);
+}
+
+function getPokemonsGroupedByType(pokemons) {
+    var pokemonsGroupedByType = {};
+    var data = pokemons.map(function(pokemon) {
+        var pokemonsOfThisType = pokemonsGroupedByType[pokemon.pokemon_id];
+        if (pokemonsOfThisType === undefined) {
+            pokemonsOfThisType = [];
+            pokemonsGroupedByType[pokemon.pokemon_id] = pokemonsOfThisType
+        }
+        pokemonsOfThisType.push(pokemon);
+    })
+    return pokemonsGroupedByType;
+}
+
+function isUselessPokemon(pokemon) {
+    return pokemon.cp <= 500 && calculateIVPerfection(pokemon) <= 75;
+}
+
+function showUselessPokemons(data) {
+    var pokemonGroups = getPokemonsGroupedByType(data.pokemon);
+    var uselessPokemons = [];
+    for (var i in pokemonGroups) {
+        var pokemons = pokemonGroups[i];
+        var uselessPokemonsInGroup = pokemons.filter(isUselessPokemon).sort(function(a, b) {return calculateIVPerfection(a) - calculateIVPerfection(b)});
+        if (pokemons.length === uselessPokemonsInGroup.length) uselessPokemonsInGroup.pop();
+        uselessPokemonsInGroup.forEach(function(p) {uselessPokemons.push(p)});
+    }
+    uselessPokemons.sort(function(a, b){return a.pokemon_id - b.pokemon_id});
+    data.pokemon = uselessPokemons;
+    renderPage(data);
 }
