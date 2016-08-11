@@ -7,7 +7,7 @@ $(document).ready(function() {
 			data: {googleAuthCode: $("#googleAuthCode").val()}
 		})
 		.done(function(data) {
-			renderPage(data);
+			sortByIVPerfection(data);
 		});
 	});
 	$("#refresh").click(function() {
@@ -20,7 +20,7 @@ $(document).ready(function() {
 				alert("Client is expired, please login again");
 				return;
 			}
-			renderPage(data);
+			sortByIVPerfection(data);
 		});
 	});
 	$("#sortByIVPerfection").click(function() {
@@ -37,7 +37,7 @@ $(document).ready(function() {
 		dataType: "json"
 	})
 	.done(function(data) {
-		renderPage(data);
+		sortByIVPerfection(data);
 	});
 })
 
