@@ -106,7 +106,8 @@ function showUselessPokemons(data) {
         if (pokemons.length === uselessPokemonsInGroup.length) uselessPokemonsInGroup.pop();
         uselessPokemonsInGroup.forEach(function(p) {uselessPokemons.push(p)});
     }
-    data.pokemon = uselessPokemons;
+    //Skip Pikachu. You know, Pikachu has privilege
+    data.pokemon = uselessPokemons.filter(p => p.pokemon_id != 25);
     sortByID(data);
 }
 
