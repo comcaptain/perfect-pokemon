@@ -35,14 +35,22 @@ function renderPage(data) {
 function renderPokemon(pokemon) {
 	//don't know why, there're some pokemons that have 0 cp
 	if (pokemon.cp == 0) return;
+
 	var template = document.getElementById("pokemonTemplate");
-	var pokemonNode = document.importNode(template.content, true);
+	var pokemonNode = document.importNode(template.content, true).querySelector(".pokemon");
+	pokemonNode.setAttribute("title", generateDetail(pokemon));
+
 	var pokemonID = leftPadZero(pokemon.pokemon_id, 3);
 	pokemonNode.querySelector(".pokemon-name").textContent = `${timeSince(pokemon.caught_time)} ago`;
 	pokemonNode.querySelector(".pokemon-image").style.backgroundImage = `url(./images/${pokemonID}.png)`;
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
 	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = pokemon.iv_perfection + "%";
 	return pokemonNode;
+}
+
+function generateDetail(pokemon) {
+	return `Height: ${pokemon.height_m.toFixed(2)} m
+Weight: ${pokemon.weight_kg.toFixed(2)} kg`;
 }
 
 
