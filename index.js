@@ -25,7 +25,8 @@ app.use(session({
 	saveUninitialized: false,
 	secret: 'PUT YOUR SECRET HERE'
 }));
-
+//TODO: now all below methods will kill the whole server, add try-catch or something
+//to make it more robust
 app.post('/login', function (req, res) {
 	var client = new pogobuf.Client();
 	googleLogin.loginWithAuthCode(req.body.googleAuthCode).then(token => {

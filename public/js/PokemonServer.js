@@ -27,6 +27,7 @@ class PokemonServer {
 			})
 			.done(function(data) {
 				if (data.expired) {
+					//TODO: somehow this cannot be caught by Promise.catch, fix this bug
 					throw "Client is expired, please login again";
 				}
 				resolve(server.preprocessData(data));
