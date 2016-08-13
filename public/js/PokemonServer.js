@@ -48,12 +48,19 @@ class PokemonServer {
 	}
 
 	preprocessData(data) {
-		data.pokemon.forEach(this.calculateIVPerfection);
+		data.pokemon.map(this.calculateIVPerfection).forEach(this.normalizeCreationTime);
 		return data;
 	}
 
 	calculateIVPerfection(pokemon) {
 		var ivTotal = pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina;
 		pokemon.iv_perfection = ((ivTotal) / 45 * 100).toFixed(2);
+		return pokemon
+	}
+
+	normalizeCreationTime(pokemon) {
+		var creationTimeMs = pokemon.creation_time_ms;
+		var normalizedTime = parseInt(creationTimeMs.high.toString(16) + creationTimeMs.low.toString(16), 16);
+		pokemon.caught_time = new Date(normalizedTime);
 	}
 }

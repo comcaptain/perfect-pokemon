@@ -12,6 +12,9 @@ $(document).ready(function() {
 	$("#sortByCP").click(function() {
 		sortByCP(window.pokemonsData);
 	});
+	$("#sortByTime").click(function() {
+		sortByTime(window.pokemonsData);
+	});
 	$("#showUselessPokemons").click(function() {
 		showUselessPokemons(window.pokemonsData);
 	});
@@ -55,6 +58,12 @@ function sortByIVPerfection(data) {
 //descending
 function sortByCP(data) {
 	data.pokemon.sort(function(a, b) {return b.cp - a.cp});
+	renderPage(data);
+}
+
+//descending
+function sortByTime(data) {
+	data.pokemon.sort(function(a, b) {return b.caught_time - a.caught_time});
 	renderPage(data);
 }
 
