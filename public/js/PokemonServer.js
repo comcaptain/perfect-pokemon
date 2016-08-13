@@ -60,7 +60,10 @@ class PokemonServer {
 
 	normalizeCreationTime(pokemon) {
 		var creationTimeMs = pokemon.creation_time_ms;
-		var normalizedTime = parseInt(creationTimeMs.high.toString(16) + creationTimeMs.low.toString(16), 16);
+		//`number >>> 0` will convert signed number to unsigner number, e.g. for `(-3).toString(2)`, you'll get `-11`.
+		// but for `(-3 >>> 0).toString(2)`, you'll get its unsigned format value `11111111111111111111111111111101` 
+		// Thanks http://stackoverflow.com/questions/16155592/negative-numbers-to-binary-string-in-javascript
+		var normalizedTime = parseInt((creationTimeMs.high >>> 0).toString(16) + (creationTimeMs.low >>> 0).toString(16), 16);
 		pokemon.caught_time = new Date(normalizedTime);
 	}
 }
