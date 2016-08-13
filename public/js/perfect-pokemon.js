@@ -72,7 +72,11 @@ function sortByTime(data) {
 
 //ascending
 function sortByID(data) {
-	data.pokemon.sort(function(a, b) {return a.pokemon_id - b.pokemon_id});
+	data.pokemon.sort(function(a, b) {
+		var idDiff = a.pokemon_id - b.pokemon_id;
+		if (idDiff === 0) return b.cp - a.cp;
+		return idDiff;
+	});
 	renderPage(data);
 }
 
@@ -102,9 +106,8 @@ function showUselessPokemons(data) {
         if (pokemons.length === uselessPokemonsInGroup.length) uselessPokemonsInGroup.pop();
         uselessPokemonsInGroup.forEach(function(p) {uselessPokemons.push(p)});
     }
-    uselessPokemons.sort(function(a, b){return a.pokemon_id - b.pokemon_id});
     data.pokemon = uselessPokemons;
-    renderPage(data);
+    sortByID(data);
 }
 
 function timeSince(date) {
