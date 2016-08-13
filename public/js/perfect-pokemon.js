@@ -1,27 +1,10 @@
+const pokemonServer = new PokemonServer();
 $(document).ready(function() {
 	$("button#login").click(function() {
-		$.ajax({
-			url: "login",
-			method: "post",
-			dataType: "json",
-			data: {googleAuthCode: $("#googleAuthCode").val()}
-		})
-		.done(function(data) {
-			sortByIVPerfection(data);
-		});
+		pokemonServer.login($("#googleAuthCode").val()).then(sortByIVPerfection);
 	});
 	$("#refresh").click(function() {
-		$.ajax({
-			url: "refresh",
-			dataType: "json",
-		})
-		.done(function(data) {
-			if (data.expired) {
-				alert("Client is expired, please login again");
-				return;
-			}
-			sortByIVPerfection(data);
-		});
+		pokemonServer.refreshData().then(sortByIVPerfection);
 	});
 	$("#sortByIVPerfection").click(function() {
 		sortByIVPerfection(window.pokemonsData);
@@ -32,13 +15,8 @@ $(document).ready(function() {
 	$("#showUselessPokemons").click(function() {
 		showUselessPokemons(window.pokemonsData);
 	});
-	$.ajax({
-		url: "pogoData",
-		dataType: "json"
-	})
-	.done(function(data) {
-		sortByIVPerfection(data);
-	});
+	
+	pokemonServer.getData().then(sortByIVPerfection);
 })
 
 function renderPage(data) {
@@ -57,12 +35,8 @@ function renderPokemon(pokemon) {
 	pokemonNode.querySelector(".pokemon-name").textContent = pokemonNames[pokemon.pokemon_id];
 	pokemonNode.querySelector(".pokemon-image").style.backgroundImage = "url(./images/" + pokemonID + ".png)";
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
-	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = calculateIVPerfection(pokemon) + "%";
+	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = pokemon.iv_perfection + "%";
 	return pokemonNode;
-}
-
-function calculateIVPerfection(pokemon) {
-	return ((pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina) / 45 * 100).toFixed(2)
 }
 
 
@@ -75,7 +49,7 @@ function leftPadZero(integer, minLength) {
 
 //descending
 function sortByIVPerfection(data) {
-	data.pokemon.sort(function(a, b) {return calculateIVPerfection(b) - calculateIVPerfection(a)});
+	data.pokemon.sort(function(a, b) {return b.iv_perfection - a.iv_perfection});
 	renderPage(data);
 }
 //descending
@@ -98,7 +72,7 @@ function getPokemonsGroupedByType(pokemons) {
 }
 
 function isUselessPokemon(pokemon) {
-    return pokemon.cp <= 500 && calculateIVPerfection(pokemon) <= 75;
+    return pokemon.cp <= 500 && pokemon.iv_perfection <= 75;
 }
 
 function showUselessPokemons(data) {
@@ -106,7 +80,7 @@ function showUselessPokemons(data) {
     var uselessPokemons = [];
     for (var i in pokemonGroups) {
         var pokemons = pokemonGroups[i];
-        var uselessPokemonsInGroup = pokemons.filter(isUselessPokemon).sort(function(a, b) {return calculateIVPerfection(a) - calculateIVPerfection(b)});
+        var uselessPokemonsInGroup = pokemons.filter(isUselessPokemon).sort(function(a, b) {return a.iv_perfection - b.iv_perfection});
         if (pokemons.length === uselessPokemonsInGroup.length) uselessPokemonsInGroup.pop();
         uselessPokemonsInGroup.forEach(function(p) {uselessPokemons.push(p)});
     }
