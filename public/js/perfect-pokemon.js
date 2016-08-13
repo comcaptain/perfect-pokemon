@@ -51,7 +51,7 @@ function renderPokemon(pokemon) {
 function generateDetail(pokemon) {
 	return `Height: ${pokemon.height_m.toFixed(2)} m
 Weight: ${pokemon.weight_kg.toFixed(2)} kg
-Attach: ${pokemon.individual_attack}
+Attack: ${pokemon.individual_attack}
 Defense: ${pokemon.individual_defense}
 Stamina: ${pokemon.individual_stamina}`;
 }
