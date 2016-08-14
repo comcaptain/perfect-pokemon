@@ -60,8 +60,8 @@ class PokemonServer {
 	}
 
 	calculateLevel(pokemon) {
-		var level = pokemonLevelMaps[Math.round(pokemon.cp_multiplier * 100000) + ""];
-		pokemon.level = level;
+		var initialLevel = pokemonLevelMaps[Math.round(pokemon.cp_multiplier * 100000) + ""];
+		pokemon.level = initialLevel + pokemon.num_upgrades / 2;
 		return pokemon
 	}
 
