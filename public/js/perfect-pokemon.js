@@ -53,7 +53,8 @@ function generateDetail(pokemon) {
 Weight: ${pokemon.weight_kg.toFixed(2)} kg
 Attack: ${pokemon.individual_attack}
 Defense: ${pokemon.individual_defense}
-Stamina: ${pokemon.individual_stamina}`;
+Stamina: ${pokemon.individual_stamina}
+Level: ${pokemon.level}`;
 }
 
 

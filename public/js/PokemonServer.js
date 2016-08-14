@@ -49,13 +49,19 @@ class PokemonServer {
 	}
 
 	preprocessData(data) {
-		data.pokemon.map(this.calculateIVPerfection).forEach(this.normalizeCreationTime);
+		data.pokemon.map(this.calculateIVPerfection).map(this.normalizeCreationTime).map(this.calculateLevel);
 		return data;
 	}
 
 	calculateIVPerfection(pokemon) {
 		var ivTotal = pokemon.individual_attack + pokemon.individual_defense + pokemon.individual_stamina;
 		pokemon.iv_perfection = ((ivTotal) / 45 * 100).toFixed(2);
+		return pokemon
+	}
+
+	calculateLevel(pokemon) {
+		var level = pokemonLevelMaps[Math.round(pokemon.cp_multiplier * 100000) + ""];
+		pokemon.level = level;
 		return pokemon
 	}
 
@@ -66,5 +72,6 @@ class PokemonServer {
 		// Thanks http://stackoverflow.com/questions/16155592/negative-numbers-to-binary-string-in-javascript
 		var normalizedTime = parseInt((creationTimeMs.high >>> 0).toString(16) + (creationTimeMs.low >>> 0).toString(16), 16);
 		pokemon.caught_time = new Date(normalizedTime);
+		return pokemon
 	}
 }
