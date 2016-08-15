@@ -41,7 +41,8 @@ function renderPokemon(pokemon) {
 	pokemonNode.setAttribute("title", generateDetail(pokemon));
 
 	var pokemonID = leftPadZero(pokemon.pokemon_id, 3);
-	pokemonNode.querySelector(".pokemon-name").textContent = `${timeSince(pokemon.caught_time)} ago`;
+	pokemonNode.querySelector(".caught-time").textContent = `${timeSince(pokemon.caught_time)} ago`;
+	pokemonNode.querySelector(".pokemon-level").textContent = pokemon.level;
 	pokemonNode.querySelector(".pokemon-image").style.backgroundImage = `url(./images/${pokemonID}.png)`;
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
 	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = pokemon.iv_perfection + "%";
@@ -53,8 +54,7 @@ function generateDetail(pokemon) {
 Weight: ${pokemon.weight_kg.toFixed(2)} kg
 Attack: ${pokemon.individual_attack}
 Defense: ${pokemon.individual_defense}
-Stamina: ${pokemon.individual_stamina}
-Level: ${pokemon.level}`;
+Stamina: ${pokemon.individual_stamina}`;
 }
 
 
