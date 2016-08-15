@@ -128,3 +128,93 @@ button#showUselessPokemons {
     vertical-align: middle;
     margin-left: 20px;
 }
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.loading-bg {
+    background-color: white;
+    opacity: 0.8;
+}
+
+#loading-text {
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    margin-top: 1%;
+}
+
+.jumping {
+    font-size:70px;
+    font-weight:bold;
+    color:#4794D3;
+    width:300px;
+    margin:90px auto;
+    -webkit-animation: jump 1.5s ease 0s infinite normal;
+    animation: jump 1.5s ease 0s infinite normal;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20%;
+}
+
+@-webkit-keyframes jump {
+    0%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    20%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40%{
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+    }
+    50%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    60%{
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+    80%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes jump {
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-100px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(-50px);
+    }
+    80%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

@@ -1,7 +1,13 @@
 class PokemonServer {
+
+	constructor(loadingFunc) {
+		this.loadingFunc = loadingFunc;
+	}
+
 	login(authCode) {
 		var server = this;
 		return new Promise(function(resolve, reject) {
+			server.loadingFunc(true);
 			$.ajax({
 				url: "login",
 				method: "post",
@@ -14,6 +20,9 @@ class PokemonServer {
 			.fail(function() {
 				console.error(arguments);
 				reject("Error happens while login");
+			})
+			.always(function() {
+				server.loadingFunc(false);
 			});
 		});
 	}
@@ -21,6 +30,7 @@ class PokemonServer {
 	refreshData() {
 		var server = this;
 		return new Promise(function(resolve, reject) {
+			server.loadingFunc(true);
 			$.ajax({
 				url: "refresh",
 				dataType: "json",
@@ -33,18 +43,25 @@ class PokemonServer {
 					resolve(server.preprocessData(data));
 				}
 			})
+			.always(function() {
+				server.loadingFunc(false);
+			});
 		});
 	}
 
 	getData() {
 		var server = this;
 		return new Promise(function(resolve, reject) {
+			server.loadingFunc(true);
 			$.ajax({
 				url: "pogoData",
 				dataType: "json"
 			})
 			.done(function(data) {
 				resolve(server.preprocessData(data));
+			})
+			.always(function() {
+				server.loadingFunc(false);
 			});
 		});
 	}

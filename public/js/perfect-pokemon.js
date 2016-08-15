@@ -1,4 +1,7 @@
-const pokemonServer = new PokemonServer();
+const pokemonServer = new PokemonServer(function(isLoading) {
+	if (isLoading) $(".loading").show();
+	else $(".loading").hide();
+});
 $(document).ready(function() {
 	$("button#login").click(function() {
 		pokemonServer.login($("#googleAuthCode").val()).then(sortByIVPerfection);
