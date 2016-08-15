@@ -4,7 +4,7 @@ $(document).ready(function() {
 		pokemonServer.login($("#googleAuthCode").val()).then(sortByIVPerfection);
 	});
 	$("#refresh").click(function() {
-		pokemonServer.refreshData().then(sortByIVPerfection);
+		pokemonServer.refreshData().then(sortByIVPerfection, window.alert);
 	});
 	$("#sortByIVPerfection").click(function() {
 		sortByIVPerfection(window.pokemonsData);

@@ -13,7 +13,7 @@ class PokemonServer {
 			})
 			.fail(function() {
 				console.error(arguments);
-				throw "Error happens while login";
+				reject("Error happens while login");
 			});
 		});
 	}
@@ -27,11 +27,12 @@ class PokemonServer {
 			})
 			.done(function(data) {
 				if (data.expired) {
-					//TODO: somehow this cannot be caught by Promise.catch, fix this bug
-					throw "Client is expired, please login again";
+					reject("Client is expired, please login again");
 				}
-				resolve(server.preprocessData(data));
-			});
+				else {
+					resolve(server.preprocessData(data));
+				}
+			})
 		});
 	}
 
