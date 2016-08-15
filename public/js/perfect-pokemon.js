@@ -30,10 +30,19 @@ $(document).ready(function() {
 
 function renderPage(data) {
 	window.pokemonsData = data;
+	document.title = `Perfect Pokemon (${data.pokemon.length}/250)`;
 	document.querySelector("#player").textContent = `LEVEL${data.player.level}: ${data.player.current_level_earned_xp}/${data.player.current_level_xp}`;
 	var pokemonsNode = document.querySelector("#pokemons");
 	pokemonsNode.innerHTML = "";
 	data.pokemon.map(renderPokemon).filter(function(p){return p;}).forEach(function(p) {pokemonsNode.appendChild(p)});
+	adjustControllerPosition();
+}
+
+window.onresize = adjustControllerPosition;
+
+function adjustControllerPosition() {
+	var $firstPokemonCard = $(".pokemon:first-child");
+	$("#controller").css("margin-left", $firstPokemonCard.offset().left - parseInt($firstPokemonCard.css("margin-left")) + "px");
 }
 
 function renderPokemon(pokemon) {
