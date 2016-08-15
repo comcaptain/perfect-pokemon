@@ -49,7 +49,8 @@ class PokemonServer {
 	}
 
 	preprocessData(data) {
-		data.pokemon.map(this.calculateIVPerfection).map(this.normalizeCreationTime).map(this.calculateLevel);
+		data.pokemon.map(this.calculateIVPerfection.bind(this)).map(this.normalizeCreationTime.bind(this)).map(this.calculatePokemonLevel.bind(this));
+		this.calculateLevelXP(data.player);
 		return data;
 	}
 
@@ -59,19 +60,27 @@ class PokemonServer {
 		return pokemon
 	}
 
-	calculateLevel(pokemon) {
+	calculatePokemonLevel(pokemon) {
 		var initialLevel = pokemonLevelMaps[Math.round(pokemon.cp_multiplier * 100000) + ""];
 		pokemon.level = initialLevel + pokemon.num_upgrades / 2;
 		return pokemon
 	}
 
 	normalizeCreationTime(pokemon) {
-		var creationTimeMs = pokemon.creation_time_ms;
+		pokemon.caught_time = new Date(this.normalizeNumber(pokemon.creation_time_ms));
+		return pokemon
+	}
+
+	calculateLevelXP(player) {
+		player.current_level_xp = PLAYER_XP_FOR_EACH_LEVEL[player.level];
+		player.current_level_earned_xp = player.current_level_xp - 
+			(this.normalizeNumber(player.next_level_xp) - this.normalizeNumber(player.experience));
+	}
+
+	normalizeNumber(numberObj) {
 		//`number >>> 0` will convert signed number to unsigner number, e.g. for `(-3).toString(2)`, you'll get `-11`.
 		// but for `(-3 >>> 0).toString(2)`, you'll get its unsigned format value `11111111111111111111111111111101` 
 		// Thanks http://stackoverflow.com/questions/16155592/negative-numbers-to-binary-string-in-javascript
-		var normalizedTime = parseInt((creationTimeMs.high >>> 0).toString(16) + (creationTimeMs.low >>> 0).toString(16), 16);
-		pokemon.caught_time = new Date(normalizedTime);
-		return pokemon
+		return parseInt((numberObj.high >>> 0).toString(16) + (numberObj.low >>> 0).toString(16), 16);
 	}
 }

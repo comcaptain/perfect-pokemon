@@ -18,6 +18,9 @@ $(document).ready(function() {
 	$("#sortByID").click(function() {
 		sortByID(window.pokemonsData);
 	});
+	$("#sortByLevel").click(function() {
+		sortByLevel(window.pokemonsData);
+	});
 	$("#showUselessPokemons").click(function() {
 		showUselessPokemons(window.pokemonsData);
 	});
@@ -27,6 +30,7 @@ $(document).ready(function() {
 
 function renderPage(data) {
 	window.pokemonsData = data;
+	document.querySelector("#player").textContent = `LEVEL${data.player.level}: ${data.player.current_level_earned_xp}/${data.player.current_level_xp}`;
 	var pokemonsNode = document.querySelector("#pokemons");
 	pokemonsNode.innerHTML = "";
 	data.pokemon.map(renderPokemon).filter(function(p){return p;}).forEach(function(p) {pokemonsNode.appendChild(p)});
@@ -88,6 +92,16 @@ function sortByID(data) {
 		var idDiff = a.pokemon_id - b.pokemon_id;
 		if (idDiff === 0) return b.cp - a.cp;
 		return idDiff;
+	});
+	renderPage(data);
+}
+
+//descending
+function sortByLevel(data) {
+	data.pokemon.sort(function(a, b) {
+		var levelDiff = b.level - a.level;
+		if (levelDiff === 0) return b.pokemon_id - a.pokemon_id;
+		return levelDiff;
 	});
 	renderPage(data);
 }
