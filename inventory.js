@@ -25,7 +25,6 @@ new Promise(function(resolve, reject) {
     return googleLogin.loginWithAuthCode(authCode);
 })
 .then(token => {
-    console.log(token)
     // Initialize the client
     client.setAuthInfo('google', token);
 
@@ -45,11 +44,11 @@ new Promise(function(resolve, reject) {
 
     // Split inventory into individual arrays and log them on the console
     inventory = pogobuf.Utils.splitInventory(inventory);
-    console.log('Full inventory:', inventory);
+    // console.log('Full inventory:', inventory);
 
-    console.log('Items:');
-    inventory.items.forEach(item => {
-        console.log(item.count + 'x ' + pogobuf.Utils.getEnumKeyByValue(POGOProtos.Inventory.Item.ItemId, item.item_id));
-    });
+    // console.log('Items:');
+    // inventory.items.forEach(item => {
+    //     console.log(item.count + 'x ' + pogobuf.Utils.getEnumKeyByValue(POGOProtos.Inventory.Item.ItemId, item.item_id));
+    // });
 })
 .catch(console.error);

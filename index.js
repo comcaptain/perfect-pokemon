@@ -10,6 +10,16 @@ var express = require('express');
 var session = require('express-session')
 var app = express();
 
+app.use((req, res, next) => {
+	try {
+		next();
+	}
+	catch(e) {
+		console.error(e);
+  		res.status(500).send(e);
+	}
+});
+
 var bodyParser = require('body-parser')
 app.use(bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -25,10 +35,14 @@ app.use(session({
 	saveUninitialized: false,
 	secret: 'PUT YOUR SECRET HERE'
 }));
-//TODO: now all below methods will kill the whole server, add try-catch or something
-//to make it more robust
+
 app.post('/login', function (req, res) {
 	var client = new pogobuf.Client();
+	var authCode = req.body.googleAuthCode;
+	if (!authCode) {
+		res.status(500).send("Please specify google auth code");
+		return;
+	}
 	googleLogin.loginWithAuthCode(req.body.googleAuthCode).then(token => {
 	    client.setAuthInfo('google', token);
 	    return client.init();

@@ -4,7 +4,12 @@ const pokemonServer = new PokemonServer(function(isLoading) {
 });
 $(document).ready(function() {
 	$("button#login").click(function() {
-		pokemonServer.login($("#googleAuthCode").val()).then(sortByIVPerfection);
+		var authCode = $("#googleAuthCode").val();
+		if (!authCode) {
+			alert("Please specify auth code");
+			return;
+		}
+		pokemonServer.login(authCode).then(sortByIVPerfection, window.alert);
 	});
 	$("#refresh").click(function() {
 		pokemonServer.refreshData().then(sortByIVPerfection, window.alert);
