@@ -1,3 +1,7 @@
+//Weedle, Pidgey, Rattata
+const SHOULD_BE_EVOLVED_FOR_XP_POKEMONS = [16, 19, 13];
+
+
 const pokemonServer = new PokemonServer(function(isLoading) {
 	if (isLoading) $(".loading").show();
 	else $(".loading").hide();
@@ -79,7 +83,9 @@ function renderPokemon(pokemon) {
 }
 
 function generateDetail(pokemon) {
-	return `Height: ${pokemon.height_m.toFixed(2)} m
+	return `ID: ${pokemon.pokemon_id}
+Name: ${pokemon.name}
+Height: ${pokemon.height_m.toFixed(2)} m
 Weight: ${pokemon.weight_kg.toFixed(2)} kg
 Attack: ${pokemon.individual_attack}
 Defense: ${pokemon.individual_defense}
@@ -132,6 +138,9 @@ function sortByLevel(data) {
 	renderPage(data);
 }
 
+/**
+ * @return pokemon_id => [pokemon]
+ */
 function getPokemonsGroupedByType(pokemons) {
     var pokemonsGroupedByType = {};
     var data = pokemons.map(function(pokemon) {
@@ -152,10 +161,21 @@ function isUselessPokemon(pokemon) {
 function showUselessPokemons(data) {
     var pokemonGroups = getPokemonsGroupedByType(data.pokemon);
     var uselessPokemons = [];
-    for (var i in pokemonGroups) {
-        var pokemons = pokemonGroups[i];
+    for (let id in pokemonGroups) {
+        var pokemons = pokemonGroups[id];
         var uselessPokemonsInGroup = pokemons.filter(isUselessPokemon).sort(function(a, b) {return a.iv_perfection - b.iv_perfection});
-        if (pokemons.length === uselessPokemonsInGroup.length) uselessPokemonsInGroup.pop();
+
+        if (SHOULD_BE_EVOLVED_FOR_XP_POKEMONS.includes(parseInt(id))) {
+        	let firstPokemon = pokemons[0];
+        	let candyCount = firstPokemon.candy_count;
+        	let canEvolvePokemonsCount = Math.floor(candyCount / firstPokemon.evolve_candy);
+        	if (pokemons.length <= canEvolvePokemonsCount) continue;
+        	uselessPokemonsInGroup = uselessPokemonsInGroup.slice(0, (pokemons.length - canEvolvePokemonsCount));
+        }
+    	//every pokemon type should have at least one
+        else if (pokemons.length === uselessPokemonsInGroup.length) {
+        	uselessPokemonsInGroup.pop();
+        }
         uselessPokemonsInGroup.forEach(function(p) {uselessPokemons.push(p)});
     }
     //Skip Pikachu. You know, Pikachu has privilege
