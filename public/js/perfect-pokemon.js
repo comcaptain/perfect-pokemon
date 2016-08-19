@@ -65,9 +65,6 @@ function adjustControllerPosition() {
 }
 
 function renderPokemon(pokemon) {
-	//don't know why, there're some pokemons that have 0 cp
-	if (pokemon.cp == 0) return;
-
 	var template = document.getElementById("pokemonTemplate");
 	var pokemonNode = document.importNode(template.content, true).querySelector(".pokemon");
 	pokemonNode.setAttribute("title", generateDetail(pokemon));
@@ -179,7 +176,13 @@ function showUselessPokemons(data) {
         uselessPokemonsInGroup.forEach(function(p) {uselessPokemons.push(p)});
     }
     //Skip Pikachu. You know, Pikachu has privilege
-    data.pokemon = uselessPokemons.filter(p => p.pokemon_id != 25);
+    uselessPokemons = uselessPokemons.filter(p => p.pokemon_id != 25);
+
+    if (uselessPokemons.length === 0) {
+    	alert("Congratulations! All your pokemons are useful now!")
+    	return;
+    }
+    data.pokemon = uselessPokemons;
     sortByID(data);
 }
 

@@ -67,7 +67,11 @@ class PokemonServer {
 	}
 
 	preprocessData(data) {
-		data.pokemon.map(this.calculateIVPerfection.bind(this)).map(this.normalizeCreationTime.bind(this)).map(this.calculatePokemonLevel.bind(this));
+		//don't know why, there're some pokemons that have 0 cp
+		data.pokemon = data.pokemon.filter(p => p.cp > 0)
+			.map(this.calculateIVPerfection.bind(this))
+			.map(this.normalizeCreationTime.bind(this))
+			.map(this.calculatePokemonLevel.bind(this));
 		this.calculateLevelXP(data.player);
 		this.enrichCandyInfo(data);
 		return data;
