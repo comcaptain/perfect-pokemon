@@ -2,6 +2,13 @@ const pokemonServer = new PokemonServer(function(isLoading) {
 	if (isLoading) $(".loading").show();
 	else $(".loading").hide();
 });
+document.addEventListener("paste", event => {
+	event.preventDefault();
+	event.stopPropagation();
+
+	var clipboardData = event.clipboardData || window.clipboardData;
+	document.getElementById("googleAuthCode").value = clipboardData.getData("Text");
+});
 $(document).ready(function() {
 	$("button#login").click(function() {
 		var authCode = $("#googleAuthCode").val();
