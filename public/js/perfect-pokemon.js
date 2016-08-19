@@ -74,6 +74,7 @@ function renderPokemon(pokemon) {
 	pokemonNode.querySelector(".pokemon-image").style.backgroundImage = `url(./images/${pokemonID}.png)`;
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
 	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = pokemon.iv_perfection + "%";
+	pokemonNode.querySelector(".pokemon-candy-count").textContent = pokemon.candy_count;
 	return pokemonNode;
 }
 
@@ -82,7 +83,8 @@ function generateDetail(pokemon) {
 Weight: ${pokemon.weight_kg.toFixed(2)} kg
 Attack: ${pokemon.individual_attack}
 Defense: ${pokemon.individual_defense}
-Stamina: ${pokemon.individual_stamina}`;
+Stamina: ${pokemon.individual_stamina}
+${pokemon.evolve_candy ? "Evolve Candy: " + pokemon.evolve_candy : "Cannot Evolve"}`;
 }
 
 

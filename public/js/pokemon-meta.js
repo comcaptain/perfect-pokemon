@@ -1,155 +1,678 @@
-var pokemonNames = {
-  1: "Bulbasaur",
-  2: "Ivysaur",
-  3: "Venasaur",
-  4: "Charmander",
-  5: "Charmeleon",
-  6: "Charizard",
-  7: "Squirtle",
-  8: "Wartortle",
-  9: "Blastoise",
-  10: "Caterpie",
-  11: "Metapod",
-  12: "Butterfree",
-  13: "Weedle",
-  14: "Kakuna",
-  15: "Beedrill",
-  16: "Pidgey",
-  17: "Pidgeotto",
-  18: "Pidgeot",
-  19: "Rattata",
-  20: "Raticate",
-  21: "Spearow",
-  22: "Fearow",
-  23: "Ekans",
-  24: "Arbok",
-  25: "Pikachu",
-  26: "Raichu",
-  27: "Sandshrew",
-  28: "Sandslash",
-  29: "Nidoran (f)",
-  30: "Nidorina",
-  31: "Nidoqueen",
-  32: "Nidoran (m)",
-  33: "Nidorino",
-  34: "Nidoking",
-  35: "Clefairy",
-  36: "Clefable",
-  37: "Vulpix",
-  38: "Ninetales",
-  39: "Jigglypuff",
-  40: "Wigglytuff",
-  41: "Zubat",
-  42: "Golbat",
-  43: "Oddish",
-  44: "Gloom",
-  45: "Vileplume",
-  46: "Paras",
-  47: "Parasect",
-  48: "Venonat",
-  49: "Venomoth",
-  50: "Diglett",
-  51: "Dugtrio",
-  52: "Meowth",
-  53: "Persian",
-  54: "Psyduck",
-  55: "Golduck",
-  56: "Mankey",
-  57: "Primeape",
-  58: "Growlithe",
-  59: "Arcanine",
-  60: "Poliwag",
-  61: "Poliwhirl",
-  62: "Poliwrath",
-  63: "Abra",
-  64: "Kadabra",
-  65: "Alakazam",
-  66: "Machop",
-  67: "Machoke",
-  68: "Machamp",
-  69: "Bellsprout",
-  70: "Weepinbell",
-  71: "Victreebell",
-  72: "Tentacool",
-  73: "Tentacruel",
-  74: "Geodude",
-  75: "Graveler",
-  76: "Golem",
-  77: "Ponyta",
-  78: "Rapidash",
-  79: "Slowpoke",
-  80: "Slowbro",
-  81: "Magnemite",
-  82: "Magneton",
-  83: "Farfetch'd",
-  84: "Doduo",
-  85: "Dodrio",
-  86: "Seel",
-  87: "Dewgong",
-  88: "Grimer",
-  89: "Muk",
-  90: "Shellder",
-  91: "Cloyster",
-  92: "Gastly",
-  93: "Haunter",
-  94: "Gengar",
-  95: "Onix",
-  96: "Drowzee",
-  97: "Hypno",
-  98: "Krabby",
-  99: "Kingler",
-  100: "Voltorb",
-  101: "Electrode",
-  102: "Exeggcute",
-  103: "Exeggutor",
-  104: "Cubone",
-  105: "Marowak",
-  106: "Hitmonlee",
-  107: "Hitmonchan",
-  108: "Lickitung",
-  109: "Koffing",
-  110: "Weezing",
-  111: "Rhyhorn",
-  112: "Rhydon",
-  113: "Chansey",
-  114: "Tangela",
-  115: "Kangaskgan",
-  116: "Horsea",
-  117: "Seadra",
-  118: "Goldeen",
-  119: "Seaking",
-  120: "Staryu",
-  121: "Starmie",
-  122: "Mr. Mime",
-  123: "Scyther",
-  124: "Jynx",
-  125: "Electabuzz",
-  126: "Magmar",
-  127: "Pinsir",
-  128: "Tauros",
-  129: "Magikarp",
-  130: "Gyarados",
-  131: "Lapras",
-  132: "Ditto",
-  133: "Eevee",
-  134: "Vaporeon",
-  135: "Jolteon",
-  136: "Flareon",
-  137: "Porygon",
-  138: "Omanyte",
-  139: "Omastar",
-  140: "Kabuto",
-  141: "Kabutops",
-  142: "Aerodactyl",
-  143: "Snorlax",
-  144: "Articuno",
-  145: "Zapdos",
-  146: "Moltres",
-  147: "Dratini",
-  148: "Dragonair",
-  149: "Dragonite",
-  150: "Mewtwo",
-  151: "Mew"
+const POKEMON_INDEX = {
+  1: {
+    "name": "Bulbasaur",
+    "family_id": "1",
+    "evolve_candy": 25
+  },
+  2: {
+    "name": "Ivysaur",
+    "family_id": "1",
+    "evolve_candy": 100
+  },
+  3: {
+    "name": "Venasaur",
+    "family_id": "1"
+  },
+  4: {
+    "name": "Charmander",
+    "family_id": "4",
+    "evolve_candy": 25
+  },
+  5: {
+    "name": "Charmeleon",
+    "family_id": "4",
+    "evolve_candy": 100
+  },
+  6: {
+    "name": "Charizard",
+    "family_id": "4"
+  },
+  7: {
+    "name": "Squirtle",
+    "family_id": "7",
+    "evolve_candy": 25
+  },
+  8: {
+    "name": "Wartortle",
+    "family_id": "7",
+    "evolve_candy": 100
+  },
+  9: {
+    "name": "Blastoise",
+    "family_id": "7"
+  },
+  10: {
+    "name": "Caterpie",
+    "family_id": "10",
+    "evolve_candy": 12
+  },
+  11: {
+    "name": "Metapod",
+    "family_id": "10",
+    "evolve_candy": 50
+  },
+  12: {
+    "name": "Butterfree",
+    "family_id": "10"
+  },
+  13: {
+    "name": "Weedle",
+    "family_id": "13",
+    "evolve_candy": 12
+  },
+  14: {
+    "name": "Kakuna",
+    "family_id": "13",
+    "evolve_candy": 50
+  },
+  15: {
+    "name": "Beedrill",
+    "family_id": "13"
+  },
+  16: {
+    "name": "Pidgey",
+    "family_id": "16",
+    "evolve_candy": 12
+  },
+  17: {
+    "name": "Pidgeotto",
+    "family_id": "16",
+    "evolve_candy": 50
+  },
+  18: {
+    "name": "Pidgeot",
+    "family_id": "16"
+  },
+  19: {
+    "name": "Rattata",
+    "family_id": "19",
+    "evolve_candy": 25
+  },
+  20: {
+    "name": "Raticate",
+    "family_id": "19"
+  },
+  21: {
+    "name": "Spearow",
+    "family_id": "21",
+    "evolve_candy": 50
+  },
+  22: {
+    "name": "Fearow",
+    "family_id": "21"
+  },
+  23: {
+    "name": "Ekans",
+    "family_id": "23",
+    "evolve_candy": 50
+  },
+  24: {
+    "name": "Arbok",
+    "family_id": "23"
+  },
+  25: {
+    "name": "Pikachu",
+    "family_id": "25",
+    "evolve_candy": 50
+  },
+  26: {
+    "name": "Raichu",
+    "family_id": "25"
+  },
+  27: {
+    "name": "Sandshrew",
+    "family_id": "27",
+    "evolve_candy": 50
+  },
+  28: {
+    "name": "Sandslash",
+    "family_id": "27"
+  },
+  29: {
+    "name": "Nidoran (f)",
+    "family_id": "29",
+    "evolve_candy": 25
+  },
+  30: {
+    "name": "Nidorina",
+    "family_id": "29",
+    "evolve_candy": 100
+  },
+  31: {
+    "name": "Nidoqueen",
+    "family_id": "29"
+  },
+  32: {
+    "name": "Nidoran (m)",
+    "family_id": "32",
+    "evolve_candy": 25
+  },
+  33: {
+    "name": "Nidorino",
+    "family_id": "32",
+    "evolve_candy": 100
+  },
+  34: {
+    "name": "Nidoking",
+    "family_id": "32"
+  },
+  35: {
+    "name": "Clefairy",
+    "family_id": "35",
+    "evolve_candy": 50
+  },
+  36: {
+    "name": "Clefable",
+    "family_id": "35"
+  },
+  37: {
+    "name": "Vulpix",
+    "family_id": "37",
+    "evolve_candy": 50
+  },
+  38: {
+    "name": "Ninetales",
+    "family_id": "37"
+  },
+  39: {
+    "name": "Jigglypuff",
+    "family_id": "39",
+    "evolve_candy": 50
+  },
+  40: {
+    "name": "Wigglytuff",
+    "family_id": "39"
+  },
+  41: {
+    "name": "Zubat",
+    "family_id": "41",
+    "evolve_candy": 50
+  },
+  42: {
+    "name": "Golbat",
+    "family_id": "41"
+  },
+  43: {
+    "name": "Oddish",
+    "family_id": "43",
+    "evolve_candy": 25
+  },
+  44: {
+    "name": "Gloom",
+    "family_id": "43",
+    "evolve_candy": 100
+  },
+  45: {
+    "name": "Vileplume",
+    "family_id": "43"
+  },
+  46: {
+    "name": "Paras",
+    "family_id": "46",
+    "evolve_candy": 50
+  },
+  47: {
+    "name": "Parasect",
+    "family_id": "46"
+  },
+  48: {
+    "name": "Venonat",
+    "family_id": "48",
+    "evolve_candy": 50
+  },
+  49: {
+    "name": "Venomoth",
+    "family_id": "48"
+  },
+  50: {
+    "name": "Diglett",
+    "family_id": "50",
+    "evolve_candy": 50
+  },
+  51: {
+    "name": "Dugtrio",
+    "family_id": "50"
+  },
+  52: {
+    "name": "Meowth",
+    "family_id": "52",
+    "evolve_candy": 50
+  },
+  53: {
+    "name": "Persian",
+    "family_id": "52"
+  },
+  54: {
+    "name": "Psyduck",
+    "family_id": "54",
+    "evolve_candy": 50
+  },
+  55: {
+    "name": "Golduck",
+    "family_id": "54"
+  },
+  56: {
+    "name": "Mankey",
+    "family_id": "56",
+    "evolve_candy": 50
+  },
+  57: {
+    "name": "Primeape",
+    "family_id": "56"
+  },
+  58: {
+    "name": "Growlithe",
+    "family_id": "58",
+    "evolve_candy": 50
+  },
+  59: {
+    "name": "Arcanine",
+    "family_id": "58"
+  },
+  60: {
+    "name": "Poliwag",
+    "family_id": "60",
+    "evolve_candy": 25
+  },
+  61: {
+    "name": "Poliwhirl",
+    "family_id": "60",
+    "evolve_candy": 100
+  },
+  62: {
+    "name": "Poliwrath",
+    "family_id": "60"
+  },
+  63: {
+    "name": "Abra",
+    "family_id": "63",
+    "evolve_candy": 25
+  },
+  64: {
+    "name": "Kadabra",
+    "family_id": "63",
+    "evolve_candy": 100
+  },
+  65: {
+    "name": "Alakazam",
+    "family_id": "63"
+  },
+  66: {
+    "name": "Machop",
+    "family_id": "66",
+    "evolve_candy": 25
+  },
+  67: {
+    "name": "Machoke",
+    "family_id": "66",
+    "evolve_candy": 100
+  },
+  68: {
+    "name": "Machamp",
+    "family_id": "66"
+  },
+  69: {
+    "name": "Bellsprout",
+    "family_id": "69",
+    "evolve_candy": 25
+  },
+  70: {
+    "name": "Weepinbell",
+    "family_id": "69",
+    "evolve_candy": 100
+  },
+  71: {
+    "name": "Victreebell",
+    "family_id": "69"
+  },
+  72: {
+    "name": "Tentacool",
+    "family_id": "72",
+    "evolve_candy": 50
+  },
+  73: {
+    "name": "Tentacruel",
+    "family_id": "72"
+  },
+  74: {
+    "name": "Geodude",
+    "family_id": "74",
+    "evolve_candy": 25
+  },
+  75: {
+    "name": "Graveler",
+    "family_id": "74",
+    "evolve_candy": 100
+  },
+  76: {
+    "name": "Golem",
+    "family_id": "74"
+  },
+  77: {
+    "name": "Ponyta",
+    "family_id": "77",
+    "evolve_candy": 50
+  },
+  78: {
+    "name": "Rapidash",
+    "family_id": "77"
+  },
+  79: {
+    "name": "Slowpoke",
+    "family_id": "79",
+    "evolve_candy": 50
+  },
+  80: {
+    "name": "Slowbro",
+    "family_id": "79"
+  },
+  81: {
+    "name": "Magnemite",
+    "family_id": "81",
+    "evolve_candy": 50
+  },
+  82: {
+    "name": "Magneton",
+    "family_id": "81"
+  },
+  83: {
+    "name": "Farfetch'd",
+    "family_id": "83"
+  },
+  84: {
+    "name": "Doduo",
+    "family_id": "84",
+    "evolve_candy": 50
+  },
+  85: {
+    "name": "Dodrio",
+    "family_id": "84"
+  },
+  86: {
+    "name": "Seel",
+    "family_id": "86",
+    "evolve_candy": 50
+  },
+  87: {
+    "name": "Dewgong",
+    "family_id": "86"
+  },
+  88: {
+    "name": "Grimer",
+    "family_id": "88",
+    "evolve_candy": 50
+  },
+  89: {
+    "name": "Muk",
+    "family_id": "88"
+  },
+  90: {
+    "name": "Shellder",
+    "family_id": "90",
+    "evolve_candy": 50
+  },
+  91: {
+    "name": "Cloyster",
+    "family_id": "90"
+  },
+  92: {
+    "name": "Gastly",
+    "family_id": "92",
+    "evolve_candy": 25
+  },
+  93: {
+    "name": "Haunter",
+    "family_id": "92",
+    "evolve_candy": 100
+  },
+  94: {
+    "name": "Gengar",
+    "family_id": "92"
+  },
+  95: {
+    "name": "Onix",
+    "family_id": "95"
+  },
+  96: {
+    "name": "Drowzee",
+    "family_id": "96",
+    "evolve_candy": 50
+  },
+  97: {
+    "name": "Hypno",
+    "family_id": "96"
+  },
+  98: {
+    "name": "Krabby",
+    "family_id": "98",
+    "evolve_candy": 50
+  },
+  99: {
+    "name": "Kingler",
+    "family_id": "98"
+  },
+  100: {
+    "name": "Voltorb",
+    "family_id": "100",
+    "evolve_candy": 50
+  },
+  101: {
+    "name": "Electrode",
+    "family_id": "100"
+  },
+  102: {
+    "name": "Exeggcute",
+    "family_id": "102",
+    "evolve_candy": 50
+  },
+  103: {
+    "name": "Exeggutor",
+    "family_id": "102"
+  },
+  104: {
+    "name": "Cubone",
+    "family_id": "104",
+    "evolve_candy": 50
+  },
+  105: {
+    "name": "Marowak",
+    "family_id": "104"
+  },
+  106: {
+    "name": "Hitmonlee",
+    "family_id": "106"
+  },
+  107: {
+    "name": "Hitmonchan",
+    "family_id": "107"
+  },
+  108: {
+    "name": "Lickitung",
+    "family_id": "108"
+  },
+  109: {
+    "name": "Koffing",
+    "family_id": "109",
+    "evolve_candy": 50
+  },
+  110: {
+    "name": "Weezing",
+    "family_id": "109"
+  },
+  111: {
+    "name": "Rhyhorn",
+    "family_id": "111",
+    "evolve_candy": 50
+  },
+  112: {
+    "name": "Rhydon",
+    "family_id": "111"
+  },
+  113: {
+    "name": "Chansey",
+    "family_id": "113"
+  },
+  114: {
+    "name": "Tangela",
+    "family_id": "114"
+  },
+  115: {
+    "name": "Kangaskgan",
+    "family_id": "115"
+  },
+  116: {
+    "name": "Horsea",
+    "family_id": "116",
+    "evolve_candy": 50
+  },
+  117: {
+    "name": "Seadra",
+    "family_id": "116"
+  },
+  118: {
+    "name": "Goldeen",
+    "family_id": "118",
+    "evolve_candy": 50
+  },
+  119: {
+    "name": "Seaking",
+    "family_id": "118"
+  },
+  120: {
+    "name": "Staryu",
+    "family_id": "120",
+    "evolve_candy": 50
+  },
+  121: {
+    "name": "Starmie",
+    "family_id": "120"
+  },
+  122: {
+    "name": "Mr. Mime",
+    "family_id": "122"
+  },
+  123: {
+    "name": "Scyther",
+    "family_id": "123"
+  },
+  124: {
+    "name": "Jynx",
+    "family_id": "124"
+  },
+  125: {
+    "name": "Electabuzz",
+    "family_id": "125"
+  },
+  126: {
+    "name": "Magmar",
+    "family_id": "126"
+  },
+  127: {
+    "name": "Pinsir",
+    "family_id": "127"
+  },
+  128: {
+    "name": "Tauros",
+    "family_id": "128"
+  },
+  129: {
+    "name": "Magikarp",
+    "family_id": "129",
+    "evolve_candy": 400
+  },
+  130: {
+    "name": "Gyarados",
+    "family_id": "129"
+  },
+  131: {
+    "name": "Lapras",
+    "family_id": "131"
+  },
+  132: {
+    "name": "Ditto",
+    "family_id": "132"
+  },
+  133: {
+    "name": "Eevee",
+    "family_id": "133",
+    "evolve_candy": 25
+  },
+  134: {
+    "name": "Vaporeon",
+    "family_id": "133"
+  },
+  135: {
+    "name": "Jolteon",
+    "family_id": "135"
+  },
+  136: {
+    "name": "Flareon",
+    "family_id": "136"
+  },
+  137: {
+    "name": "Porygon",
+    "family_id": "137"
+  },
+  138: {
+    "name": "Omanyte",
+    "family_id": "138",
+    "evolve_candy": 50
+  },
+  139: {
+    "name": "Omastar",
+    "family_id": "138"
+  },
+  140: {
+    "name": "Kabuto",
+    "family_id": "140",
+    "evolve_candy": 50
+  },
+  141: {
+    "name": "Kabutops",
+    "family_id": "140"
+  },
+  142: {
+    "name": "Aerodactyl",
+    "family_id": "142"
+  },
+  143: {
+    "name": "Snorlax",
+    "family_id": "143"
+  },
+  144: {
+    "name": "Articuno",
+    "family_id": "144"
+  },
+  145: {
+    "name": "Zapdos",
+    "family_id": "145"
+  },
+  146: {
+    "name": "Moltres",
+    "family_id": "146"
+  },
+  147: {
+    "name": "Dratini",
+    "family_id": "147",
+    "evolve_candy": 25
+  },
+  148: {
+    "name": "Dragonair",
+    "family_id": "147",
+    "evolve_candy": 100
+  },
+  149: {
+    "name": "Dragonite",
+    "family_id": "147"
+  },
+  150: {
+    "name": "Mewtwo",
+    "family_id": "150"
+  },
+  151: {
+    "name": "Mew",
+    "family_id": "151"
+  }
 };
 //key is Math.round(cp_multiplier * 100000)
 var pokemonLevelMaps = {
