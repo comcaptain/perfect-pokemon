@@ -1,5 +1,4 @@
-const pogobuf = require('pogobuf-sgq-fork'),
-    POGOProtos = require('node-pogo-protos');
+const pogobuf = require('pogobuf-sgq-fork');
 
 const ClientCache = require('./ClientCache'),
 	clientCache = new ClientCache();

@@ -2,7 +2,7 @@
 /*
     This example script shows how to work with the getInventory() API call and the splitInventory() function.
 */
-const pogobuf = require('../pogobuf/pogobuf'),
+const pogobuf = require('pogobuf-sgq-fork'),
     POGOProtos = require('node-pogo-protos');
 
 const readline = require('readline');
