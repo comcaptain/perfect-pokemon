@@ -53,7 +53,7 @@ function renderPage(data) {
 	document.querySelector("#player").textContent = `LEVEL${data.player.level}: ${data.player.current_level_earned_xp}/${data.player.current_level_xp}`;
 	var pokemonsNode = document.querySelector("#pokemons");
 	pokemonsNode.innerHTML = "";
-	data.pokemon.map(renderPokemon).filter(function(p){return p;}).forEach(function(p) {pokemonsNode.appendChild(p)});
+	data.pokemon.map(renderPokemon).forEach(function(p) {pokemonsNode.appendChild(p)});
 	adjustControllerPosition();
 }
 
@@ -152,7 +152,7 @@ function getPokemonsGroupedByType(pokemons) {
 }
 
 function isUselessPokemon(pokemon) {
-    return pokemon.cp <= 700 && pokemon.iv_perfection <= 80;
+    return pokemon.cp <= 900 && pokemon.iv_perfection < 80;
 }
 
 function showUselessPokemons(data) {
