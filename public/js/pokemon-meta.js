@@ -603,11 +603,11 @@ const POKEMON_INDEX = {
   },
   135: {
     "name": "Jolteon",
-    "family_id": "135"
+    "family_id": "133"
   },
   136: {
     "name": "Flareon",
-    "family_id": "136"
+    "family_id": "133"
   },
   137: {
     "name": "Porygon",
