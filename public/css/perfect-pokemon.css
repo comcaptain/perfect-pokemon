@@ -126,14 +126,15 @@ button#showUselessPokemons {
     line-height: 24px;
 }
 
-#player {
+.other-info {
     display: inline-block;
     border: 1px dashed silver;
     line-height: 23px;
     padding: 2px 5px;
     border-radius: 5px;
     vertical-align: middle;
-    margin-left: 20px;
+    margin-left: 10px;
+    visibility: hidden;
 }
 
 .loading {

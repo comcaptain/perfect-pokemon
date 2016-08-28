@@ -51,6 +51,8 @@ function renderPage(data) {
 	window.pokemonsData = data;
 	document.title = `Perfect Pokemon (${data.pokemon.length}/250)`;
 	document.querySelector("#player").textContent = `LEVEL${data.player.level}: ${data.player.current_level_earned_xp}/${data.player.current_level_xp}`;
+	document.querySelector("#evolvable-count").textContent = getEvolvedForXPPokemonCount(data.pokemon);
+	$(".other-info").css("visibility", "visible");
 	var pokemonsNode = document.querySelector("#pokemons");
 	pokemonsNode.innerHTML = "";
 	data.pokemon.map(renderPokemon).forEach(function(p) {pokemonsNode.appendChild(p)});
@@ -212,4 +214,20 @@ function timeSince(date) {
         return interval + " minutes";
     }
     return Math.floor(seconds) + " seconds";
+}
+
+function getEvolvedForXPPokemonCount(pokemons) {
+	var counts = {};
+	pokemons
+		.filter(p => SHOULD_BE_EVOLVED_FOR_XP_POKEMONS.indexOf(p.pokemon_id) >= 0)
+		.forEach(p => {
+			var id = p.pokemon_id;
+			if (counts[id] === undefined) counts[id] = $.extend({count: 0}, p);
+			counts[id].count++;
+		});
+	var count = 0;
+	for (var id in counts) {
+		count += Math.min(counts[id].count, counts[id].candy_count / counts[id].evolve_candy);
+	}
+	return count;
 }
