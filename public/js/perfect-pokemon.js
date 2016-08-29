@@ -227,7 +227,7 @@ function getEvolvedForXPPokemonCount(pokemons) {
 		});
 	var count = 0;
 	for (var id in counts) {
-		count += Math.min(counts[id].count, counts[id].candy_count / counts[id].evolve_candy);
+		count += Math.min(counts[id].count, Math.floor(counts[id].candy_count / counts[id].evolve_candy));
 	}
 	return count;
 }
