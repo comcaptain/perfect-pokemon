@@ -63,7 +63,12 @@ window.onresize = adjustControllerPosition;
 
 function adjustControllerPosition() {
 	var $firstPokemonCard = $(".pokemon:first-child");
-	$("#controller").css("margin-left", $firstPokemonCard.offset().left - parseInt($firstPokemonCard.css("margin-left")) + "px");
+	var pokemonsContainerWidth = $("#pokemons").width();
+	var $pokemons = $(".pokemon");
+	var pokemonWidth = ["margin-left", "border-left-width", "padding-left", "width", "padding-right", "border-right-width", "margin-right"].map(p => $pokemons.css(p)).map(v => parseInt(v)).reduce((a, b) => a + b);
+	var pokemonsInOneRow = Math.floor(pokemonsContainerWidth / pokemonWidth);
+	if (pokemonsInOneRow > $pokemons.length) $("#controller").css("margin-left", "");
+	else $("#controller").css("margin-left", $firstPokemonCard.offset().left - parseInt($firstPokemonCard.css("margin-left")) + "px");
 }
 
 function renderPokemon(pokemon) {
