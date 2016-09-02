@@ -1,679 +1,2626 @@
 const POKEMON_INDEX = {
-  1: {
+  "1": {
     "name": "Bulbasaur",
     "family_id": "1",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      214,
+      118
+    ],
+    "quick_moves": [
+      214,
+      221
+    ],
+    "main_moves": [
+      90,
+      59,
+      118
+    ]
   },
-  2: {
+  "2": {
     "name": "Ivysaur",
     "family_id": "1",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      214,
+      116
+    ],
+    "quick_moves": [
+      215,
+      214
+    ],
+    "main_moves": [
+      90,
+      116,
+      118
+    ]
   },
-  3: {
-    "name": "Venasaur",
-    "family_id": "1"
+  "3": {
+    "name": "Venusaur",
+    "family_id": "1",
+    "best_moveset": [
+      214,
+      116
+    ],
+    "quick_moves": [
+      215,
+      214
+    ],
+    "main_moves": [
+      90,
+      47,
+      116
+    ]
   },
-  4: {
+  "4": {
     "name": "Charmander",
     "family_id": "4",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      220,
+      24
+    ],
+    "quick_moves": [
+      209,
+      220
+    ],
+    "main_moves": [
+      101,
+      102,
+      24
+    ]
   },
-  5: {
+  "5": {
     "name": "Charmeleon",
     "family_id": "4",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      220,
+      24
+    ],
+    "quick_moves": [
+      209,
+      220
+    ],
+    "main_moves": [
+      115,
+      102,
+      24
+    ]
   },
-  6: {
+  "6": {
     "name": "Charizard",
-    "family_id": "4"
+    "family_id": "4",
+    "best_moveset": [
+      210,
+      103
+    ],
+    "quick_moves": [
+      209,
+      210
+    ],
+    "main_moves": [
+      103,
+      83,
+      24
+    ]
   },
-  7: {
+  "7": {
     "name": "Squirtle",
     "family_id": "7",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      237,
+      58
+    ],
+    "quick_moves": [
+      237,
+      221
+    ],
+    "main_moves": [
+      57,
+      58,
+      105
+    ]
   },
-  8: {
+  "8": {
     "name": "Wartortle",
     "family_id": "7",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      230,
+      107
+    ],
+    "quick_moves": [
+      230,
+      202
+    ],
+    "main_moves": [
+      57,
+      39,
+      107
+    ]
   },
-  9: {
+  "9": {
     "name": "Blastoise",
-    "family_id": "7"
+    "family_id": "7",
+    "best_moveset": [
+      230,
+      107
+    ],
+    "quick_moves": [
+      230,
+      202
+    ],
+    "main_moves": [
+      36,
+      39,
+      107
+    ]
   },
-  10: {
+  "10": {
     "name": "Caterpie",
     "family_id": "10",
-    "evolve_candy": 12
+    "evolve_candy": 12,
+    "best_moveset": [
+      201
+    ],
+    "quick_moves": [
+      201,
+      221
+    ],
+    "main_moves": [
+      133
+    ]
   },
-  11: {
+  "11": {
     "name": "Metapod",
     "family_id": "10",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      201
+    ],
+    "quick_moves": [
+      201,
+      221
+    ],
+    "main_moves": [
+      133
+    ]
   },
-  12: {
+  "12": {
     "name": "Butterfree",
-    "family_id": "10"
+    "family_id": "10",
+    "best_moveset": [
+      201,
+      49
+    ],
+    "quick_moves": [
+      201,
+      235
+    ],
+    "main_moves": [
+      49,
+      108,
+      99
+    ]
   },
-  13: {
+  "13": {
     "name": "Weedle",
     "family_id": "13",
-    "evolve_candy": 12
+    "evolve_candy": 12,
+    "best_moveset": [
+      201
+    ],
+    "quick_moves": [
+      201,
+      236
+    ],
+    "main_moves": [
+      133
+    ]
   },
-  14: {
+  "14": {
     "name": "Kakuna",
     "family_id": "13",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      201
+    ],
+    "quick_moves": [
+      201,
+      236
+    ],
+    "main_moves": [
+      133
+    ]
   },
-  15: {
+  "15": {
     "name": "Beedrill",
-    "family_id": "13"
+    "family_id": "13",
+    "best_moveset": [
+      224,
+      90
+    ],
+    "quick_moves": [
+      201,
+      224
+    ],
+    "main_moves": [
+      90,
+      45,
+      100
+    ]
   },
-  16: {
+  "16": {
     "name": "Pidgey",
     "family_id": "16",
-    "evolve_candy": 12
+    "evolve_candy": 12,
+    "best_moveset": [
+      221
+    ],
+    "quick_moves": [
+      219,
+      221
+    ],
+    "main_moves": [
+      80,
+      45,
+      121
+    ]
   },
-  17: {
+  "17": {
     "name": "Pidgeotto",
     "family_id": "16",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      210
+    ],
+    "quick_moves": [
+      210,
+      239
+    ],
+    "main_moves": [
+      80,
+      45,
+      121
+    ]
   },
-  18: {
+  "18": {
     "name": "Pidgeot",
-    "family_id": "16"
+    "family_id": "16",
+    "best_moveset": [
+      210,
+      122
+    ],
+    "quick_moves": [
+      210,
+      239
+    ],
+    "main_moves": [
+      122,
+      45,
+      121
+    ]
   },
-  19: {
+  "19": {
     "name": "Rattata",
     "family_id": "19",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      221,
+      131
+    ],
+    "quick_moves": [
+      221,
+      219
+    ],
+    "main_moves": [
+      26,
+      129,
+      131
+    ]
   },
-  20: {
+  "20": {
     "name": "Raticate",
-    "family_id": "19"
+    "family_id": "19",
+    "best_moveset": [
+      202,
+      14
+    ],
+    "quick_moves": [
+      202,
+      219
+    ],
+    "main_moves": [
+      26,
+      129,
+      14
+    ]
   },
-  21: {
+  "21": {
     "name": "Spearow",
     "family_id": "21",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      211,
+      38
+    ],
+    "quick_moves": [
+      211,
+      219
+    ],
+    "main_moves": [
+      45,
+      38,
+      80
+    ]
   },
-  22: {
+  "22": {
     "name": "Fearow",
-    "family_id": "21"
+    "family_id": "21",
+    "best_moveset": [
+      239,
+      46
+    ],
+    "quick_moves": [
+      211,
+      239
+    ],
+    "main_moves": [
+      45,
+      46,
+      80
+    ]
   },
-  23: {
+  "23": {
     "name": "Ekans",
     "family_id": "23",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      236,
+      92
+    ],
+    "quick_moves": [
+      236,
+      225
+    ],
+    "main_moves": [
+      13,
+      90,
+      92
+    ]
   },
-  24: {
+  "24": {
     "name": "Arbok",
-    "family_id": "23"
+    "family_id": "23",
+    "best_moveset": [
+      202,
+      92
+    ],
+    "quick_moves": [
+      202,
+      225
+    ],
+    "main_moves": [
+      16,
+      91,
+      92
+    ]
   },
-  25: {
+  "25": {
     "name": "Pikachu",
     "family_id": "25",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      205,
+      78
+    ],
+    "quick_moves": [
+      205,
+      219
+    ],
+    "main_moves": [
+      35,
+      79,
+      78
+    ]
   },
-  26: {
+  "26": {
     "name": "Raichu",
-    "family_id": "25"
+    "family_id": "25",
+    "best_moveset": [
+      206,
+      78
+    ],
+    "quick_moves": [
+      205,
+      206
+    ],
+    "main_moves": [
+      123,
+      77,
+      78
+    ]
   },
-  27: {
+  "27": {
     "name": "Sandshrew",
     "family_id": "27",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      216,
+      26
+    ],
+    "quick_moves": [
+      220,
+      216
+    ],
+    "main_moves": [
+      26,
+      64,
+      63
+    ]
   },
-  28: {
+  "28": {
     "name": "Sandslash",
-    "family_id": "27"
+    "family_id": "27",
+    "best_moveset": [
+      216,
+      31
+    ],
+    "quick_moves": [
+      228,
+      216
+    ],
+    "main_moves": [
+      31,
+      63,
+      95
+    ]
   },
-  29: {
-    "name": "Nidoran (f)",
+  "29": {
+    "name": "Nidoran鈾€",
     "family_id": "29",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      236,
+      90
+    ],
+    "quick_moves": [
+      202,
+      236
+    ],
+    "main_moves": [
+      50,
+      131,
+      90
+    ]
   },
-  30: {
+  "30": {
     "name": "Nidorina",
     "family_id": "29",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      236,
+      90
+    ],
+    "quick_moves": [
+      202,
+      236
+    ],
+    "main_moves": [
+      50,
+      26,
+      90
+    ]
   },
-  31: {
+  "31": {
     "name": "Nidoqueen",
-    "family_id": "29"
+    "family_id": "29",
+    "best_moveset": [
+      224,
+      32
+    ],
+    "quick_moves": [
+      224,
+      202
+    ],
+    "main_moves": [
+      31,
+      91,
+      32
+    ]
   },
-  32: {
-    "name": "Nidoran (m)",
+  "32": {
+    "name": "Nidoran鈾�",
     "family_id": "32",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      236,
+      90
+    ],
+    "quick_moves": [
+      211,
+      236
+    ],
+    "main_moves": [
+      126,
+      131,
+      90
+    ]
   },
-  33: {
+  "33": {
     "name": "Nidorino",
     "family_id": "32",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      224,
+      90
+    ],
+    "quick_moves": [
+      224,
+      236
+    ],
+    "main_moves": [
+      126,
+      26,
+      90
+    ]
   },
-  34: {
+  "34": {
     "name": "Nidoking",
-    "family_id": "32"
+    "family_id": "32",
+    "best_moveset": [
+      224,
+      31
+    ],
+    "quick_moves": [
+      224,
+      200
+    ],
+    "main_moves": [
+      31,
+      91,
+      22
+    ]
   },
-  35: {
+  "35": {
     "name": "Clefairy",
     "family_id": "35",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      222,
+      87
+    ],
+    "quick_moves": [
+      222,
+      234
+    ],
+    "main_moves": [
+      84,
+      131,
+      87
+    ]
   },
-  36: {
+  "36": {
     "name": "Clefable",
-    "family_id": "35"
+    "family_id": "35",
+    "best_moveset": [
+      222,
+      87
+    ],
+    "quick_moves": [
+      222,
+      234
+    ],
+    "main_moves": [
+      86,
+      108,
+      87
+    ]
   },
-  37: {
+  "37": {
     "name": "Vulpix",
     "family_id": "37",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      209,
+      24
+    ],
+    "quick_moves": [
+      219,
+      209
+    ],
+    "main_moves": [
+      131,
+      24,
+      101
+    ]
   },
-  38: {
+  "38": {
     "name": "Ninetales",
-    "family_id": "37"
+    "family_id": "37",
+    "best_moveset": [
+      209,
+      103
+    ],
+    "quick_moves": [
+      238,
+      209
+    ],
+    "main_moves": [
+      42,
+      24,
+      103
+    ]
   },
-  39: {
+  "39": {
     "name": "Jigglypuff",
     "family_id": "39",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      222,
+      131
+    ],
+    "quick_moves": [
+      222,
+      238
+    ],
+    "main_moves": [
+      84,
+      131,
+      86,
+      88
+    ]
   },
-  40: {
+  "40": {
     "name": "Wigglytuff",
-    "family_id": "39"
+    "family_id": "39",
+    "best_moveset": [
+      222,
+      14
+    ],
+    "quick_moves": [
+      222,
+      238
+    ],
+    "main_moves": [
+      86,
+      14,
+      88
+    ]
   },
-  41: {
+  "41": {
     "name": "Zubat",
     "family_id": "41",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      202,
+      90
+    ],
+    "quick_moves": [
+      219,
+      202
+    ],
+    "main_moves": [
+      50,
+      121,
+      90
+    ]
   },
-  42: {
+  "42": {
     "name": "Golbat",
-    "family_id": "41"
+    "family_id": "41",
+    "best_moveset": [
+      210
+    ],
+    "quick_moves": [
+      210,
+      202
+    ],
+    "main_moves": [
+      50,
+      121,
+      69
+    ]
   },
-  43: {
+  "43": {
     "name": "Oddish",
     "family_id": "43",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      215,
+      90
+    ],
+    "quick_moves": [
+      215,
+      225
+    ],
+    "main_moves": [
+      59,
+      90,
+      87
+    ]
   },
-  44: {
+  "44": {
     "name": "Gloom",
     "family_id": "43",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      215,
+      90
+    ],
+    "quick_moves": [
+      215,
+      225
+    ],
+    "main_moves": [
+      47,
+      90,
+      87
+    ]
   },
-  45: {
+  "45": {
     "name": "Vileplume",
-    "family_id": "43"
+    "family_id": "43",
+    "best_moveset": [
+      215,
+      116
+    ],
+    "quick_moves": [
+      215,
+      225
+    ],
+    "main_moves": [
+      47,
+      116,
+      87
+    ]
   },
-  46: {
+  "46": {
     "name": "Paras",
     "family_id": "46",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      201,
+      59
+    ],
+    "quick_moves": [
+      220,
+      201
+    ],
+    "main_moves": [
+      89,
+      100,
+      59
+    ]
   },
-  47: {
+  "47": {
     "name": "Parasect",
-    "family_id": "46"
+    "family_id": "46",
+    "best_moveset": [
+      201,
+      116
+    ],
+    "quick_moves": [
+      201,
+      200
+    ],
+    "main_moves": [
+      89,
+      100,
+      116
+    ]
   },
-  48: {
+  "48": {
     "name": "Venonat",
     "family_id": "48",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      201,
+      99
+    ],
+    "quick_moves": [
+      201,
+      235
+    ],
+    "main_moves": [
+      50,
+      30,
+      99
+    ]
   },
-  49: {
+  "49": {
     "name": "Venomoth",
-    "family_id": "48"
+    "family_id": "48",
+    "best_moveset": [
+      201,
+      49
+    ],
+    "quick_moves": [
+      201,
+      235
+    ],
+    "main_moves": [
+      50,
+      108,
+      49
+    ]
   },
-  50: {
+  "50": {
     "name": "Diglett",
     "family_id": "50",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      233,
+      26
+    ],
+    "quick_moves": [
+      220,
+      233,
+      216
+    ],
+    "main_moves": [
+      26,
+      96,
+      63
+    ]
   },
-  51: {
+  "51": {
     "name": "Dugtrio",
-    "family_id": "50"
+    "family_id": "50",
+    "best_moveset": [
+      233,
+      32
+    ],
+    "quick_moves": [
+      203,
+      233,
+      216
+    ],
+    "main_moves": [
+      31,
+      96,
+      32
+    ]
   },
-  52: {
+  "52": {
     "name": "Meowth",
     "family_id": "52",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      220,
+      131
+    ],
+    "quick_moves": [
+      220,
+      202
+    ],
+    "main_moves": [
+      51,
+      16,
+      131
+    ]
   },
-  53: {
+  "53": {
     "name": "Persian",
-    "family_id": "52"
+    "family_id": "52",
+    "best_moveset": [
+      220,
+      88
+    ],
+    "quick_moves": [
+      220,
+      238
+    ],
+    "main_moves": [
+      51,
+      65,
+      88
+    ]
   },
-  54: {
+  "54": {
     "name": "Psyduck",
     "family_id": "54",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      230,
+      28
+    ],
+    "quick_moves": [
+      230,
+      234
+    ],
+    "main_moves": [
+      30,
+      58,
+      28
+    ]
   },
-  55: {
+  "55": {
     "name": "Golduck",
-    "family_id": "54"
+    "family_id": "54",
+    "best_moveset": [
+      230,
+      107
+    ],
+    "quick_moves": [
+      230,
+      235
+    ],
+    "main_moves": [
+      108,
+      107,
+      39
+    ]
   },
-  56: {
+  "56": {
     "name": "Mankey",
     "family_id": "56",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      220,
+      28
+    ],
+    "quick_moves": [
+      208,
+      220
+    ],
+    "main_moves": [
+      28,
+      56,
+      123
+    ]
   },
-  57: {
+  "57": {
     "name": "Primeape",
-    "family_id": "56"
+    "family_id": "56",
+    "best_moveset": [
+      207,
+      28
+    ],
+    "quick_moves": [
+      207,
+      208
+    ],
+    "main_moves": [
+      28,
+      56,
+      51
+    ]
   },
-  58: {
+  "58": {
     "name": "Growlithe",
     "family_id": "58",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      202,
+      24
+    ],
+    "quick_moves": [
+      209,
+      202
+    ],
+    "main_moves": [
+      21,
+      131,
+      24
+    ]
   },
-  59: {
+  "59": {
     "name": "Arcanine",
-    "family_id": "58"
+    "family_id": "58",
+    "best_moveset": [
+      240,
+      103
+    ],
+    "quick_moves": [
+      240,
+      202
+    ],
+    "main_moves": [
+      103,
+      24,
+      95
+    ]
   },
-  60: {
+  "60": {
     "name": "Poliwag",
     "family_id": "60",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      237,
+      131
+    ],
+    "quick_moves": [
+      237,
+      216
+    ],
+    "main_moves": [
+      53,
+      96,
+      131
+    ]
   },
-  61: {
+  "61": {
     "name": "Poliwhirl",
     "family_id": "60",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      237,
+      106
+    ],
+    "quick_moves": [
+      237,
+      216
+    ],
+    "main_moves": [
+      106,
+      96,
+      53
+    ]
   },
-  62: {
+  "62": {
     "name": "Poliwrath",
-    "family_id": "60"
+    "family_id": "60",
+    "best_moveset": [
+      237,
+      107
+    ],
+    "quick_moves": [
+      237,
+      216
+    ],
+    "main_moves": [
+      107,
+      54,
+      33
+    ]
   },
-  63: {
+  "63": {
     "name": "Abra",
     "family_id": "63",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      234,
+      60
+    ],
+    "quick_moves": [
+      234
+    ],
+    "main_moves": [
+      60,
+      99,
+      70
+    ]
   },
-  64: {
+  "64": {
     "name": "Kadabra",
     "family_id": "63",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      226
+    ],
+    "quick_moves": [
+      226,
+      235
+    ],
+    "main_moves": [
+      30,
+      86,
+      70
+    ]
   },
-  65: {
+  "65": {
     "name": "Alakazam",
-    "family_id": "63"
+    "family_id": "63",
+    "best_moveset": [
+      226,
+      108
+    ],
+    "quick_moves": [
+      226,
+      235
+    ],
+    "main_moves": [
+      108,
+      86,
+      70
+    ]
   },
-  66: {
+  "66": {
     "name": "Machop",
     "family_id": "66",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      207,
+      28
+    ],
+    "quick_moves": [
+      207,
+      208
+    ],
+    "main_moves": [
+      56,
+      123,
+      28
+    ]
   },
-  67: {
+  "67": {
     "name": "Machoke",
     "family_id": "66",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      207,
+      28
+    ],
+    "quick_moves": [
+      207,
+      208
+    ],
+    "main_moves": [
+      54,
+      123,
+      28
+    ]
   },
-  68: {
+  "68": {
     "name": "Machamp",
-    "family_id": "66"
+    "family_id": "66",
+    "best_moveset": [
+      208,
+      28
+    ],
+    "quick_moves": [
+      229,
+      208
+    ],
+    "main_moves": [
+      32,
+      54,
+      28
+    ]
   },
-  69: {
+  "69": {
     "name": "Bellsprout",
     "family_id": "69",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      214,
+      118
+    ],
+    "quick_moves": [
+      214,
+      225
+    ],
+    "main_moves": [
+      118,
+      90,
+      13
+    ]
   },
-  70: {
+  "70": {
     "name": "Weepinbell",
     "family_id": "69",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      215,
+      118
+    ],
+    "quick_moves": [
+      215,
+      225
+    ],
+    "main_moves": [
+      118,
+      90,
+      59
+    ]
   },
-  71: {
-    "name": "Victreebell",
-    "family_id": "69"
+  "71": {
+    "name": "Victreebel",
+    "family_id": "69",
+    "best_moveset": [
+      215,
+      116
+    ],
+    "quick_moves": [
+      215,
+      225
+    ],
+    "main_moves": [
+      117,
+      90,
+      116
+    ]
   },
-  72: {
+  "72": {
     "name": "Tentacool",
     "family_id": "72",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      237
+    ],
+    "quick_moves": [
+      237,
+      236
+    ],
+    "main_moves": [
+      53,
+      105,
+      13
+    ]
   },
-  73: {
+  "73": {
     "name": "Tentacruel",
-    "family_id": "72"
+    "family_id": "72",
+    "best_moveset": [
+      224,
+      107
+    ],
+    "quick_moves": [
+      225,
+      224
+    ],
+    "main_moves": [
+      107,
+      91,
+      40
+    ]
   },
-  74: {
+  "74": {
     "name": "Geodude",
     "family_id": "74",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      227,
+      64
+    ],
+    "quick_moves": [
+      227,
+      221
+    ],
+    "main_moves": [
+      64,
+      63,
+      26
+    ]
   },
-  75: {
+  "75": {
     "name": "Graveler",
     "family_id": "74",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      233,
+      32
+    ],
+    "quick_moves": [
+      227,
+      233,
+      216
+    ],
+    "main_moves": [
+      26,
+      32,
+      64
+    ]
   },
-  76: {
+  "76": {
     "name": "Golem",
-    "family_id": "74"
+    "family_id": "74",
+    "best_moveset": [
+      233,
+      32
+    ],
+    "quick_moves": [
+      227,
+      233,
+      216
+    ],
+    "main_moves": [
+      32,
+      62,
+      31
+    ]
   },
-  77: {
+  "77": {
     "name": "Ponyta",
     "family_id": "77",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      209,
+      103
+    ],
+    "quick_moves": [
+      221,
+      209
+    ],
+    "main_moves": [
+      101,
+      21,
+      103
+    ]
   },
-  78: {
+  "78": {
     "name": "Rapidash",
-    "family_id": "77"
+    "family_id": "77",
+    "best_moveset": [
+      209,
+      103
+    ],
+    "quick_moves": [
+      207,
+      209
+    ],
+    "main_moves": [
+      103,
+      46,
+      42
+    ]
   },
-  79: {
+  "79": {
     "name": "Slowpoke",
     "family_id": "79",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      230,
+      108
+    ],
+    "quick_moves": [
+      230,
+      235
+    ],
+    "main_moves": [
+      105,
+      60,
+      108
+    ]
   },
-  80: {
+  "80": {
     "name": "Slowbro",
-    "family_id": "79"
+    "family_id": "79",
+    "best_moveset": [
+      230,
+      108
+    ],
+    "quick_moves": [
+      230,
+      235
+    ],
+    "main_moves": [
+      105,
+      108,
+      39
+    ]
   },
-  81: {
+  "81": {
     "name": "Magnemite",
     "family_id": "81",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      206,
+      79
+    ],
+    "quick_moves": [
+      206,
+      205
+    ],
+    "main_moves": [
+      35,
+      72,
+      79
+    ]
   },
-  82: {
+  "82": {
     "name": "Magneton",
-    "family_id": "81"
+    "family_id": "81",
+    "best_moveset": [
+      206,
+      36
+    ],
+    "quick_moves": [
+      206,
+      205
+    ],
+    "main_moves": [
+      35,
+      72,
+      36
+    ]
   },
-  83: {
+  "83": {
     "name": "Farfetch'd",
-    "family_id": "83"
+    "family_id": "83",
+    "best_moveset": [
+      223,
+      117
+    ],
+    "quick_moves": [
+      223,
+      200
+    ],
+    "main_moves": [
+      45,
+      121,
+      117
+    ]
   },
-  84: {
+  "84": {
     "name": "Doduo",
     "family_id": "84",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      211,
+      38
+    ],
+    "quick_moves": [
+      211,
+      219
+    ],
+    "main_moves": [
+      38,
+      45,
+      125
+    ]
   },
-  85: {
+  "85": {
     "name": "Dodrio",
-    "family_id": "84"
+    "family_id": "84",
+    "best_moveset": [
+      238,
+      38
+    ],
+    "quick_moves": [
+      238,
+      239
+    ],
+    "main_moves": [
+      38,
+      45,
+      121
+    ]
   },
-  86: {
+  "86": {
     "name": "Seel",
     "family_id": "86",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      230,
+      58
+    ],
+    "quick_moves": [
+      217,
+      212,
+      230
+    ],
+    "main_moves": [
+      57,
+      111,
+      58
+    ]
   },
-  87: {
+  "87": {
     "name": "Dewgong",
-    "family_id": "86"
+    "family_id": "86",
+    "best_moveset": [
+      218,
+      40
+    ],
+    "quick_moves": [
+      218,
+      217
+    ],
+    "main_moves": [
+      111,
+      57,
+      40
+    ]
   },
-  88: {
+  "88": {
     "name": "Grimer",
     "family_id": "88",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      224,
+      90
+    ],
+    "quick_moves": [
+      233,
+      224,
+      225
+    ],
+    "main_moves": [
+      18,
+      96,
+      90
+    ]
   },
-  89: {
+  "89": {
     "name": "Muk",
-    "family_id": "88"
+    "family_id": "88",
+    "best_moveset": [
+      224,
+      92
+    ],
+    "quick_moves": [
+      224,
+      212,
+      225
+    ],
+    "main_moves": [
+      16,
+      92,
+      91
+    ]
   },
-  90: {
+  "90": {
     "name": "Shellder",
     "family_id": "90",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      221,
+      105
+    ],
+    "quick_moves": [
+      217,
+      221
+    ],
+    "main_moves": [
+      53,
+      105,
+      111
+    ]
   },
-  91: {
+  "91": {
     "name": "Cloyster",
-    "family_id": "90"
+    "family_id": "90",
+    "best_moveset": [
+      218,
+      40
+    ],
+    "quick_moves": [
+      218,
+      217
+    ],
+    "main_moves": [
+      111,
+      107,
+      40
+    ]
   },
-  92: {
+  "92": {
     "name": "Gastly",
     "family_id": "92",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      212,
+      90
+    ],
+    "quick_moves": [
+      212,
+      203
+    ],
+    "main_moves": [
+      69,
+      16,
+      90
+    ]
   },
-  93: {
+  "93": {
     "name": "Haunter",
     "family_id": "92",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      213,
+      90
+    ],
+    "quick_moves": [
+      213,
+      212
+    ],
+    "main_moves": [
+      70,
+      16,
+      90
+    ]
   },
-  94: {
+  "94": {
     "name": "Gengar",
-    "family_id": "92"
+    "family_id": "92",
+    "best_moveset": [
+      213,
+      91
+    ],
+    "quick_moves": [
+      203,
+      213
+    ],
+    "main_moves": [
+      70,
+      16,
+      90,
+      91
+    ]
   },
-  95: {
+  "95": {
     "name": "Onix",
-    "family_id": "95"
+    "family_id": "95",
+    "best_moveset": [
+      227,
+      32
+    ],
+    "quick_moves": [
+      227,
+      221
+    ],
+    "main_moves": [
+      64,
+      32,
+      74
+    ]
   },
-  96: {
+  "96": {
     "name": "Drowzee",
     "family_id": "96",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      222,
+      108
+    ],
+    "quick_moves": [
+      222,
+      235
+    ],
+    "main_moves": [
+      30,
+      60,
+      108
+    ]
   },
-  97: {
+  "97": {
     "name": "Hypno",
-    "family_id": "96"
+    "family_id": "96",
+    "best_moveset": [
+      234,
+      108
+    ],
+    "quick_moves": [
+      234,
+      235
+    ],
+    "main_moves": [
+      60,
+      108,
+      70
+    ]
   },
-  98: {
+  "98": {
     "name": "Krabby",
     "family_id": "98",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      237
+    ],
+    "quick_moves": [
+      237,
+      216
+    ],
+    "main_moves": [
+      20,
+      53,
+      105
+    ]
   },
-  99: {
+  "99": {
     "name": "Kingler",
-    "family_id": "98"
+    "family_id": "98",
+    "best_moveset": [
+      228,
+      100
+    ],
+    "quick_moves": [
+      228,
+      216
+    ],
+    "main_moves": [
+      20,
+      100,
+      105
+    ]
   },
-  100: {
+  "100": {
     "name": "Voltorb",
     "family_id": "100",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      206,
+      79
+    ],
+    "quick_moves": [
+      206,
+      221
+    ],
+    "main_moves": [
+      35,
+      79,
+      99
+    ]
   },
-  101: {
+  "101": {
     "name": "Electrode",
-    "family_id": "100"
+    "family_id": "100",
+    "best_moveset": [
+      206,
+      14
+    ],
+    "quick_moves": [
+      206,
+      221
+    ],
+    "main_moves": [
+      35,
+      79,
+      14
+    ]
   },
-  102: {
+  "102": {
     "name": "Exeggcute",
     "family_id": "102",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      235,
+      108
+    ],
+    "quick_moves": [
+      235
+    ],
+    "main_moves": [
+      59,
+      108,
+      62
+    ]
   },
-  103: {
+  "103": {
     "name": "Exeggutor",
-    "family_id": "102"
+    "family_id": "102",
+    "best_moveset": [
+      234,
+      116
+    ],
+    "quick_moves": [
+      235,
+      234
+    ],
+    "main_moves": [
+      59,
+      108,
+      116
+    ]
   },
-  104: {
+  "104": {
     "name": "Cubone",
     "family_id": "104",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      233,
+      94
+    ],
+    "quick_moves": [
+      233,
+      241
+    ],
+    "main_moves": [
+      94,
+      26,
+      95
+    ]
   },
-  105: {
+  "105": {
     "name": "Marowak",
-    "family_id": "104"
+    "family_id": "104",
+    "best_moveset": [
+      233,
+      31
+    ],
+    "quick_moves": [
+      233,
+      241
+    ],
+    "main_moves": [
+      94,
+      26,
+      31
+    ]
   },
-  106: {
+  "106": {
     "name": "Hitmonlee",
-    "family_id": "106"
+    "family_id": "106",
+    "best_moveset": [
+      241,
+      32
+    ],
+    "quick_moves": [
+      207,
+      241
+    ],
+    "main_moves": [
+      56,
+      32,
+      123,
+      127
+    ]
   },
-  107: {
+  "107": {
     "name": "Hitmonchan",
-    "family_id": "107"
+    "family_id": "107",
+    "best_moveset": [
+      241,
+      123
+    ],
+    "quick_moves": [
+      229,
+      241
+    ],
+    "main_moves": [
+      115,
+      33,
+      77,
+      123
+    ]
   },
-  108: {
+  "108": {
     "name": "Lickitung",
-    "family_id": "108"
+    "family_id": "108",
+    "best_moveset": [
+      234,
+      14
+    ],
+    "quick_moves": [
+      212,
+      234
+    ],
+    "main_moves": [
+      14,
+      127,
+      118
+    ]
   },
-  109: {
+  "109": {
     "name": "Koffing",
     "family_id": "109",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      225,
+      90
+    ],
+    "quick_moves": [
+      221,
+      225
+    ],
+    "main_moves": [
+      18,
+      90,
+      16
+    ]
   },
-  110: {
+  "110": {
     "name": "Weezing",
-    "family_id": "109"
+    "family_id": "109",
+    "best_moveset": [
+      225,
+      90
+    ],
+    "quick_moves": [
+      221,
+      225
+    ],
+    "main_moves": [
+      90,
+      70,
+      16
+    ]
   },
-  111: {
+  "111": {
     "name": "Rhyhorn",
     "family_id": "111",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      233
+    ],
+    "quick_moves": [
+      233,
+      241
+    ],
+    "main_moves": [
+      95,
+      126,
+      127
+    ]
   },
-  112: {
+  "112": {
     "name": "Rhydon",
-    "family_id": "111"
+    "family_id": "111",
+    "best_moveset": [
+      233,
+      32
+    ],
+    "quick_moves": [
+      233,
+      241
+    ],
+    "main_moves": [
+      22,
+      31,
+      32
+    ]
   },
-  113: {
+  "113": {
     "name": "Chansey",
-    "family_id": "113"
+    "family_id": "113",
+    "best_moveset": [
+      222,
+      14
+    ],
+    "quick_moves": [
+      222,
+      234
+    ],
+    "main_moves": [
+      108,
+      86,
+      14,
+      30
+    ]
   },
-  114: {
+  "114": {
     "name": "Tangela",
-    "family_id": "114"
+    "family_id": "114",
+    "best_moveset": [
+      214,
+      116
+    ],
+    "quick_moves": [
+      214
+    ],
+    "main_moves": [
+      118,
+      90,
+      116
+    ]
   },
-  115: {
-    "name": "Kangaskgan",
-    "family_id": "115"
+  "115": {
+    "name": "Kangaskhan",
+    "family_id": "115",
+    "best_moveset": [
+      233,
+      31
+    ],
+    "quick_moves": [
+      233,
+      207
+    ],
+    "main_moves": [
+      123,
+      31,
+      127
+    ]
   },
-  116: {
+  "116": {
     "name": "Horsea",
     "family_id": "116",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      230,
+      82
+    ],
+    "quick_moves": [
+      230,
+      237
+    ],
+    "main_moves": [
+      53,
+      82,
+      36
+    ]
   },
-  117: {
+  "117": {
     "name": "Seadra",
-    "family_id": "116"
+    "family_id": "116",
+    "best_moveset": [
+      230,
+      107
+    ],
+    "quick_moves": [
+      230,
+      204
+    ],
+    "main_moves": [
+      40,
+      82,
+      107
+    ]
   },
-  118: {
+  "118": {
     "name": "Goldeen",
     "family_id": "118",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      216,
+      58
+    ],
+    "quick_moves": [
+      211,
+      216
+    ],
+    "main_moves": [
+      105,
+      126,
+      58
+    ]
   },
-  119: {
+  "119": {
     "name": "Seaking",
-    "family_id": "118"
+    "family_id": "118",
+    "best_moveset": [
+      224,
+      22
+    ],
+    "quick_moves": [
+      211,
+      224
+    ],
+    "main_moves": [
+      111,
+      46,
+      22
+    ]
   },
-  120: {
+  "120": {
     "name": "Staryu",
     "family_id": "120",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      230
+    ],
+    "quick_moves": [
+      230,
+      221,
+      219
+    ],
+    "main_moves": [
+      125,
+      53,
+      65
+    ]
   },
-  121: {
+  "121": {
     "name": "Starmie",
-    "family_id": "120"
+    "family_id": "120",
+    "best_moveset": [
+      230,
+      107
+    ],
+    "quick_moves": [
+      230,
+      221,
+      219
+    ],
+    "main_moves": [
+      107,
+      65,
+      108,
+      30
+    ]
   },
-  122: {
+  "122": {
     "name": "Mr. Mime",
-    "family_id": "122"
+    "family_id": "122",
+    "best_moveset": [
+      234,
+      108
+    ],
+    "quick_moves": [
+      235,
+      234
+    ],
+    "main_moves": [
+      30,
+      108,
+      70
+    ]
   },
-  123: {
+  "123": {
     "name": "Scyther",
-    "family_id": "123"
+    "family_id": "123",
+    "best_moveset": [
+      239,
+      49
+    ],
+    "quick_moves": [
+      200,
+      239
+    ],
+    "main_moves": [
+      51,
+      100,
+      49
+    ]
   },
-  124: {
+  "124": {
     "name": "Jynx",
-    "family_id": "124"
+    "family_id": "124",
+    "best_moveset": [
+      218,
+      60
+    ],
+    "quick_moves": [
+      218,
+      222
+    ],
+    "main_moves": [
+      85,
+      33,
+      60
+    ]
   },
-  125: {
+  "125": {
     "name": "Electabuzz",
-    "family_id": "125"
+    "family_id": "125",
+    "best_moveset": [
+      205,
+      78
+    ],
+    "quick_moves": [
+      205,
+      207
+    ],
+    "main_moves": [
+      77,
+      79,
+      78
+    ]
   },
-  126: {
+  "126": {
     "name": "Magmar",
-    "family_id": "126"
+    "family_id": "126",
+    "best_moveset": [
+      209,
+      103
+    ],
+    "quick_moves": [
+      209,
+      208
+    ],
+    "main_moves": [
+      103,
+      115,
+      24
+    ]
   },
-  127: {
+  "127": {
     "name": "Pinsir",
-    "family_id": "127"
+    "family_id": "127",
+    "best_moveset": [
+      241,
+      100
+    ],
+    "quick_moves": [
+      241,
+      200
+    ],
+    "main_moves": [
+      20,
+      100,
+      54
+    ]
   },
-  128: {
+  "128": {
     "name": "Tauros",
-    "family_id": "128"
+    "family_id": "128",
+    "best_moveset": [
+      221,
+      31
+    ],
+    "quick_moves": [
+      221,
+      234
+    ],
+    "main_moves": [
+      126,
+      74,
+      31
+    ]
   },
-  129: {
+  "129": {
     "name": "Magikarp",
     "family_id": "129",
-    "evolve_candy": 400
+    "evolve_candy": 400,
+    "best_moveset": [
+      231,
+      133
+    ],
+    "quick_moves": [
+      231
+    ],
+    "main_moves": [
+      133
+    ]
   },
-  130: {
+  "130": {
     "name": "Gyarados",
-    "family_id": "129"
+    "family_id": "129",
+    "best_moveset": [
+      204,
+      202,
+      107
+    ],
+    "quick_moves": [
+      202,
+      204
+    ],
+    "main_moves": [
+      107,
+      80,
+      82
+    ]
   },
-  131: {
+  "131": {
     "name": "Lapras",
-    "family_id": "131"
+    "family_id": "131",
+    "best_moveset": [
+      218,
+      40
+    ],
+    "quick_moves": [
+      218,
+      217
+    ],
+    "main_moves": [
+      82,
+      39,
+      40
+    ]
   },
-  132: {
+  "132": {
     "name": "Ditto",
-    "family_id": "132"
+    "family_id": "132",
+    "best_moveset": [
+      222
+    ],
+    "quick_moves": [
+      222
+    ],
+    "main_moves": [
+      133
+    ]
   },
-  133: {
+  "133": {
     "name": "Eevee",
     "family_id": "133",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      221,
+      131
+    ],
+    "quick_moves": [
+      219,
+      221
+    ],
+    "main_moves": [
+      26,
+      125,
+      131
+    ]
   },
-  134: {
+  "134": {
     "name": "Vaporeon",
-    "family_id": "133"
+    "family_id": "133",
+    "best_moveset": [
+      230,
+      107
+    ],
+    "quick_moves": [
+      230
+    ],
+    "main_moves": [
+      105,
+      107,
+      58
+    ]
   },
-  135: {
+  "135": {
     "name": "Jolteon",
-    "family_id": "133"
+    "family_id": "133",
+    "best_moveset": [
+      205,
+      78
+    ],
+    "quick_moves": [
+      205
+    ],
+    "main_moves": [
+      35,
+      79,
+      78
+    ]
   },
-  136: {
+  "136": {
     "name": "Flareon",
-    "family_id": "133"
+    "family_id": "133",
+    "best_moveset": [
+      209,
+      103
+    ],
+    "quick_moves": [
+      209
+    ],
+    "main_moves": [
+      103,
+      24,
+      42
+    ]
   },
-  137: {
+  "137": {
     "name": "Porygon",
-    "family_id": "137"
+    "family_id": "137",
+    "best_moveset": [
+      221
+    ],
+    "quick_moves": [
+      221,
+      234,
+      219
+    ],
+    "main_moves": [
+      30,
+      99,
+      35
+    ]
   },
-  138: {
+  "138": {
     "name": "Omanyte",
     "family_id": "138",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      230
+    ],
+    "quick_moves": [
+      230,
+      216
+    ],
+    "main_moves": [
+      62,
+      104,
+      63
+    ]
   },
-  139: {
+  "139": {
     "name": "Omastar",
-    "family_id": "138"
+    "family_id": "138",
+    "best_moveset": [
+      230,
+      107
+    ],
+    "quick_moves": [
+      230,
+      216,
+      227
+    ],
+    "main_moves": [
+      62,
+      107,
+      64
+    ]
   },
-  140: {
+  "140": {
     "name": "Kabuto",
     "family_id": "140",
-    "evolve_candy": 50
+    "evolve_candy": 50,
+    "best_moveset": [
+      220
+    ],
+    "quick_moves": [
+      220,
+      216
+    ],
+    "main_moves": [
+      62,
+      57,
+      63
+    ]
   },
-  141: {
+  "141": {
     "name": "Kabutops",
-    "family_id": "140"
+    "family_id": "140",
+    "best_moveset": [
+      216,
+      32
+    ],
+    "quick_moves": [
+      216,
+      200
+    ],
+    "main_moves": [
+      62,
+      105,
+      32
+    ]
   },
-  142: {
+  "142": {
     "name": "Aerodactyl",
-    "family_id": "142"
+    "family_id": "142",
+    "best_moveset": [
+      202,
+      14
+    ],
+    "quick_moves": [
+      239,
+      202
+    ],
+    "main_moves": [
+      62,
+      74,
+      14
+    ]
   },
-  143: {
+  "143": {
     "name": "Snorlax",
-    "family_id": "143"
+    "family_id": "143",
+    "best_moveset": [
+      234,
+      14
+    ],
+    "quick_moves": [
+      234,
+      212
+    ],
+    "main_moves": [
+      131,
+      14,
+      31
+    ]
   },
-  144: {
+  "144": {
     "name": "Articuno",
-    "family_id": "144"
+    "family_id": "144",
+    "best_moveset": [
+      218,
+      40
+    ],
+    "quick_moves": [
+      218
+    ],
+    "main_moves": [
+      39,
+      111,
+      40
+    ]
   },
-  145: {
+  "145": {
     "name": "Zapdos",
-    "family_id": "145"
+    "family_id": "145",
+    "best_moveset": [
+      205,
+      78
+    ],
+    "quick_moves": [
+      205
+    ],
+    "main_moves": [
+      35,
+      79,
+      78
+    ]
   },
-  146: {
+  "146": {
     "name": "Moltres",
-    "family_id": "146"
+    "family_id": "146",
+    "best_moveset": [
+      209,
+      103
+    ],
+    "quick_moves": [
+      209
+    ],
+    "main_moves": [
+      103,
+      42,
+      24
+    ]
   },
-  147: {
+  "147": {
     "name": "Dratini",
     "family_id": "147",
-    "evolve_candy": 25
+    "evolve_candy": 25,
+    "best_moveset": [
+      204,
+      58
+    ],
+    "quick_moves": [
+      204
+    ],
+    "main_moves": [
+      13,
+      80,
+      58
+    ]
   },
-  148: {
+  "148": {
     "name": "Dragonair",
     "family_id": "147",
-    "evolve_candy": 100
+    "evolve_candy": 100,
+    "best_moveset": [
+      204,
+      82
+    ],
+    "quick_moves": [
+      204
+    ],
+    "main_moves": [
+      13,
+      58,
+      82
+    ]
   },
-  149: {
+  "149": {
     "name": "Dragonite",
-    "family_id": "147"
+    "family_id": "147",
+    "best_moveset": [
+      204,
+      83
+    ],
+    "quick_moves": [
+      204,
+      239
+    ],
+    "main_moves": [
+      82,
+      14,
+      83
+    ]
   },
-  150: {
+  "150": {
     "name": "Mewtwo",
-    "family_id": "150"
+    "family_id": "150",
+    "best_moveset": [
+      226,
+      14
+    ],
+    "quick_moves": [
+      226,
+      235
+    ],
+    "main_moves": [
+      108,
+      70,
+      14
+    ]
   },
-  151: {
+  "151": {
     "name": "Mew",
-    "family_id": "151"
+    "family_id": "151",
+    "best_moveset": [
+      222,
+      40
+    ],
+    "quick_moves": [
+      222
+    ],
+    "main_moves": [
+      31,
+      108,
+      82,
+      78,
+      103,
+      116,
+      14,
+      40,
+      122,
+      87
+    ]
   }
 };
+
 //key is Math.round(cp_multiplier * 100000)
 var pokemonLevelMaps = {
   "9400": 1,
@@ -797,4 +2744,2058 @@ const PLAYER_XP_FOR_EACH_LEVEL = {
   37: 2500000,
   38: 3000000,
   39: 5000000
+};
+
+const MOVE_INDEX = {
+  "13": {
+    "name": "Wrap",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "5.7",
+    "damage_type": "Normal",
+    "energy": -20
+  },
+  "14": {
+    "name": "Hyper Beam",
+    "is_main_move": true,
+    "damage": "120",
+    "dps": "22.4",
+    "damage_type": "Normal",
+    "energy": -100
+  },
+  "16": {
+    "name": "Dark Pulse",
+    "is_main_move": true,
+    "damage": "45",
+    "dps": "11.5",
+    "damage_type": "Dark",
+    "energy": -33
+  },
+  "18": {
+    "name": "Sludge",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "9.9",
+    "damage_type": "Poison",
+    "energy": -25
+  },
+  "20": {
+    "name": "Vice Grip",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "9.9",
+    "damage_type": "Normal",
+    "energy": -20
+  },
+  "21": {
+    "name": "Flame Wheel",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "8",
+    "damage_type": "Fire",
+    "energy": -25
+  },
+  "22": {
+    "name": "Megahorn",
+    "is_main_move": true,
+    "damage": "80",
+    "dps": "22.2",
+    "damage_type": "Bug",
+    "energy": -100
+  },
+  "24": {
+    "name": "Flamethrower",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "16.6",
+    "damage_type": "Fire",
+    "energy": -50
+  },
+  "26": {
+    "name": "Dig",
+    "is_main_move": true,
+    "damage": "70",
+    "dps": "11.4",
+    "damage_type": "Ground",
+    "energy": -33
+  },
+  "28": {
+    "name": "Cross Chop",
+    "is_main_move": true,
+    "damage": "60",
+    "dps": "27",
+    "damage_type": "Fighting",
+    "energy": -100
+  },
+  "30": {
+    "name": "Psybeam",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "9.5",
+    "damage_type": "Psychic",
+    "energy": -25
+  },
+  "31": {
+    "name": "Earthquake",
+    "is_main_move": true,
+    "damage": "100",
+    "dps": "21.8",
+    "damage_type": "Ground",
+    "energy": -100
+  },
+  "32": {
+    "name": "Stone Edge",
+    "is_main_move": true,
+    "damage": "80",
+    "dps": "27.8",
+    "damage_type": "Rock",
+    "energy": -100
+  },
+  "33": {
+    "name": "Ice Punch",
+    "is_main_move": true,
+    "damage": "45",
+    "dps": "11.5",
+    "damage_type": "Ice",
+    "energy": -33
+  },
+  "35": {
+    "name": "Discharge",
+    "is_main_move": true,
+    "damage": "35",
+    "dps": "12",
+    "damage_type": "Electric",
+    "energy": -33
+  },
+  "36": {
+    "name": "Flash Cannon",
+    "is_main_move": true,
+    "damage": "60",
+    "dps": "14",
+    "damage_type": "Steel",
+    "energy": -33
+  },
+  "38": {
+    "name": "Drill Peck",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "12.8",
+    "damage_type": "Flying",
+    "energy": -33
+  },
+  "39": {
+    "name": "Ice Beam",
+    "is_main_move": true,
+    "damage": "65",
+    "dps": "16.1",
+    "damage_type": "Ice",
+    "energy": -50
+  },
+  "40": {
+    "name": "Blizzard",
+    "is_main_move": true,
+    "damage": "100",
+    "dps": "23.3",
+    "damage_type": "Ice",
+    "energy": -100
+  },
+  "42": {
+    "name": "Heat Wave",
+    "is_main_move": true,
+    "damage": "80",
+    "dps": "19.1",
+    "damage_type": "Fire",
+    "energy": -100
+  },
+  "45": {
+    "name": "Aerial Ace",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "9",
+    "damage_type": "Flying",
+    "energy": -25
+  },
+  "46": {
+    "name": "Drill Run",
+    "is_main_move": true,
+    "damage": "50",
+    "dps": "14.4",
+    "damage_type": "Ground",
+    "energy": -33
+  },
+  "47": {
+    "name": "Petal Blizzard",
+    "is_main_move": true,
+    "damage": "65",
+    "dps": "18",
+    "damage_type": "Grass",
+    "energy": -50
+  },
+  "49": {
+    "name": "Bug Buzz",
+    "is_main_move": true,
+    "damage": "75",
+    "dps": "16.2",
+    "damage_type": "Bug",
+    "energy": -50
+  },
+  "50": {
+    "name": "Poison Fang",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "8.8",
+    "damage_type": "Poison",
+    "energy": -20
+  },
+  "51": {
+    "name": "Night Slash",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "10.5",
+    "damage_type": "Dark",
+    "energy": -25
+  },
+  "53": {
+    "name": "Bubble Beam",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "9",
+    "damage_type": "Water",
+    "energy": -25
+  },
+  "54": {
+    "name": "Submission",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "11.8",
+    "damage_type": "Fighting",
+    "energy": -33
+  },
+  "56": {
+    "name": "Low Sweep",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "11.2",
+    "damage_type": "Fighting",
+    "energy": -25
+  },
+  "57": {
+    "name": "Aqua Jet",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "9",
+    "damage_type": "Water",
+    "energy": -20
+  },
+  "58": {
+    "name": "Aqua Tail",
+    "is_main_move": true,
+    "damage": "45",
+    "dps": "16.2",
+    "damage_type": "Water",
+    "energy": -50
+  },
+  "59": {
+    "name": "Seed Bomb",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "14.1",
+    "damage_type": "Grass",
+    "energy": -33
+  },
+  "60": {
+    "name": "Psyshock",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "12.8",
+    "damage_type": "Psychic",
+    "energy": -33
+  },
+  "62": {
+    "name": "Ancient Power",
+    "is_main_move": true,
+    "damage": "35",
+    "dps": "8.8",
+    "damage_type": "Rock",
+    "energy": -25
+  },
+  "63": {
+    "name": "Rock Tomb",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "8.7",
+    "damage_type": "Rock",
+    "energy": -25
+  },
+  "64": {
+    "name": "Rock Slide",
+    "is_main_move": true,
+    "damage": "50",
+    "dps": "13.9",
+    "damage_type": "Rock",
+    "energy": -33
+  },
+  "65": {
+    "name": "Power Gem",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "12.1",
+    "damage_type": "Rock",
+    "energy": -33
+  },
+  "69": {
+    "name": "Ominous Wind",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "8.5",
+    "damage_type": "Ghost",
+    "energy": -25
+  },
+  "70": {
+    "name": "Shadow Ball",
+    "is_main_move": true,
+    "damage": "45",
+    "dps": "12.9",
+    "damage_type": "Ghost",
+    "energy": -33
+  },
+  "72": {
+    "name": "Magnet Bomb",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "9.3",
+    "damage_type": "Steel",
+    "energy": -25
+  },
+  "74": {
+    "name": "Iron Head",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "12.3",
+    "damage_type": "Steel",
+    "energy": -33
+  },
+  "77": {
+    "name": "Thunder Punch",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "14.1",
+    "damage_type": "Electric",
+    "energy": -33
+  },
+  "78": {
+    "name": "Thunder",
+    "is_main_move": true,
+    "damage": "100",
+    "dps": "21.4",
+    "damage_type": "Electric",
+    "energy": -100
+  },
+  "79": {
+    "name": "Thunderbolt",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "17.6",
+    "damage_type": "Electric",
+    "energy": -50
+  },
+  "80": {
+    "name": "Twister",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "8",
+    "damage_type": "Dragon",
+    "energy": -20
+  },
+  "82": {
+    "name": "Dragon Pulse",
+    "is_main_move": true,
+    "damage": "65",
+    "dps": "16.3",
+    "damage_type": "Dragon",
+    "energy": -50
+  },
+  "83": {
+    "name": "Dragon Claw",
+    "is_main_move": true,
+    "damage": "35",
+    "dps": "19.7",
+    "damage_type": "Dragon",
+    "energy": -50
+  },
+  "84": {
+    "name": "Disarming Voice",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "5.8",
+    "damage_type": "Fairy",
+    "energy": -20
+  },
+  "85": {
+    "name": "Draining Kiss",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "7.8",
+    "damage_type": "Fairy",
+    "energy": -20
+  },
+  "86": {
+    "name": "Dazzling Gleam",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "12",
+    "damage_type": "Fairy",
+    "energy": -33
+  },
+  "87": {
+    "name": "Moonblast",
+    "is_main_move": true,
+    "damage": "85",
+    "dps": "18.9",
+    "damage_type": "Fairy",
+    "energy": -100
+  },
+  "88": {
+    "name": "Play Rough",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "16.6",
+    "damage_type": "Fairy",
+    "energy": -50
+  },
+  "89": {
+    "name": "Cross Poison",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "14.1",
+    "damage_type": "Poison",
+    "energy": -25
+  },
+  "90": {
+    "name": "Sludge Bomb",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "18.2",
+    "damage_type": "Poison",
+    "energy": -50
+  },
+  "91": {
+    "name": "Sludge Wave",
+    "is_main_move": true,
+    "damage": "70",
+    "dps": "18.4",
+    "damage_type": "Poison",
+    "energy": -100
+  },
+  "92": {
+    "name": "Gunk Shot",
+    "is_main_move": true,
+    "damage": "65",
+    "dps": "19",
+    "damage_type": "Poison",
+    "energy": -100
+  },
+  "94": {
+    "name": "Bone Club",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "12.2",
+    "damage_type": "Ground",
+    "energy": -25
+  },
+  "95": {
+    "name": "Bulldoze",
+    "is_main_move": true,
+    "damage": "35",
+    "dps": "9.2",
+    "damage_type": "Ground",
+    "energy": -25
+  },
+  "96": {
+    "name": "Mud Bomb",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "9.9",
+    "damage_type": "Ground",
+    "energy": -25
+  },
+  "99": {
+    "name": "Signal Beam",
+    "is_main_move": true,
+    "damage": "45",
+    "dps": "12.8",
+    "damage_type": "Bug",
+    "energy": -33
+  },
+  "100": {
+    "name": "X-Scissor",
+    "is_main_move": true,
+    "damage": "35",
+    "dps": "13.8",
+    "damage_type": "Bug"
+  },
+  "101": {
+    "name": "Flame Charge",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "7.1",
+    "damage_type": "Fire",
+    "energy": -20
+  },
+  "102": {
+    "name": "Flame Burst",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "11.8",
+    "damage_type": "Fire",
+    "energy": -25
+  },
+  "103": {
+    "name": "Fire Blast",
+    "is_main_move": true,
+    "damage": "100",
+    "dps": "22.3",
+    "damage_type": "Fire",
+    "energy": -100
+  },
+  "104": {
+    "name": "Brine",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "8.8",
+    "damage_type": "Water",
+    "energy": -25
+  },
+  "105": {
+    "name": "Water Pulse",
+    "is_main_move": true,
+    "damage": "35",
+    "dps": "9.4",
+    "damage_type": "Water",
+    "energy": -25
+  },
+  "106": {
+    "name": "Scald",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "12.5",
+    "damage_type": "Water",
+    "energy": -33
+  },
+  "107": {
+    "name": "Hydro Pump",
+    "is_main_move": true,
+    "damage": "90",
+    "dps": "21.5",
+    "damage_type": "Water",
+    "energy": -100
+  },
+  "108": {
+    "name": "Psychic",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "17.1",
+    "damage_type": "Psychic",
+    "energy": -50
+  },
+  "111": {
+    "name": "Icy Wind",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "6",
+    "damage_type": "Ice",
+    "energy": -20
+  },
+  "115": {
+    "name": "Fire Punch",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "12.4",
+    "damage_type": "Fire",
+    "energy": -33
+  },
+  "116": {
+    "name": "Solar Beam",
+    "is_main_move": true,
+    "damage": "120",
+    "dps": "22.8",
+    "damage_type": "Grass",
+    "energy": -100
+  },
+  "117": {
+    "name": "Leaf Blade",
+    "is_main_move": true,
+    "damage": "55",
+    "dps": "18.8",
+    "damage_type": "Grass",
+    "energy": -50
+  },
+  "118": {
+    "name": "Power Whip",
+    "is_main_move": true,
+    "damage": "70",
+    "dps": "21.2",
+    "damage_type": "Grass",
+    "energy": -100
+  },
+  "121": {
+    "name": "Air Cutter",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "8.9",
+    "damage_type": "Flying",
+    "energy": -25
+  },
+  "122": {
+    "name": "Hurricane",
+    "is_main_move": true,
+    "damage": "80",
+    "dps": "22.2",
+    "damage_type": "Flying",
+    "energy": -100
+  },
+  "123": {
+    "name": "Brick Break",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "16.1",
+    "damage_type": "Fighting",
+    "energy": -33
+  },
+  "125": {
+    "name": "Swift",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "8.8",
+    "damage_type": "Normal",
+    "energy": -25
+  },
+  "126": {
+    "name": "Horn Attack",
+    "is_main_move": true,
+    "damage": "25",
+    "dps": "9.5",
+    "damage_type": "Normal",
+    "energy": -25
+  },
+  "127": {
+    "name": "Stomp",
+    "is_main_move": true,
+    "damage": "30",
+    "dps": "11.8",
+    "damage_type": "Normal",
+    "energy": -25
+  },
+  "129": {
+    "name": "Hyper Fang",
+    "is_main_move": true,
+    "damage": "35",
+    "dps": "13.8",
+    "damage_type": "Normal",
+    "energy": -33
+  },
+  "131": {
+    "name": "Body Slam",
+    "is_main_move": true,
+    "damage": "40",
+    "dps": "19.9",
+    "damage_type": "Normal",
+    "energy": -50
+  },
+  "133": {
+    "name": "Struggle",
+    "is_main_move": true,
+    "damage": "15",
+    "dps": "6.8",
+    "damage_type": "Normal",
+    "energy": -20
+  },
+  "200": {
+    "name": "Fury Cutter",
+    "is_main_move": false,
+    "damage": "3",
+    "dps": "7.5",
+    "damage_type": "Bug",
+    "energy": 12
+  },
+  "201": {
+    "name": "Bug Bite",
+    "is_main_move": false,
+    "damage": "5",
+    "dps": "11.1",
+    "damage_type": "Bug",
+    "energy": 7
+  },
+  "202": {
+    "name": "Bite",
+    "is_main_move": false,
+    "damage": "6",
+    "dps": "12",
+    "damage_type": "Dark",
+    "energy": 7
+  },
+  "203": {
+    "name": "Sucker Punch",
+    "is_main_move": false,
+    "damage": "7",
+    "dps": "10",
+    "damage_type": "Dark",
+    "energy": 4
+  },
+  "204": {
+    "name": "Dragon Breath",
+    "is_main_move": false,
+    "damage": "6",
+    "dps": "12",
+    "damage_type": "Dragon",
+    "energy": 7
+  },
+  "205": {
+    "name": "Thunder Shock",
+    "is_main_move": false,
+    "damage": "5",
+    "dps": "8.3",
+    "damage_type": "Electric",
+    "energy": 7
+  },
+  "206": {
+    "name": "Spark",
+    "is_main_move": false,
+    "damage": "7",
+    "dps": "10",
+    "damage_type": "Electric",
+    "energy": 4
+  },
+  "207": {
+    "name": "Low Kick",
+    "is_main_move": false,
+    "damage": "5",
+    "dps": "8.3",
+    "damage_type": "Fighting",
+    "energy": 7
+  },
+  "208": {
+    "name": "Karate Chop",
+    "is_main_move": false,
+    "damage": "6",
+    "dps": "7.5",
+    "damage_type": "Fighting",
+    "energy": 7
+  },
+  "209": {
+    "name": "Ember",
+    "is_main_move": false,
+    "damage": "10",
+    "dps": "9.5",
+    "damage_type": "Fire",
+    "energy": 7
+  },
+  "210": {
+    "name": "Wing Attack",
+    "is_main_move": false,
+    "damage": "9",
+    "dps": "12",
+    "damage_type": "Flying",
+    "energy": 7
+  },
+  "211": {
+    "name": "Peck",
+    "is_main_move": false,
+    "damage": "10",
+    "dps": "8.7",
+    "damage_type": "Flying",
+    "energy": 10
+  },
+  "212": {
+    "name": "Lick",
+    "is_main_move": false,
+    "damage": "5",
+    "dps": "10",
+    "damage_type": "Ghost",
+    "energy": 7
+  },
+  "213": {
+    "name": "Shadow Claw",
+    "is_main_move": false,
+    "damage": "11",
+    "dps": "11.6",
+    "damage_type": "Ghost",
+    "energy": 7
+  },
+  "214": {
+    "name": "Vine Whip",
+    "is_main_move": false,
+    "damage": "7",
+    "dps": "10.8",
+    "damage_type": "Grass",
+    "energy": 7
+  },
+  "215": {
+    "name": "Razor Leaf",
+    "is_main_move": false,
+    "damage": "15",
+    "dps": "10.3",
+    "damage_type": "Grass",
+    "energy": 7
+  },
+  "216": {
+    "name": "Mud Shot",
+    "is_main_move": false,
+    "damage": "6",
+    "dps": "10.9",
+    "damage_type": "Ground",
+    "energy": 7
+  },
+  "217": {
+    "name": "Ice Shard",
+    "is_main_move": false,
+    "damage": "15",
+    "dps": "10.7",
+    "damage_type": "Ice",
+    "energy": 7
+  },
+  "218": {
+    "name": "Frost Breath",
+    "is_main_move": false,
+    "damage": "9",
+    "dps": "11.1",
+    "damage_type": "Ice",
+    "energy": 7
+  },
+  "219": {
+    "name": "Quick Attack",
+    "is_main_move": false,
+    "damage": "10",
+    "dps": "7.5",
+    "damage_type": "Normal",
+    "energy": 7
+  },
+  "220": {
+    "name": "Scratch",
+    "is_main_move": false,
+    "damage": "6",
+    "dps": "12",
+    "damage_type": "Normal",
+    "energy": 7
+  },
+  "221": {
+    "name": "Tackle",
+    "is_main_move": false,
+    "damage": "12",
+    "dps": "10.9",
+    "damage_type": "Normal",
+    "energy": 7
+  },
+  "222": {
+    "name": "Pound",
+    "is_main_move": false,
+    "damage": "7",
+    "dps": "13",
+    "damage_type": "Normal",
+    "energy": 7
+  },
+  "223": {
+    "name": "Cut",
+    "is_main_move": false,
+    "damage": "12",
+    "dps": "10.6",
+    "damage_type": "Normal",
+    "energy": 7
+  },
+  "224": {
+    "name": "Poison Jab",
+    "is_main_move": false,
+    "damage": "12",
+    "dps": "11.4",
+    "damage_type": "Poison",
+    "energy": 7
+  },
+  "225": {
+    "name": "Acid",
+    "is_main_move": false,
+    "damage": "10",
+    "dps": "9.5",
+    "damage_type": "Poison",
+    "energy": 7
+  },
+  "226": {
+    "name": "Psycho Cut",
+    "is_main_move": false,
+    "damage": "7",
+    "dps": "12.3",
+    "damage_type": "Psychic",
+    "energy": 7
+  },
+  "227": {
+    "name": "Rock Throw",
+    "is_main_move": false,
+    "damage": "12",
+    "dps": "8.8",
+    "damage_type": "Rock",
+    "energy": 7
+  },
+  "228": {
+    "name": "Metal Claw",
+    "is_main_move": false,
+    "damage": "8",
+    "dps": "12.7",
+    "damage_type": "Steel",
+    "energy": 7
+  },
+  "229": {
+    "name": "Bullet Punch",
+    "is_main_move": false,
+    "damage": "10",
+    "dps": "8.3",
+    "damage_type": "Steel",
+    "energy": 7
+  },
+  "230": {
+    "name": "Water Gun",
+    "is_main_move": false,
+    "damage": "6",
+    "dps": "12",
+    "damage_type": "Water",
+    "energy": 7
+  },
+  "231": {
+    "name": "Splash",
+    "is_main_move": false,
+    "damage": "0",
+    "dps": "0",
+    "damage_type": "Water",
+    "energy": 7
+  },
+  "233": {
+    "name": "Mud Slap",
+    "is_main_move": false,
+    "damage": "15",
+    "dps": "11.1",
+    "damage_type": "Ground",
+    "energy": 9
+  },
+  "234": {
+    "name": "Zen Headbutt",
+    "is_main_move": false,
+    "damage": "12",
+    "dps": "11.4",
+    "damage_type": "Psychic",
+    "energy": 4
+  },
+  "235": {
+    "name": "Confusion",
+    "is_main_move": false,
+    "damage": "15",
+    "dps": "9.9",
+    "damage_type": "Psychic",
+    "energy": 7
+  },
+  "236": {
+    "name": "Poison Sting",
+    "is_main_move": false,
+    "damage": "6",
+    "dps": "10.4",
+    "damage_type": "Poison",
+    "energy": 4
+  },
+  "237": {
+    "name": "Bubble",
+    "is_main_move": false,
+    "damage": "25",
+    "dps": "10.9",
+    "damage_type": "Water",
+    "energy": 15
+  },
+  "238": {
+    "name": "Feint Attack",
+    "is_main_move": false,
+    "damage": "12",
+    "dps": "11.5",
+    "damage_type": "Dark",
+    "energy": 7
+  },
+  "239": {
+    "name": "Steel Wing",
+    "is_main_move": false,
+    "damage": "15",
+    "dps": "11.3",
+    "damage_type": "Steel",
+    "energy": 4
+  },
+  "240": {
+    "name": "Fire Fang",
+    "is_main_move": false,
+    "damage": "10",
+    "dps": "11.9",
+    "damage_type": "Fire",
+    "energy": 4
+  },
+  "241": {
+    "name": "Rock Smash",
+    "is_main_move": false,
+    "damage": "15",
+    "dps": "10.6",
+    "damage_type": "Fighting",
+    "energy": 7
+  }
+};
+
+
+const TYPE_INDEX = {
+  "Normal": {
+    "strong": [],
+    "weak": [
+      "Rock",
+      "Steel",
+      "Ghost"
+    ]
+  },
+  "Fire": {
+    "strong": [
+      "Grass",
+      "Ice",
+      "Bug",
+      "Steel"
+    ],
+    "weak": [
+      "Fire",
+      "Water",
+      "Rock",
+      "Dragon"
+    ]
+  },
+  "Water": {
+    "strong": [
+      "Fire",
+      "Ground",
+      "Rock"
+    ],
+    "weak": [
+      "Water",
+      "Grass",
+      "Dragon"
+    ]
+  },
+  "Electric": {
+    "strong": [
+      "Water",
+      "Flying"
+    ],
+    "weak": [
+      "Electric",
+      "Grass",
+      "Dragon",
+      "Ground"
+    ]
+  },
+  "Grass": {
+    "strong": [
+      "Water",
+      "Ground",
+      "Rock"
+    ],
+    "weak": [
+      "Fire",
+      "Grass",
+      "Poison",
+      "Flying",
+      "Bug",
+      "Dragon",
+      "Steel"
+    ]
+  },
+  "Ice": {
+    "strong": [
+      "Grass",
+      "Ground",
+      "Flying",
+      "Dragon"
+    ],
+    "weak": [
+      "Fire",
+      "Water",
+      "Ice",
+      "Steel"
+    ]
+  },
+  "Fighting": {
+    "strong": [
+      "Normal",
+      "Ice",
+      "Rock",
+      "Dark",
+      "Steel"
+    ],
+    "weak": [
+      "Poison",
+      "Flying",
+      "Psychic",
+      "Bug",
+      "Fairy",
+      "Ghost"
+    ]
+  },
+  "Poison": {
+    "strong": [
+      "Grass",
+      "Fairy"
+    ],
+    "weak": [
+      "Poison",
+      "Ground",
+      "Rock",
+      "Ghost",
+      "Steel"
+    ]
+  },
+  "Ground": {
+    "strong": [
+      "Fire",
+      "Electric",
+      "Poison",
+      "Rock",
+      "Steel"
+    ],
+    "weak": [
+      "Grass",
+      "Bug",
+      "Flying"
+    ]
+  },
+  "Flying": {
+    "strong": [
+      "Grass",
+      "Fighting",
+      "Bug"
+    ],
+    "weak": [
+      "Electric",
+      "Rock",
+      "Steel"
+    ]
+  },
+  "Psychic": {
+    "strong": [
+      "Fighting",
+      "Poison"
+    ],
+    "weak": [
+      "Psychic",
+      "Steel",
+      "Dark"
+    ]
+  },
+  "Bug": {
+    "strong": [
+      "Grass",
+      "Psychic",
+      "Dark"
+    ],
+    "weak": [
+      "Fire",
+      "Fighting",
+      "Poison",
+      "Flying",
+      "Ghost",
+      "Steel",
+      "Fairy"
+    ]
+  },
+  "Rock": {
+    "strong": [
+      "Fire",
+      "Ice",
+      "Flying",
+      "Bug"
+    ],
+    "weak": [
+      "Fighting",
+      "Ground",
+      "Steel"
+    ]
+  },
+  "Ghost": {
+    "strong": [
+      "Psychic",
+      "Ghost"
+    ],
+    "weak": [
+      "Dark",
+      "Normal"
+    ]
+  },
+  "Dragon": {
+    "strong": [
+      "Dragon"
+    ],
+    "weak": [
+      "Steel",
+      "Fairy"
+    ]
+  },
+  "Dark": {
+    "strong": [
+      "Psychic",
+      "Ghost"
+    ],
+    "weak": [
+      "Fighting",
+      "Dark",
+      "Fairy"
+    ]
+  },
+  "Steel": {
+    "strong": [
+      "Ice",
+      "Rock",
+      "Fairy"
+    ],
+    "weak": [
+      "Fire",
+      "Water",
+      "Electric",
+      "Steel"
+    ]
+  },
+  "Fairy": {
+    "strong": [
+      "Fighting",
+      "Dragon",
+      "Dark"
+    ],
+    "weak": [
+      "Fire",
+      "Poison",
+      "Steel"
+    ]
+  }
+};
+
+
+const NAME_INDEX = {
+  "Bulbasaur": {
+    "jp": "フシギダネ"
+  },
+  "Ivysaur": {
+    "jp": "フシギソウ"
+  },
+  "Venusaur": {
+    "jp": "フシギバナ"
+  },
+  "Charmander": {
+    "jp": "ヒトカゲ"
+  },
+  "Charmeleon": {
+    "jp": "リザード"
+  },
+  "Charizard": {
+    "jp": "リザードン"
+  },
+  "Squirtle": {
+    "jp": "ゼニガメ"
+  },
+  "Wartortle": {
+    "jp": "カメール"
+  },
+  "Blastoise": {
+    "jp": "カメックス"
+  },
+  "Caterpie": {
+    "jp": "キャタピー"
+  },
+  "Metapod": {
+    "jp": "トランセル"
+  },
+  "Butterfree": {
+    "jp": "バタフリー"
+  },
+  "Weedle": {
+    "jp": "ビードル"
+  },
+  "Kakuna": {
+    "jp": "コクーン"
+  },
+  "Beedrill": {
+    "jp": "スピアー"
+  },
+  "Pidgey": {
+    "jp": "ポッポ"
+  },
+  "Pidgeotto": {
+    "jp": "ピジョン"
+  },
+  "Pidgeot": {
+    "jp": "ピジョット"
+  },
+  "Rattata": {
+    "jp": "コラッタ"
+  },
+  "Raticate": {
+    "jp": "ラッタ"
+  },
+  "Spearow": {
+    "jp": "オニスズメ"
+  },
+  "Fearow": {
+    "jp": "オニドリル"
+  },
+  "Ekans": {
+    "jp": "アーボ"
+  },
+  "Arbok": {
+    "jp": "アーボック"
+  },
+  "Pikachu": {
+    "jp": "ピカチュウ"
+  },
+  "Raichu": {
+    "jp": "ライチュウ"
+  },
+  "Sandshrew": {
+    "jp": "サンド"
+  },
+  "Sandslash": {
+    "jp": "サンドパン"
+  },
+  "Nidoran♀": {
+    "jp": "ニドラン♀"
+  },
+  "Nidorina": {
+    "jp": "ニドリーナ"
+  },
+  "Nidoqueen": {
+    "jp": "ニドクイン"
+  },
+  "Nidoran♂": {
+    "jp": "ニドラン♂"
+  },
+  "Nidorino": {
+    "jp": "ニドリーノ"
+  },
+  "Nidoking": {
+    "jp": "ニドキング"
+  },
+  "Clefairy": {
+    "jp": "ピッピ"
+  },
+  "Clefable": {
+    "jp": "ピクシー"
+  },
+  "Vulpix": {
+    "jp": "ロコン"
+  },
+  "Ninetales": {
+    "jp": "キュウコン"
+  },
+  "Jigglypuff": {
+    "jp": "プリン"
+  },
+  "Wigglytuff": {
+    "jp": "プクリン"
+  },
+  "Zubat": {
+    "jp": "ズバット"
+  },
+  "Golbat": {
+    "jp": "ゴルバット"
+  },
+  "Oddish": {
+    "jp": "ナゾノクサ"
+  },
+  "Gloom": {
+    "jp": "クサイハナ"
+  },
+  "Vileplume": {
+    "jp": "ラフレシア"
+  },
+  "Paras": {
+    "jp": "パラス"
+  },
+  "Parasect": {
+    "jp": "パラセクト"
+  },
+  "Venonat": {
+    "jp": "コンパン"
+  },
+  "Venomoth": {
+    "jp": "モルフォン"
+  },
+  "Diglett": {
+    "jp": "ディグダ"
+  },
+  "Dugtrio": {
+    "jp": "ダグトリオ"
+  },
+  "Meowth": {
+    "jp": "ニャース"
+  },
+  "Persian": {
+    "jp": "ペルシアン"
+  },
+  "Psyduck": {
+    "jp": "コダック"
+  },
+  "Golduck": {
+    "jp": "ゴルダック"
+  },
+  "Mankey": {
+    "jp": "マンキー"
+  },
+  "Primeape": {
+    "jp": "オコリザル"
+  },
+  "Growlithe": {
+    "jp": "ガーディ"
+  },
+  "Arcanine": {
+    "jp": "ウインディ"
+  },
+  "Poliwag": {
+    "jp": "ニョロモ"
+  },
+  "Poliwhirl": {
+    "jp": "ニョロゾ"
+  },
+  "Poliwrath": {
+    "jp": "ニョロボン"
+  },
+  "Abra": {
+    "jp": "ケーシィ"
+  },
+  "Kadabra": {
+    "jp": "ユンゲラー"
+  },
+  "Alakazam": {
+    "jp": "フーディン"
+  },
+  "Machop": {
+    "jp": "ワンリキー"
+  },
+  "Machoke": {
+    "jp": "ゴーリキー"
+  },
+  "Machamp": {
+    "jp": "カイリキー"
+  },
+  "Bellsprout": {
+    "jp": "マダツボミ"
+  },
+  "Weepinbell": {
+    "jp": "ウツドン"
+  },
+  "Victreebel": {
+    "jp": "ウツボット"
+  },
+  "Tentacool": {
+    "jp": "メノクラゲ"
+  },
+  "Tentacruel": {
+    "jp": "ドククラゲ"
+  },
+  "Geodude": {
+    "jp": "イシツブテ"
+  },
+  "Graveler": {
+    "jp": "ゴローン"
+  },
+  "Golem": {
+    "jp": "ゴローニャ"
+  },
+  "Ponyta": {
+    "jp": "ポニータ"
+  },
+  "Rapidash": {
+    "jp": "ギャロップ"
+  },
+  "Slowpoke": {
+    "jp": "ヤドン"
+  },
+  "Slowbro": {
+    "jp": "ヤドラン"
+  },
+  "Magnemite": {
+    "jp": "コイル"
+  },
+  "Magneton": {
+    "jp": "レアコイル"
+  },
+  "Farfetch'd": {
+    "jp": "カモネギ"
+  },
+  "Doduo": {
+    "jp": "ドードー"
+  },
+  "Dodrio": {
+    "jp": "ドードリオ"
+  },
+  "Seel": {
+    "jp": "パウワウ"
+  },
+  "Dewgong": {
+    "jp": "ジュゴン"
+  },
+  "Grimer": {
+    "jp": "ベトベター"
+  },
+  "Muk": {
+    "jp": "ベトベトン"
+  },
+  "Shellder": {
+    "jp": "シェルダー"
+  },
+  "Cloyster": {
+    "jp": "パルシェン"
+  },
+  "Gastly": {
+    "jp": "ゴース"
+  },
+  "Haunter": {
+    "jp": "ゴースト"
+  },
+  "Gengar": {
+    "jp": "ゲンガー"
+  },
+  "Onix": {
+    "jp": "イワーク"
+  },
+  "Drowzee": {
+    "jp": "スリープ"
+  },
+  "Hypno": {
+    "jp": "スリーパー"
+  },
+  "Krabby": {
+    "jp": "クラブ"
+  },
+  "Kingler": {
+    "jp": "キングラー"
+  },
+  "Voltorb": {
+    "jp": "ビリリダマ"
+  },
+  "Electrode": {
+    "jp": "マルマイン"
+  },
+  "Exeggcute": {
+    "jp": "タマタマ"
+  },
+  "Exeggutor": {
+    "jp": "ナッシー"
+  },
+  "Cubone": {
+    "jp": "カラカラ"
+  },
+  "Marowak": {
+    "jp": "ガラガラ"
+  },
+  "Hitmonlee": {
+    "jp": "サワムラー"
+  },
+  "Hitmonchan": {
+    "jp": "エビワラー"
+  },
+  "Lickitung": {
+    "jp": "ベロリンガ"
+  },
+  "Koffing": {
+    "jp": "ドガース"
+  },
+  "Weezing": {
+    "jp": "マタドガス"
+  },
+  "Rhyhorn": {
+    "jp": "サイホーン"
+  },
+  "Rhydon": {
+    "jp": "サイドン"
+  },
+  "Chansey": {
+    "jp": "ラッキー"
+  },
+  "Tangela": {
+    "jp": "モンジャラ"
+  },
+  "Kangaskhan": {
+    "jp": "ガルーラ"
+  },
+  "Horsea": {
+    "jp": "タッツー"
+  },
+  "Seadra": {
+    "jp": "シードラ"
+  },
+  "Goldeen": {
+    "jp": "トサキント"
+  },
+  "Seaking": {
+    "jp": "アズマオウ"
+  },
+  "Staryu": {
+    "jp": "ヒトデマン"
+  },
+  "Starmie": {
+    "jp": "スターミー"
+  },
+  "Mr. Mime": {
+    "jp": "バリヤード"
+  },
+  "Scyther": {
+    "jp": "ストライク"
+  },
+  "Jynx": {
+    "jp": "ルージュラ"
+  },
+  "Electabuzz": {
+    "jp": "エレブー"
+  },
+  "Magmar": {
+    "jp": "ブーバー"
+  },
+  "Pinsir": {
+    "jp": "カイロス"
+  },
+  "Tauros": {
+    "jp": "ケンタロス"
+  },
+  "Magikarp": {
+    "jp": "コイキング"
+  },
+  "Gyarados": {
+    "jp": "ギャラドス"
+  },
+  "Lapras": {
+    "jp": "ラプラス"
+  },
+  "Ditto": {
+    "jp": "メタモン"
+  },
+  "Eevee": {
+    "jp": "イーブイ"
+  },
+  "Vaporeon": {
+    "jp": "シャワーズ"
+  },
+  "Jolteon": {
+    "jp": "サンダース"
+  },
+  "Flareon": {
+    "jp": "ブースター"
+  },
+  "Porygon": {
+    "jp": "ポリゴン"
+  },
+  "Omanyte": {
+    "jp": "オムナイト"
+  },
+  "Omastar": {
+    "jp": "オムスター"
+  },
+  "Kabuto": {
+    "jp": "カブト"
+  },
+  "Kabutops": {
+    "jp": "カブトプス"
+  },
+  "Aerodactyl": {
+    "jp": "プテラ"
+  },
+  "Snorlax": {
+    "jp": "カビゴン"
+  },
+  "Articuno": {
+    "jp": "フリーザー"
+  },
+  "Zapdos": {
+    "jp": "サンダー"
+  },
+  "Moltres": {
+    "jp": "ファイヤー"
+  },
+  "Dratini": {
+    "jp": "ミニリュウ"
+  },
+  "Dragonair": {
+    "jp": "ハクリュー"
+  },
+  "Dragonite": {
+    "jp": "カイリュー"
+  },
+  "Mewtwo": {
+    "jp": "ミュウツー"
+  },
+  "Mew": {
+    "jp": "ミュウ"
+  },
+  "Fury Cutter": {
+    "jp": "れんぞくぎり"
+  },
+  "Bug Bite": {
+    "jp": "むしくい"
+  },
+  "Bite": {
+    "jp": "かみつく"
+  },
+  "Sucker Punch": {
+    "jp": "ふいうち"
+  },
+  "Dragon Breath": {
+    "jp": "りゅうのいぶき"
+  },
+  "Thunder Shock": {
+    "jp": "でんきショック"
+  },
+  "Spark": {
+    "jp": "スパーク"
+  },
+  "Low Kick": {
+    "jp": "けたぐり"
+  },
+  "Karate Chop": {
+    "jp": "からてチョップ"
+  },
+  "Ember": {
+    "jp": "ひのこ"
+  },
+  "Wing Attack": {
+    "jp": "つばさでうつ"
+  },
+  "Peck": {
+    "jp": "つつく"
+  },
+  "Lick": {
+    "jp": "したでなめる"
+  },
+  "Shadow Claw": {
+    "jp": "シャドークロー"
+  },
+  "Vine Whip": {
+    "jp": "つるのムチ"
+  },
+  "Razor Leaf": {
+    "jp": "はっぱカッター"
+  },
+  "Mud Shot": {
+    "jp": "マッドショット"
+  },
+  "Ice Shard": {
+    "jp": "こおりのつぶて"
+  },
+  "Frost Breath": {
+    "jp": "こおりのいぶき"
+  },
+  "Quick Attack": {
+    "jp": "でんこうせっか"
+  },
+  "Scratch": {
+    "jp": "ひっかく"
+  },
+  "Tackle": {
+    "jp": "たいあたり"
+  },
+  "Pound": {
+    "jp": "はたく"
+  },
+  "Cut": {
+    "jp": "いあいぎり"
+  },
+  "Poison Jab": {
+    "jp": "どくづき"
+  },
+  "Acid": {
+    "jp": "ようかいえき"
+  },
+  "Psycho Cut": {
+    "jp": "サイコカッター"
+  },
+  "Rock Throw": {
+    "jp": "いわおとし"
+  },
+  "Metal Claw": {
+    "jp": "メタルクロー"
+  },
+  "Bullet Punch": {
+    "jp": "バレットパンチ"
+  },
+  "Water Gun": {
+    "jp": "みずでっぽう"
+  },
+  "Splash": {
+    "jp": "はねる"
+  },
+  "Mud Slap": {
+    "jp": "どろかけ"
+  },
+  "Zen Headbutt": {
+    "jp": "しねんのずつき"
+  },
+  "Confusion": {
+    "jp": "ねんりき"
+  },
+  "Poison Sting": {
+    "jp": "どくばり"
+  },
+  "Bubble": {
+    "jp": "あわ"
+  },
+  "Feint Attack": {
+    "jp": "だましうち"
+  },
+  "Steel Wing": {
+    "jp": "はがねのつばさ"
+  },
+  "Fire Fang": {
+    "jp": "ほのおのキバ"
+  },
+  "Rock Smash": {
+    "jp": "いわくだき"
+  },
+  "Wrap": {
+    "jp": "まきつく"
+  },
+  "Hyper Beam": {
+    "jp": "はかいこうせん"
+  },
+  "Dark Pulse": {
+    "jp": "あくのはどう"
+  },
+  "Sludge": {
+    "jp": "ヘドロこうげき"
+  },
+  "Vice Grip": {
+    "jp": "はさむ"
+  },
+  "Flame Wheel": {
+    "jp": "かえんぐるま"
+  },
+  "Megahorn": {
+    "jp": "メガホーン"
+  },
+  "Flamethrower": {
+    "jp": "かえんほうしゃ"
+  },
+  "Dig": {
+    "jp": "あなをほる"
+  },
+  "Cross Chop": {
+    "jp": "クロスチョップ"
+  },
+  "Psybeam": {
+    "jp": "サイケこうせん"
+  },
+  "Earthquake": {
+    "jp": "じしん"
+  },
+  "Stone Edge": {
+    "jp": "ストーンエッジ"
+  },
+  "Ice Punch": {
+    "jp": "れいとうパンチ"
+  },
+  "Discharge": {
+    "jp": "ほうでん"
+  },
+  "Flash Cannon": {
+    "jp": "ラスターカノン"
+  },
+  "Drill Peck": {
+    "jp": "ドリルくちばし"
+  },
+  "Ice Beam": {
+    "jp": "れいとうビーム"
+  },
+  "Blizzard": {
+    "jp": "ふぶき"
+  },
+  "Heat Wave": {
+    "jp": "ねっぷう"
+  },
+  "Aerial Ace": {
+    "jp": "つばめがえし"
+  },
+  "Drill Run": {
+    "jp": "ドリルライナー"
+  },
+  "Petal Blizzard": {
+    "jp": "はなふぶき"
+  },
+  "Bug Buzz": {
+    "jp": "むしのさざめき"
+  },
+  "Poison Fang": {
+    "jp": "どくどくのキバ"
+  },
+  "Night Slash": {
+    "jp": "つじぎり"
+  },
+  "Bubble Beam": {
+    "jp": "バブルこうせん"
+  },
+  "Submission": {
+    "jp": "じごくぐるま"
+  },
+  "Low Sweep": {
+    "jp": "ローキック"
+  },
+  "Aqua Jet": {
+    "jp": "アクアジェット"
+  },
+  "Aqua Tail": {
+    "jp": "アクアテール"
+  },
+  "Seed Bomb": {
+    "jp": "タネばくだん"
+  },
+  "Psyshock": {
+    "jp": "サイコショック"
+  },
+  "Ancient Power": {
+    "jp": "げんしのちから"
+  },
+  "Rock Tomb": {
+    "jp": "がんせきふうじ"
+  },
+  "Rock Slide": {
+    "jp": "いわなだれ"
+  },
+  "Power Gem": {
+    "jp": "パワージェム"
+  },
+  "Ominous Wind": {
+    "jp": "あやしいかぜ"
+  },
+  "Shadow Ball": {
+    "jp": "シャドーボール"
+  },
+  "Magnet Bomb": {
+    "jp": "マグネットボム"
+  },
+  "Iron Head": {
+    "jp": "アイアンヘッド"
+  },
+  "Thunder Punch": {
+    "jp": "かみなりパンチ"
+  },
+  "Thunder": {
+    "jp": "かみなり"
+  },
+  "Thunderbolt": {
+    "jp": "１０まんボルト"
+  },
+  "Twister": {
+    "jp": "たつまき"
+  },
+  "Dragon Pulse": {
+    "jp": "りゅうのはどう"
+  },
+  "Dragon Claw": {
+    "jp": "ドラゴンクロー"
+  },
+  "Disarming Voice": {
+    "jp": "チャームボイス"
+  },
+  "Draining Kiss": {
+    "jp": "ドレインキッス"
+  },
+  "Dazzling Gleam": {
+    "jp": "マジカルシャイン"
+  },
+  "Moonblast": {
+    "jp": "ムーンフォース"
+  },
+  "Play Rough": {
+    "jp": "じゃれつく"
+  },
+  "Cross Poison": {
+    "jp": "クロスポイズン"
+  },
+  "Sludge Bomb": {
+    "jp": "ヘドロばくだん"
+  },
+  "Sludge Wave": {
+    "jp": "ヘドロウェーブ"
+  },
+  "Gunk Shot": {
+    "jp": "ダストシュート"
+  },
+  "Bone Club": {
+    "jp": "ホネこんぼう"
+  },
+  "Bulldoze": {
+    "jp": "じならし"
+  },
+  "Mud Bomb": {
+    "jp": "どろばくだん"
+  },
+  "Signal Beam": {
+    "jp": "シグナルビーム"
+  },
+  "X-Scissor": {
+    "jp": "シザークロス"
+  },
+  "Flame Charge": {
+    "jp": "ニトロチャージ"
+  },
+  "Flame Burst": {
+    "jp": "はじけるほのお"
+  },
+  "Fire Blast": {
+    "jp": "だいもんじ"
+  },
+  "Brine": {
+    "jp": "しおみず"
+  },
+  "Water Pulse": {
+    "jp": "みずのはどう"
+  },
+  "Scald": {
+    "jp": "ねっとう"
+  },
+  "Hydro Pump": {
+    "jp": "ハイドロポンプ"
+  },
+  "Psychic": {
+    "jp": "サイコキネシス"
+  },
+  "Icy Wind": {
+    "jp": "こごえるかぜ"
+  },
+  "Fire Punch": {
+    "jp": "ほのおのパンチ"
+  },
+  "Solar Beam": {
+    "jp": "ソーラービーム"
+  },
+  "Leaf Blade": {
+    "jp": "リーフブレード"
+  },
+  "Power Whip": {
+    "jp": "パワーウィップ"
+  },
+  "Air Cutter": {
+    "jp": "エアカッター"
+  },
+  "Hurricane": {
+    "jp": "ぼうふう"
+  },
+  "Brick Break": {
+    "jp": "かわらわり"
+  },
+  "Swift": {
+    "jp": "スピードスター"
+  },
+  "Horn Attack": {
+    "jp": "つのでつく"
+  },
+  "Stomp": {
+    "jp": "ふみつけ"
+  },
+  "Hyper Fang": {
+    "jp": "ひっさつまえば"
+  },
+  "Body Slam": {
+    "jp": "のしかかり"
+  },
+  "Struggle": {
+    "jp": "わるあがき"
+  }
 };
