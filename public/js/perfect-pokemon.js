@@ -159,7 +159,7 @@ function getPokemonsGroupedByType(pokemons) {
 }
 
 function isUselessPokemon(pokemon) {
-    return pokemon.cp <= 900 && pokemon.iv_perfection < 80;
+    return pokemon.cp <= 1000 && pokemon.iv_perfection < 90;
 }
 
 function showUselessPokemons(data) {
