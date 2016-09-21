@@ -173,8 +173,8 @@ button#showUselessPokemons {
 }
 
 .best-moveset-pokemon {
-    background-color: #fbffab;
-    background: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, #fbffab 100%);
+    background-color: rgba(253,255,204,0.8);
+    background: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgba(253,255,204,0.8) 100%);
 }
 
 @-webkit-keyframes jump {
