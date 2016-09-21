@@ -3,10 +3,6 @@ const POKEMON_INDEX = {
     "name": "Bulbasaur",
     "family_id": "1",
     "evolve_candy": 25,
-    "best_moveset": [
-      214,
-      118
-    ],
     "quick_moves": [
       214,
       221
@@ -21,10 +17,6 @@ const POKEMON_INDEX = {
     "name": "Ivysaur",
     "family_id": "1",
     "evolve_candy": 100,
-    "best_moveset": [
-      214,
-      116
-    ],
     "quick_moves": [
       215,
       214
@@ -38,10 +30,6 @@ const POKEMON_INDEX = {
   "3": {
     "name": "Venusaur",
     "family_id": "1",
-    "best_moveset": [
-      214,
-      116
-    ],
     "quick_moves": [
       215,
       214
@@ -56,10 +44,6 @@ const POKEMON_INDEX = {
     "name": "Charmander",
     "family_id": "4",
     "evolve_candy": 25,
-    "best_moveset": [
-      220,
-      24
-    ],
     "quick_moves": [
       209,
       220
@@ -74,10 +58,6 @@ const POKEMON_INDEX = {
     "name": "Charmeleon",
     "family_id": "4",
     "evolve_candy": 100,
-    "best_moveset": [
-      220,
-      24
-    ],
     "quick_moves": [
       209,
       220
@@ -91,10 +71,6 @@ const POKEMON_INDEX = {
   "6": {
     "name": "Charizard",
     "family_id": "4",
-    "best_moveset": [
-      210,
-      103
-    ],
     "quick_moves": [
       209,
       210
@@ -109,10 +85,6 @@ const POKEMON_INDEX = {
     "name": "Squirtle",
     "family_id": "7",
     "evolve_candy": 25,
-    "best_moveset": [
-      237,
-      58
-    ],
     "quick_moves": [
       237,
       221
@@ -127,10 +99,6 @@ const POKEMON_INDEX = {
     "name": "Wartortle",
     "family_id": "7",
     "evolve_candy": 100,
-    "best_moveset": [
-      230,
-      107
-    ],
     "quick_moves": [
       230,
       202
@@ -144,10 +112,6 @@ const POKEMON_INDEX = {
   "9": {
     "name": "Blastoise",
     "family_id": "7",
-    "best_moveset": [
-      230,
-      107
-    ],
     "quick_moves": [
       230,
       202
@@ -162,9 +126,6 @@ const POKEMON_INDEX = {
     "name": "Caterpie",
     "family_id": "10",
     "evolve_candy": 12,
-    "best_moveset": [
-      201
-    ],
     "quick_moves": [
       201,
       221
@@ -177,9 +138,6 @@ const POKEMON_INDEX = {
     "name": "Metapod",
     "family_id": "10",
     "evolve_candy": 50,
-    "best_moveset": [
-      201
-    ],
     "quick_moves": [
       201,
       221
@@ -191,10 +149,6 @@ const POKEMON_INDEX = {
   "12": {
     "name": "Butterfree",
     "family_id": "10",
-    "best_moveset": [
-      201,
-      49
-    ],
     "quick_moves": [
       201,
       235
@@ -209,9 +163,6 @@ const POKEMON_INDEX = {
     "name": "Weedle",
     "family_id": "13",
     "evolve_candy": 12,
-    "best_moveset": [
-      201
-    ],
     "quick_moves": [
       201,
       236
@@ -224,9 +175,6 @@ const POKEMON_INDEX = {
     "name": "Kakuna",
     "family_id": "13",
     "evolve_candy": 50,
-    "best_moveset": [
-      201
-    ],
     "quick_moves": [
       201,
       236
@@ -238,10 +186,6 @@ const POKEMON_INDEX = {
   "15": {
     "name": "Beedrill",
     "family_id": "13",
-    "best_moveset": [
-      224,
-      90
-    ],
     "quick_moves": [
       201,
       224
@@ -256,9 +200,6 @@ const POKEMON_INDEX = {
     "name": "Pidgey",
     "family_id": "16",
     "evolve_candy": 12,
-    "best_moveset": [
-      221
-    ],
     "quick_moves": [
       219,
       221
@@ -273,9 +214,6 @@ const POKEMON_INDEX = {
     "name": "Pidgeotto",
     "family_id": "16",
     "evolve_candy": 50,
-    "best_moveset": [
-      210
-    ],
     "quick_moves": [
       210,
       239
@@ -289,10 +227,6 @@ const POKEMON_INDEX = {
   "18": {
     "name": "Pidgeot",
     "family_id": "16",
-    "best_moveset": [
-      210,
-      122
-    ],
     "quick_moves": [
       210,
       239
@@ -307,10 +241,6 @@ const POKEMON_INDEX = {
     "name": "Rattata",
     "family_id": "19",
     "evolve_candy": 25,
-    "best_moveset": [
-      221,
-      131
-    ],
     "quick_moves": [
       221,
       219
@@ -324,10 +254,6 @@ const POKEMON_INDEX = {
   "20": {
     "name": "Raticate",
     "family_id": "19",
-    "best_moveset": [
-      202,
-      14
-    ],
     "quick_moves": [
       202,
       219
@@ -342,10 +268,6 @@ const POKEMON_INDEX = {
     "name": "Spearow",
     "family_id": "21",
     "evolve_candy": 50,
-    "best_moveset": [
-      211,
-      38
-    ],
     "quick_moves": [
       211,
       219
@@ -359,10 +281,6 @@ const POKEMON_INDEX = {
   "22": {
     "name": "Fearow",
     "family_id": "21",
-    "best_moveset": [
-      239,
-      46
-    ],
     "quick_moves": [
       211,
       239
@@ -377,10 +295,6 @@ const POKEMON_INDEX = {
     "name": "Ekans",
     "family_id": "23",
     "evolve_candy": 50,
-    "best_moveset": [
-      236,
-      92
-    ],
     "quick_moves": [
       236,
       225
@@ -394,10 +308,6 @@ const POKEMON_INDEX = {
   "24": {
     "name": "Arbok",
     "family_id": "23",
-    "best_moveset": [
-      202,
-      92
-    ],
     "quick_moves": [
       202,
       225
@@ -412,10 +322,6 @@ const POKEMON_INDEX = {
     "name": "Pikachu",
     "family_id": "25",
     "evolve_candy": 50,
-    "best_moveset": [
-      205,
-      78
-    ],
     "quick_moves": [
       205,
       219
@@ -429,10 +335,6 @@ const POKEMON_INDEX = {
   "26": {
     "name": "Raichu",
     "family_id": "25",
-    "best_moveset": [
-      206,
-      78
-    ],
     "quick_moves": [
       205,
       206
@@ -447,10 +349,6 @@ const POKEMON_INDEX = {
     "name": "Sandshrew",
     "family_id": "27",
     "evolve_candy": 50,
-    "best_moveset": [
-      216,
-      26
-    ],
     "quick_moves": [
       220,
       216
@@ -464,10 +362,6 @@ const POKEMON_INDEX = {
   "28": {
     "name": "Sandslash",
     "family_id": "27",
-    "best_moveset": [
-      216,
-      31
-    ],
     "quick_moves": [
       228,
       216
@@ -482,10 +376,6 @@ const POKEMON_INDEX = {
     "name": "Nidoran鈾€",
     "family_id": "29",
     "evolve_candy": 25,
-    "best_moveset": [
-      236,
-      90
-    ],
     "quick_moves": [
       202,
       236
@@ -500,10 +390,6 @@ const POKEMON_INDEX = {
     "name": "Nidorina",
     "family_id": "29",
     "evolve_candy": 100,
-    "best_moveset": [
-      236,
-      90
-    ],
     "quick_moves": [
       202,
       236
@@ -517,10 +403,6 @@ const POKEMON_INDEX = {
   "31": {
     "name": "Nidoqueen",
     "family_id": "29",
-    "best_moveset": [
-      224,
-      32
-    ],
     "quick_moves": [
       224,
       202
@@ -535,10 +417,6 @@ const POKEMON_INDEX = {
     "name": "Nidoran鈾�",
     "family_id": "32",
     "evolve_candy": 25,
-    "best_moveset": [
-      236,
-      90
-    ],
     "quick_moves": [
       211,
       236
@@ -553,10 +431,6 @@ const POKEMON_INDEX = {
     "name": "Nidorino",
     "family_id": "32",
     "evolve_candy": 100,
-    "best_moveset": [
-      224,
-      90
-    ],
     "quick_moves": [
       224,
       236
@@ -570,10 +444,6 @@ const POKEMON_INDEX = {
   "34": {
     "name": "Nidoking",
     "family_id": "32",
-    "best_moveset": [
-      224,
-      31
-    ],
     "quick_moves": [
       224,
       200
@@ -588,10 +458,6 @@ const POKEMON_INDEX = {
     "name": "Clefairy",
     "family_id": "35",
     "evolve_candy": 50,
-    "best_moveset": [
-      222,
-      87
-    ],
     "quick_moves": [
       222,
       234
@@ -605,10 +471,6 @@ const POKEMON_INDEX = {
   "36": {
     "name": "Clefable",
     "family_id": "35",
-    "best_moveset": [
-      222,
-      87
-    ],
     "quick_moves": [
       222,
       234
@@ -623,10 +485,6 @@ const POKEMON_INDEX = {
     "name": "Vulpix",
     "family_id": "37",
     "evolve_candy": 50,
-    "best_moveset": [
-      209,
-      24
-    ],
     "quick_moves": [
       219,
       209
@@ -640,10 +498,6 @@ const POKEMON_INDEX = {
   "38": {
     "name": "Ninetales",
     "family_id": "37",
-    "best_moveset": [
-      209,
-      103
-    ],
     "quick_moves": [
       238,
       209
@@ -658,10 +512,6 @@ const POKEMON_INDEX = {
     "name": "Jigglypuff",
     "family_id": "39",
     "evolve_candy": 50,
-    "best_moveset": [
-      222,
-      131
-    ],
     "quick_moves": [
       222,
       238
@@ -676,10 +526,6 @@ const POKEMON_INDEX = {
   "40": {
     "name": "Wigglytuff",
     "family_id": "39",
-    "best_moveset": [
-      222,
-      14
-    ],
     "quick_moves": [
       222,
       238
@@ -694,10 +540,6 @@ const POKEMON_INDEX = {
     "name": "Zubat",
     "family_id": "41",
     "evolve_candy": 50,
-    "best_moveset": [
-      202,
-      90
-    ],
     "quick_moves": [
       219,
       202
@@ -711,9 +553,6 @@ const POKEMON_INDEX = {
   "42": {
     "name": "Golbat",
     "family_id": "41",
-    "best_moveset": [
-      210
-    ],
     "quick_moves": [
       210,
       202
@@ -728,10 +567,6 @@ const POKEMON_INDEX = {
     "name": "Oddish",
     "family_id": "43",
     "evolve_candy": 25,
-    "best_moveset": [
-      215,
-      90
-    ],
     "quick_moves": [
       215,
       225
@@ -746,10 +581,6 @@ const POKEMON_INDEX = {
     "name": "Gloom",
     "family_id": "43",
     "evolve_candy": 100,
-    "best_moveset": [
-      215,
-      90
-    ],
     "quick_moves": [
       215,
       225
@@ -763,10 +594,6 @@ const POKEMON_INDEX = {
   "45": {
     "name": "Vileplume",
     "family_id": "43",
-    "best_moveset": [
-      215,
-      116
-    ],
     "quick_moves": [
       215,
       225
@@ -781,10 +608,6 @@ const POKEMON_INDEX = {
     "name": "Paras",
     "family_id": "46",
     "evolve_candy": 50,
-    "best_moveset": [
-      201,
-      59
-    ],
     "quick_moves": [
       220,
       201
@@ -798,10 +621,6 @@ const POKEMON_INDEX = {
   "47": {
     "name": "Parasect",
     "family_id": "46",
-    "best_moveset": [
-      201,
-      116
-    ],
     "quick_moves": [
       201,
       200
@@ -816,10 +635,6 @@ const POKEMON_INDEX = {
     "name": "Venonat",
     "family_id": "48",
     "evolve_candy": 50,
-    "best_moveset": [
-      201,
-      99
-    ],
     "quick_moves": [
       201,
       235
@@ -833,10 +648,6 @@ const POKEMON_INDEX = {
   "49": {
     "name": "Venomoth",
     "family_id": "48",
-    "best_moveset": [
-      201,
-      49
-    ],
     "quick_moves": [
       201,
       235
@@ -851,10 +662,6 @@ const POKEMON_INDEX = {
     "name": "Diglett",
     "family_id": "50",
     "evolve_candy": 50,
-    "best_moveset": [
-      233,
-      26
-    ],
     "quick_moves": [
       220,
       233,
@@ -869,10 +676,6 @@ const POKEMON_INDEX = {
   "51": {
     "name": "Dugtrio",
     "family_id": "50",
-    "best_moveset": [
-      233,
-      32
-    ],
     "quick_moves": [
       203,
       233,
@@ -888,10 +691,6 @@ const POKEMON_INDEX = {
     "name": "Meowth",
     "family_id": "52",
     "evolve_candy": 50,
-    "best_moveset": [
-      220,
-      131
-    ],
     "quick_moves": [
       220,
       202
@@ -905,10 +704,6 @@ const POKEMON_INDEX = {
   "53": {
     "name": "Persian",
     "family_id": "52",
-    "best_moveset": [
-      220,
-      88
-    ],
     "quick_moves": [
       220,
       238
@@ -923,10 +718,6 @@ const POKEMON_INDEX = {
     "name": "Psyduck",
     "family_id": "54",
     "evolve_candy": 50,
-    "best_moveset": [
-      230,
-      28
-    ],
     "quick_moves": [
       230,
       234
@@ -940,10 +731,6 @@ const POKEMON_INDEX = {
   "55": {
     "name": "Golduck",
     "family_id": "54",
-    "best_moveset": [
-      230,
-      107
-    ],
     "quick_moves": [
       230,
       235
@@ -958,10 +745,6 @@ const POKEMON_INDEX = {
     "name": "Mankey",
     "family_id": "56",
     "evolve_candy": 50,
-    "best_moveset": [
-      220,
-      28
-    ],
     "quick_moves": [
       208,
       220
@@ -975,10 +758,6 @@ const POKEMON_INDEX = {
   "57": {
     "name": "Primeape",
     "family_id": "56",
-    "best_moveset": [
-      207,
-      28
-    ],
     "quick_moves": [
       207,
       208
@@ -993,10 +772,6 @@ const POKEMON_INDEX = {
     "name": "Growlithe",
     "family_id": "58",
     "evolve_candy": 50,
-    "best_moveset": [
-      202,
-      24
-    ],
     "quick_moves": [
       209,
       202
@@ -1010,10 +785,6 @@ const POKEMON_INDEX = {
   "59": {
     "name": "Arcanine",
     "family_id": "58",
-    "best_moveset": [
-      240,
-      103
-    ],
     "quick_moves": [
       240,
       202
@@ -1028,10 +799,6 @@ const POKEMON_INDEX = {
     "name": "Poliwag",
     "family_id": "60",
     "evolve_candy": 25,
-    "best_moveset": [
-      237,
-      131
-    ],
     "quick_moves": [
       237,
       216
@@ -1046,10 +813,6 @@ const POKEMON_INDEX = {
     "name": "Poliwhirl",
     "family_id": "60",
     "evolve_candy": 100,
-    "best_moveset": [
-      237,
-      106
-    ],
     "quick_moves": [
       237,
       216
@@ -1063,10 +826,6 @@ const POKEMON_INDEX = {
   "62": {
     "name": "Poliwrath",
     "family_id": "60",
-    "best_moveset": [
-      237,
-      107
-    ],
     "quick_moves": [
       237,
       216
@@ -1081,10 +840,6 @@ const POKEMON_INDEX = {
     "name": "Abra",
     "family_id": "63",
     "evolve_candy": 25,
-    "best_moveset": [
-      234,
-      60
-    ],
     "quick_moves": [
       234
     ],
@@ -1098,9 +853,6 @@ const POKEMON_INDEX = {
     "name": "Kadabra",
     "family_id": "63",
     "evolve_candy": 100,
-    "best_moveset": [
-      226
-    ],
     "quick_moves": [
       226,
       235
@@ -1114,10 +866,6 @@ const POKEMON_INDEX = {
   "65": {
     "name": "Alakazam",
     "family_id": "63",
-    "best_moveset": [
-      226,
-      108
-    ],
     "quick_moves": [
       226,
       235
@@ -1132,10 +880,6 @@ const POKEMON_INDEX = {
     "name": "Machop",
     "family_id": "66",
     "evolve_candy": 25,
-    "best_moveset": [
-      207,
-      28
-    ],
     "quick_moves": [
       207,
       208
@@ -1150,10 +894,6 @@ const POKEMON_INDEX = {
     "name": "Machoke",
     "family_id": "66",
     "evolve_candy": 100,
-    "best_moveset": [
-      207,
-      28
-    ],
     "quick_moves": [
       207,
       208
@@ -1167,10 +907,6 @@ const POKEMON_INDEX = {
   "68": {
     "name": "Machamp",
     "family_id": "66",
-    "best_moveset": [
-      208,
-      28
-    ],
     "quick_moves": [
       229,
       208
@@ -1185,10 +921,6 @@ const POKEMON_INDEX = {
     "name": "Bellsprout",
     "family_id": "69",
     "evolve_candy": 25,
-    "best_moveset": [
-      214,
-      118
-    ],
     "quick_moves": [
       214,
       225
@@ -1203,10 +935,6 @@ const POKEMON_INDEX = {
     "name": "Weepinbell",
     "family_id": "69",
     "evolve_candy": 100,
-    "best_moveset": [
-      215,
-      118
-    ],
     "quick_moves": [
       215,
       225
@@ -1220,10 +948,6 @@ const POKEMON_INDEX = {
   "71": {
     "name": "Victreebel",
     "family_id": "69",
-    "best_moveset": [
-      215,
-      116
-    ],
     "quick_moves": [
       215,
       225
@@ -1238,9 +962,6 @@ const POKEMON_INDEX = {
     "name": "Tentacool",
     "family_id": "72",
     "evolve_candy": 50,
-    "best_moveset": [
-      237
-    ],
     "quick_moves": [
       237,
       236
@@ -1254,10 +975,6 @@ const POKEMON_INDEX = {
   "73": {
     "name": "Tentacruel",
     "family_id": "72",
-    "best_moveset": [
-      224,
-      107
-    ],
     "quick_moves": [
       225,
       224
@@ -1272,10 +989,6 @@ const POKEMON_INDEX = {
     "name": "Geodude",
     "family_id": "74",
     "evolve_candy": 25,
-    "best_moveset": [
-      227,
-      64
-    ],
     "quick_moves": [
       227,
       221
@@ -1290,10 +1003,6 @@ const POKEMON_INDEX = {
     "name": "Graveler",
     "family_id": "74",
     "evolve_candy": 100,
-    "best_moveset": [
-      233,
-      32
-    ],
     "quick_moves": [
       227,
       233,
@@ -1308,10 +1017,6 @@ const POKEMON_INDEX = {
   "76": {
     "name": "Golem",
     "family_id": "74",
-    "best_moveset": [
-      233,
-      32
-    ],
     "quick_moves": [
       227,
       233,
@@ -1327,10 +1032,6 @@ const POKEMON_INDEX = {
     "name": "Ponyta",
     "family_id": "77",
     "evolve_candy": 50,
-    "best_moveset": [
-      209,
-      103
-    ],
     "quick_moves": [
       221,
       209
@@ -1344,10 +1045,6 @@ const POKEMON_INDEX = {
   "78": {
     "name": "Rapidash",
     "family_id": "77",
-    "best_moveset": [
-      209,
-      103
-    ],
     "quick_moves": [
       207,
       209
@@ -1362,10 +1059,6 @@ const POKEMON_INDEX = {
     "name": "Slowpoke",
     "family_id": "79",
     "evolve_candy": 50,
-    "best_moveset": [
-      230,
-      108
-    ],
     "quick_moves": [
       230,
       235
@@ -1379,10 +1072,6 @@ const POKEMON_INDEX = {
   "80": {
     "name": "Slowbro",
     "family_id": "79",
-    "best_moveset": [
-      230,
-      108
-    ],
     "quick_moves": [
       230,
       235
@@ -1397,10 +1086,6 @@ const POKEMON_INDEX = {
     "name": "Magnemite",
     "family_id": "81",
     "evolve_candy": 50,
-    "best_moveset": [
-      206,
-      79
-    ],
     "quick_moves": [
       206,
       205
@@ -1414,10 +1099,6 @@ const POKEMON_INDEX = {
   "82": {
     "name": "Magneton",
     "family_id": "81",
-    "best_moveset": [
-      206,
-      36
-    ],
     "quick_moves": [
       206,
       205
@@ -1431,10 +1112,6 @@ const POKEMON_INDEX = {
   "83": {
     "name": "Farfetch'd",
     "family_id": "83",
-    "best_moveset": [
-      223,
-      117
-    ],
     "quick_moves": [
       223,
       200
@@ -1449,10 +1126,6 @@ const POKEMON_INDEX = {
     "name": "Doduo",
     "family_id": "84",
     "evolve_candy": 50,
-    "best_moveset": [
-      211,
-      38
-    ],
     "quick_moves": [
       211,
       219
@@ -1466,10 +1139,6 @@ const POKEMON_INDEX = {
   "85": {
     "name": "Dodrio",
     "family_id": "84",
-    "best_moveset": [
-      238,
-      38
-    ],
     "quick_moves": [
       238,
       239
@@ -1484,10 +1153,6 @@ const POKEMON_INDEX = {
     "name": "Seel",
     "family_id": "86",
     "evolve_candy": 50,
-    "best_moveset": [
-      230,
-      58
-    ],
     "quick_moves": [
       217,
       212,
@@ -1502,10 +1167,6 @@ const POKEMON_INDEX = {
   "87": {
     "name": "Dewgong",
     "family_id": "86",
-    "best_moveset": [
-      218,
-      40
-    ],
     "quick_moves": [
       218,
       217
@@ -1520,10 +1181,6 @@ const POKEMON_INDEX = {
     "name": "Grimer",
     "family_id": "88",
     "evolve_candy": 50,
-    "best_moveset": [
-      224,
-      90
-    ],
     "quick_moves": [
       233,
       224,
@@ -1538,10 +1195,6 @@ const POKEMON_INDEX = {
   "89": {
     "name": "Muk",
     "family_id": "88",
-    "best_moveset": [
-      224,
-      92
-    ],
     "quick_moves": [
       224,
       212,
@@ -1557,10 +1210,6 @@ const POKEMON_INDEX = {
     "name": "Shellder",
     "family_id": "90",
     "evolve_candy": 50,
-    "best_moveset": [
-      221,
-      105
-    ],
     "quick_moves": [
       217,
       221
@@ -1574,10 +1223,6 @@ const POKEMON_INDEX = {
   "91": {
     "name": "Cloyster",
     "family_id": "90",
-    "best_moveset": [
-      218,
-      40
-    ],
     "quick_moves": [
       218,
       217
@@ -1592,10 +1237,6 @@ const POKEMON_INDEX = {
     "name": "Gastly",
     "family_id": "92",
     "evolve_candy": 25,
-    "best_moveset": [
-      212,
-      90
-    ],
     "quick_moves": [
       212,
       203
@@ -1610,10 +1251,6 @@ const POKEMON_INDEX = {
     "name": "Haunter",
     "family_id": "92",
     "evolve_candy": 100,
-    "best_moveset": [
-      213,
-      90
-    ],
     "quick_moves": [
       213,
       212
@@ -1627,10 +1264,6 @@ const POKEMON_INDEX = {
   "94": {
     "name": "Gengar",
     "family_id": "92",
-    "best_moveset": [
-      213,
-      91
-    ],
     "quick_moves": [
       203,
       213
@@ -1645,10 +1278,6 @@ const POKEMON_INDEX = {
   "95": {
     "name": "Onix",
     "family_id": "95",
-    "best_moveset": [
-      227,
-      32
-    ],
     "quick_moves": [
       227,
       221
@@ -1663,10 +1292,6 @@ const POKEMON_INDEX = {
     "name": "Drowzee",
     "family_id": "96",
     "evolve_candy": 50,
-    "best_moveset": [
-      222,
-      108
-    ],
     "quick_moves": [
       222,
       235
@@ -1680,10 +1305,6 @@ const POKEMON_INDEX = {
   "97": {
     "name": "Hypno",
     "family_id": "96",
-    "best_moveset": [
-      234,
-      108
-    ],
     "quick_moves": [
       234,
       235
@@ -1698,9 +1319,6 @@ const POKEMON_INDEX = {
     "name": "Krabby",
     "family_id": "98",
     "evolve_candy": 50,
-    "best_moveset": [
-      237
-    ],
     "quick_moves": [
       237,
       216
@@ -1714,10 +1332,6 @@ const POKEMON_INDEX = {
   "99": {
     "name": "Kingler",
     "family_id": "98",
-    "best_moveset": [
-      228,
-      100
-    ],
     "quick_moves": [
       228,
       216
@@ -1732,10 +1346,6 @@ const POKEMON_INDEX = {
     "name": "Voltorb",
     "family_id": "100",
     "evolve_candy": 50,
-    "best_moveset": [
-      206,
-      79
-    ],
     "quick_moves": [
       206,
       221
@@ -1749,10 +1359,6 @@ const POKEMON_INDEX = {
   "101": {
     "name": "Electrode",
     "family_id": "100",
-    "best_moveset": [
-      206,
-      14
-    ],
     "quick_moves": [
       206,
       221
@@ -1767,10 +1373,6 @@ const POKEMON_INDEX = {
     "name": "Exeggcute",
     "family_id": "102",
     "evolve_candy": 50,
-    "best_moveset": [
-      235,
-      108
-    ],
     "quick_moves": [
       235
     ],
@@ -1783,10 +1385,6 @@ const POKEMON_INDEX = {
   "103": {
     "name": "Exeggutor",
     "family_id": "102",
-    "best_moveset": [
-      234,
-      116
-    ],
     "quick_moves": [
       235,
       234
@@ -1801,10 +1399,6 @@ const POKEMON_INDEX = {
     "name": "Cubone",
     "family_id": "104",
     "evolve_candy": 50,
-    "best_moveset": [
-      233,
-      94
-    ],
     "quick_moves": [
       233,
       241
@@ -1818,10 +1412,6 @@ const POKEMON_INDEX = {
   "105": {
     "name": "Marowak",
     "family_id": "104",
-    "best_moveset": [
-      233,
-      31
-    ],
     "quick_moves": [
       233,
       241
@@ -1835,10 +1425,6 @@ const POKEMON_INDEX = {
   "106": {
     "name": "Hitmonlee",
     "family_id": "106",
-    "best_moveset": [
-      241,
-      32
-    ],
     "quick_moves": [
       207,
       241
@@ -1853,10 +1439,6 @@ const POKEMON_INDEX = {
   "107": {
     "name": "Hitmonchan",
     "family_id": "107",
-    "best_moveset": [
-      241,
-      123
-    ],
     "quick_moves": [
       229,
       241
@@ -1871,10 +1453,6 @@ const POKEMON_INDEX = {
   "108": {
     "name": "Lickitung",
     "family_id": "108",
-    "best_moveset": [
-      234,
-      14
-    ],
     "quick_moves": [
       212,
       234
@@ -1889,10 +1467,6 @@ const POKEMON_INDEX = {
     "name": "Koffing",
     "family_id": "109",
     "evolve_candy": 50,
-    "best_moveset": [
-      225,
-      90
-    ],
     "quick_moves": [
       221,
       225
@@ -1906,10 +1480,6 @@ const POKEMON_INDEX = {
   "110": {
     "name": "Weezing",
     "family_id": "109",
-    "best_moveset": [
-      225,
-      90
-    ],
     "quick_moves": [
       221,
       225
@@ -1924,9 +1494,6 @@ const POKEMON_INDEX = {
     "name": "Rhyhorn",
     "family_id": "111",
     "evolve_candy": 50,
-    "best_moveset": [
-      233
-    ],
     "quick_moves": [
       233,
       241
@@ -1940,10 +1507,6 @@ const POKEMON_INDEX = {
   "112": {
     "name": "Rhydon",
     "family_id": "111",
-    "best_moveset": [
-      233,
-      32
-    ],
     "quick_moves": [
       233,
       241
@@ -1957,10 +1520,6 @@ const POKEMON_INDEX = {
   "113": {
     "name": "Chansey",
     "family_id": "113",
-    "best_moveset": [
-      222,
-      14
-    ],
     "quick_moves": [
       222,
       234
@@ -1975,10 +1534,6 @@ const POKEMON_INDEX = {
   "114": {
     "name": "Tangela",
     "family_id": "114",
-    "best_moveset": [
-      214,
-      116
-    ],
     "quick_moves": [
       214
     ],
@@ -1991,10 +1546,6 @@ const POKEMON_INDEX = {
   "115": {
     "name": "Kangaskhan",
     "family_id": "115",
-    "best_moveset": [
-      233,
-      31
-    ],
     "quick_moves": [
       233,
       207
@@ -2009,10 +1560,6 @@ const POKEMON_INDEX = {
     "name": "Horsea",
     "family_id": "116",
     "evolve_candy": 50,
-    "best_moveset": [
-      230,
-      82
-    ],
     "quick_moves": [
       230,
       237
@@ -2026,10 +1573,6 @@ const POKEMON_INDEX = {
   "117": {
     "name": "Seadra",
     "family_id": "116",
-    "best_moveset": [
-      230,
-      107
-    ],
     "quick_moves": [
       230,
       204
@@ -2044,10 +1587,6 @@ const POKEMON_INDEX = {
     "name": "Goldeen",
     "family_id": "118",
     "evolve_candy": 50,
-    "best_moveset": [
-      216,
-      58
-    ],
     "quick_moves": [
       211,
       216
@@ -2061,10 +1600,6 @@ const POKEMON_INDEX = {
   "119": {
     "name": "Seaking",
     "family_id": "118",
-    "best_moveset": [
-      224,
-      22
-    ],
     "quick_moves": [
       211,
       224
@@ -2079,9 +1614,6 @@ const POKEMON_INDEX = {
     "name": "Staryu",
     "family_id": "120",
     "evolve_candy": 50,
-    "best_moveset": [
-      230
-    ],
     "quick_moves": [
       230,
       221,
@@ -2096,10 +1628,6 @@ const POKEMON_INDEX = {
   "121": {
     "name": "Starmie",
     "family_id": "120",
-    "best_moveset": [
-      230,
-      107
-    ],
     "quick_moves": [
       230,
       221,
@@ -2115,10 +1643,6 @@ const POKEMON_INDEX = {
   "122": {
     "name": "Mr. Mime",
     "family_id": "122",
-    "best_moveset": [
-      234,
-      108
-    ],
     "quick_moves": [
       235,
       234
@@ -2132,10 +1656,6 @@ const POKEMON_INDEX = {
   "123": {
     "name": "Scyther",
     "family_id": "123",
-    "best_moveset": [
-      239,
-      49
-    ],
     "quick_moves": [
       200,
       239
@@ -2149,10 +1669,6 @@ const POKEMON_INDEX = {
   "124": {
     "name": "Jynx",
     "family_id": "124",
-    "best_moveset": [
-      218,
-      60
-    ],
     "quick_moves": [
       218,
       222
@@ -2166,10 +1682,6 @@ const POKEMON_INDEX = {
   "125": {
     "name": "Electabuzz",
     "family_id": "125",
-    "best_moveset": [
-      205,
-      78
-    ],
     "quick_moves": [
       205,
       207
@@ -2183,10 +1695,6 @@ const POKEMON_INDEX = {
   "126": {
     "name": "Magmar",
     "family_id": "126",
-    "best_moveset": [
-      209,
-      103
-    ],
     "quick_moves": [
       209,
       208
@@ -2200,10 +1708,6 @@ const POKEMON_INDEX = {
   "127": {
     "name": "Pinsir",
     "family_id": "127",
-    "best_moveset": [
-      241,
-      100
-    ],
     "quick_moves": [
       241,
       200
@@ -2217,10 +1721,6 @@ const POKEMON_INDEX = {
   "128": {
     "name": "Tauros",
     "family_id": "128",
-    "best_moveset": [
-      221,
-      31
-    ],
     "quick_moves": [
       221,
       234
@@ -2235,10 +1735,6 @@ const POKEMON_INDEX = {
     "name": "Magikarp",
     "family_id": "129",
     "evolve_candy": 400,
-    "best_moveset": [
-      231,
-      133
-    ],
     "quick_moves": [
       231
     ],
@@ -2249,11 +1745,6 @@ const POKEMON_INDEX = {
   "130": {
     "name": "Gyarados",
     "family_id": "129",
-    "best_moveset": [
-      204,
-      202,
-      107
-    ],
     "quick_moves": [
       202,
       204
@@ -2267,10 +1758,6 @@ const POKEMON_INDEX = {
   "131": {
     "name": "Lapras",
     "family_id": "131",
-    "best_moveset": [
-      218,
-      40
-    ],
     "quick_moves": [
       218,
       217
@@ -2284,9 +1771,6 @@ const POKEMON_INDEX = {
   "132": {
     "name": "Ditto",
     "family_id": "132",
-    "best_moveset": [
-      222
-    ],
     "quick_moves": [
       222
     ],
@@ -2298,10 +1782,6 @@ const POKEMON_INDEX = {
     "name": "Eevee",
     "family_id": "133",
     "evolve_candy": 25,
-    "best_moveset": [
-      221,
-      131
-    ],
     "quick_moves": [
       219,
       221
@@ -2315,10 +1795,6 @@ const POKEMON_INDEX = {
   "134": {
     "name": "Vaporeon",
     "family_id": "133",
-    "best_moveset": [
-      230,
-      107
-    ],
     "quick_moves": [
       230
     ],
@@ -2331,10 +1807,6 @@ const POKEMON_INDEX = {
   "135": {
     "name": "Jolteon",
     "family_id": "133",
-    "best_moveset": [
-      205,
-      78
-    ],
     "quick_moves": [
       205
     ],
@@ -2347,10 +1819,6 @@ const POKEMON_INDEX = {
   "136": {
     "name": "Flareon",
     "family_id": "133",
-    "best_moveset": [
-      209,
-      103
-    ],
     "quick_moves": [
       209
     ],
@@ -2363,9 +1831,6 @@ const POKEMON_INDEX = {
   "137": {
     "name": "Porygon",
     "family_id": "137",
-    "best_moveset": [
-      221
-    ],
     "quick_moves": [
       221,
       234,
@@ -2381,9 +1846,6 @@ const POKEMON_INDEX = {
     "name": "Omanyte",
     "family_id": "138",
     "evolve_candy": 50,
-    "best_moveset": [
-      230
-    ],
     "quick_moves": [
       230,
       216
@@ -2397,10 +1859,6 @@ const POKEMON_INDEX = {
   "139": {
     "name": "Omastar",
     "family_id": "138",
-    "best_moveset": [
-      230,
-      107
-    ],
     "quick_moves": [
       230,
       216,
@@ -2416,9 +1874,6 @@ const POKEMON_INDEX = {
     "name": "Kabuto",
     "family_id": "140",
     "evolve_candy": 50,
-    "best_moveset": [
-      220
-    ],
     "quick_moves": [
       220,
       216
@@ -2432,10 +1887,6 @@ const POKEMON_INDEX = {
   "141": {
     "name": "Kabutops",
     "family_id": "140",
-    "best_moveset": [
-      216,
-      32
-    ],
     "quick_moves": [
       216,
       200
@@ -2449,10 +1900,6 @@ const POKEMON_INDEX = {
   "142": {
     "name": "Aerodactyl",
     "family_id": "142",
-    "best_moveset": [
-      202,
-      14
-    ],
     "quick_moves": [
       239,
       202
@@ -2466,10 +1913,6 @@ const POKEMON_INDEX = {
   "143": {
     "name": "Snorlax",
     "family_id": "143",
-    "best_moveset": [
-      234,
-      14
-    ],
     "quick_moves": [
       234,
       212
@@ -2483,10 +1926,6 @@ const POKEMON_INDEX = {
   "144": {
     "name": "Articuno",
     "family_id": "144",
-    "best_moveset": [
-      218,
-      40
-    ],
     "quick_moves": [
       218
     ],
@@ -2499,10 +1938,6 @@ const POKEMON_INDEX = {
   "145": {
     "name": "Zapdos",
     "family_id": "145",
-    "best_moveset": [
-      205,
-      78
-    ],
     "quick_moves": [
       205
     ],
@@ -2515,10 +1950,6 @@ const POKEMON_INDEX = {
   "146": {
     "name": "Moltres",
     "family_id": "146",
-    "best_moveset": [
-      209,
-      103
-    ],
     "quick_moves": [
       209
     ],
@@ -2532,10 +1963,6 @@ const POKEMON_INDEX = {
     "name": "Dratini",
     "family_id": "147",
     "evolve_candy": 25,
-    "best_moveset": [
-      204,
-      58
-    ],
     "quick_moves": [
       204
     ],
@@ -2549,10 +1976,6 @@ const POKEMON_INDEX = {
     "name": "Dragonair",
     "family_id": "147",
     "evolve_candy": 100,
-    "best_moveset": [
-      204,
-      82
-    ],
     "quick_moves": [
       204
     ],
@@ -2565,10 +1988,6 @@ const POKEMON_INDEX = {
   "149": {
     "name": "Dragonite",
     "family_id": "147",
-    "best_moveset": [
-      204,
-      83
-    ],
     "quick_moves": [
       204,
       239
@@ -2582,10 +2001,6 @@ const POKEMON_INDEX = {
   "150": {
     "name": "Mewtwo",
     "family_id": "150",
-    "best_moveset": [
-      226,
-      14
-    ],
     "quick_moves": [
       226,
       235
@@ -2599,10 +2014,6 @@ const POKEMON_INDEX = {
   "151": {
     "name": "Mew",
     "family_id": "151",
-    "best_moveset": [
-      222,
-      40
-    ],
     "quick_moves": [
       222
     ],
@@ -2620,7 +2031,6 @@ const POKEMON_INDEX = {
     ]
   }
 };
-
 //key is Math.round(cp_multiplier * 100000)
 var pokemonLevelMaps = {
   "9400": 1,
