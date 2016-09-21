@@ -85,9 +85,10 @@ function renderPokemon(pokemon) {
 	pokemonNode.querySelector(".pokemon-candy-count").textContent = pokemon.candy_count;
 	return pokemonNode;
 }
-
 function generateDetail(pokemon) {
-	return `ID: ${pokemon.pokemon_id}
+	return `${printMove(pokemon.move_1, pokemon)}
+${printMove(pokemon.move_2, pokemon)}
+ID: ${pokemon.pokemon_id}
 Name: ${pokemon.name}
 Height: ${pokemon.height_m.toFixed(2)} m
 Weight: ${pokemon.weight_kg.toFixed(2)} kg
@@ -97,6 +98,16 @@ Stamina: ${pokemon.individual_stamina}
 ${pokemon.evolve_candy ? "Evolve Candy: " + pokemon.evolve_candy : "Cannot Evolve"}`;
 }
 
+function printMove(moveID, pokemon) {
+	let move = MOVE_INDEX[moveID];
+	let moveName = `${move.name}(${NAME_INDEX[move.name].jp})`;
+	let bestMove = getBestMove(move.is_main_move ? pokemon.main_moves : pokemon.quick_moves);
+	return `${moveName}: ${move.dps}/${bestMove.dps}`;
+}
+
+function getBestMove(possibleMoveIDs) {
+	return possibleMoveIDs.map($ => MOVE_INDEX[$]).sort((a, b) => b.dps - a.dps)[0];
+}
 
 function leftPadZero(integer, minLength) {
 	var result = integer + "";
