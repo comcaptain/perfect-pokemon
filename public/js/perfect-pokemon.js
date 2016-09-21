@@ -99,7 +99,7 @@ function generateDetail(pokemon) {
 	return `${printMove(pokemon.move_1, pokemon)}
 ${printMove(pokemon.move_2, pokemon)}
 ID: ${pokemon.pokemon_id}
-Name: ${pokemon.name}
+Name: ${pokemon.nickname}
 Height: ${pokemon.height_m.toFixed(2)} m
 Weight: ${pokemon.weight_kg.toFixed(2)} kg
 Attack: ${pokemon.individual_attack}

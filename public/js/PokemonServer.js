@@ -73,11 +73,11 @@ class PokemonServer {
 			.map(this.normalizeCreationTime.bind(this))
 			.map(this.calculatePokemonLevel.bind(this));
 		this.calculateLevelXP(data.player);
-		this.enrichCandyInfo(data);
+		this.enrichPokemon(data);
 		return data;
 	}
 
-	enrichCandyInfo(data) {
+	enrichPokemon(data) {
 		//family_id => candy_count
 		var candiesCount = {};
 		data.candies.forEach(candy => candiesCount[candy.family_id] = candy.candy);
@@ -85,6 +85,7 @@ class PokemonServer {
 		data.pokemon.forEach(p => {
 			var pokemonMetaData = POKEMON_INDEX[p.pokemon_id];
 			$.extend(p, pokemonMetaData);
+			p.nickname = p.nickname ? p.nickname : p.name;
 			p.candy_count = candiesCount[p.family_id];
 		})
 	}
