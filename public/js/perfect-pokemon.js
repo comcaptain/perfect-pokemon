@@ -22,6 +22,16 @@ $(document).ready(function() {
 		}
 		pokemonServer.login(authCode).then(sortByIVPerfection, window.alert);
 	});
+	var language = localStorage.getItem("language");
+	window.language = language === null ? "en" : language;
+	$("#language > img").attr("src", `./images/${language}.png`);
+	$("#language").click(function() {
+		var newLanguage = null;
+		if (window.language == "en") newLanguage = "jp";
+		else newLanguage = "en";
+		localStorage.setItem("language", newLanguage);
+		window.location.reload();
+	});
 	$("#refresh").click(function() {
 		pokemonServer.refreshData().then(sortByIVPerfection, window.alert);
 	});
@@ -100,7 +110,7 @@ ${pokemon.evolve_candy ? "Evolve Candy: " + pokemon.evolve_candy : "Cannot Evolv
 
 function printMove(moveID, pokemon) {
 	let move = MOVE_INDEX[moveID];
-	let moveName = `${move.name}(${NAME_INDEX[move.name].jp})`;
+	let moveName = window.language == "jp" ? NAME_INDEX[move.name].jp : move.name;
 	let bestMove = getBestMove(move.is_main_move ? pokemon.main_moves : pokemon.quick_moves);
 	return `${moveName}: ${move.dps}/${bestMove.dps}`;
 }
