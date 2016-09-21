@@ -93,6 +93,9 @@ function renderPokemon(pokemon) {
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
 	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = pokemon.iv_perfection + "%";
 	pokemonNode.querySelector(".pokemon-candy-count").textContent = pokemon.candy_count;
+	if (hasPerfectMoveSet(pokemon)) {
+		pokemonNode.classList.add("best-moveset-pokemon");
+	}
 	return pokemonNode;
 }
 function generateDetail(pokemon) {
@@ -108,11 +111,21 @@ Stamina: ${pokemon.individual_stamina}
 ${pokemon.evolve_candy ? "Evolve Candy: " + pokemon.evolve_candy : "Cannot Evolve"}`;
 }
 
+function hasPerfectMoveSet(pokemon) {
+	return isBestMove(pokemon.move_1, pokemon) && isBestMove(pokemon.move_2, pokemon);
+}
+
 function printMove(moveID, pokemon) {
 	let move = MOVE_INDEX[moveID];
 	let moveName = window.language == "jp" ? NAME_INDEX[move.name].jp : move.name;
 	let bestMove = getBestMove(move.is_main_move ? pokemon.main_moves : pokemon.quick_moves);
 	return `${moveName}: ${move.dps}/${bestMove.dps}`;
+}
+
+function isBestMove(moveID, pokemon) {
+	var move = MOVE_INDEX[moveID];
+	var bestMoveDPS = getBestMove(move.is_main_move ? pokemon.main_moves : pokemon.quick_moves).dps;
+	return move.dps === bestMoveDPS;
 }
 
 function getBestMove(possibleMoveIDs) {
