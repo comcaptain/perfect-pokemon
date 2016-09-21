@@ -23,7 +23,8 @@ $(document).ready(function() {
 		pokemonServer.login(authCode).then(sortByIVPerfection, window.alert);
 	});
 	var language = localStorage.getItem("language");
-	window.language = language === null ? "en" : language;
+	language = language === null ? "en" : language;
+	window.language = language;
 	$("#language > img").attr("src", `./images/${language}.png`);
 	$("#language").click(function() {
 		var newLanguage = null;
