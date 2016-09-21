@@ -1,5 +1,5 @@
-//Weedle, Pidgey, Rattata
-const SHOULD_BE_EVOLVED_FOR_XP_POKEMONS = [16, 19, 13];
+//Caterpie, Weedle, Pidgey, Rattata
+const SHOULD_BE_EVOLVED_FOR_XP_POKEMONS = [10, 16, 19, 13];
 
 
 const pokemonServer = new PokemonServer(function(isLoading) {
