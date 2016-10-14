@@ -63,11 +63,16 @@ app.get("/release/:ids", function(req, res) {
 		return;
 	}
 	var idList = req.params.ids.split(/\s*,\s*/);
-	idList.forEach(id => client.releasePokemon(id));
-	refreshData(req, res, client).catch(error => {
-		console.error(error);
-		res.send({expired: true})
-	});
+	var chain = client.batchStart();
+	for (var id of idList) {
+		chain = chain.releasePokemon(id);
+	}
+	chain.batchCall().then(() => {
+		refreshData(req, res, client).catch(error => {
+			console.error(error);
+			res.send({expired: true})
+		});
+	})
 })
 
 function refreshData(req, res, client) {
