@@ -52,7 +52,30 @@ $(document).ready(function() {
 		sortByLevel(window.pokemonsData);
 	});
 	$("#showUselessPokemons").click(function() {
-		showUselessPokemons(window.pokemonsData);
+		var uselessPokemons = getUselessPokemons(window.pokemonsData);
+	    if (uselessPokemons.length === 0) {
+	    	alert("Congratulations! All your pokemons are useful now!")
+	    	return;
+	    }
+		window.pokemonsData.pokemon = uselessPokemons
+    	sortByID(window.pokemonsData);
+	});
+
+	$("#releasePokemons").click(function() {
+		var uselessPokemons = getUselessPokemons(window.pokemonsData);
+	    if (uselessPokemons.length === 0) {
+	    	alert("Congratulations! All your pokemons are useful now!")
+	    	return;
+	    }
+		if (!confirm(`Are you sure that you want to release ${uselessPokemons.length} pokemons?
+
+This will be done automatically and your account may be banned for this operation.`)) return;
+
+		pokemonServer.releasePokemons(uselessPokemons.map(p => p.id)).then(data => {
+			alert(`Released ${uselessPokemons.length} pokemons!`);
+			sortByIVPerfection(data);
+		}, window.alert);
+
 	});
 	
 	pokemonServer.getData().then(sortByIVPerfection);
@@ -94,6 +117,7 @@ function renderPokemon(pokemon) {
 	pokemonNode.querySelector(".pokemon-cp").textContent = pokemon.cp;
 	pokemonNode.querySelector(".pokemon-iv-perfection").textContent = pokemon.iv_perfection + "%";
 	pokemonNode.querySelector(".pokemon-candy-count").textContent = pokemon.candy_count;
+	pokemonNode.setAttribute("UUID", pokemon.id);
 	if (hasPerfectMoveSet(pokemon)) {
 		pokemonNode.classList.add("best-moveset-pokemon");
 	}
@@ -102,6 +126,7 @@ function renderPokemon(pokemon) {
 function generateDetail(pokemon) {
 	return `${printMove(pokemon.move_1, pokemon)}
 ${printMove(pokemon.move_2, pokemon)}
+UUID: ${pokemon.id}
 ID: ${pokemon.pokemon_id}
 Name: ${pokemon.nickname}
 Height: ${pokemon.height_m.toFixed(2)} m
@@ -197,7 +222,7 @@ function isUselessPokemon(pokemon) {
     return pokemon.cp <= 1000 && pokemon.iv_perfection < 90;
 }
 
-function showUselessPokemons(data) {
+function getUselessPokemons(data) {
     var pokemonGroups = getPokemonsGroupedByType(data.pokemon);
     var uselessPokemons = [];
     for (let id in pokemonGroups) {
@@ -219,13 +244,7 @@ function showUselessPokemons(data) {
     }
     //Skip Pikachu. You know, Pikachu has privilege
     uselessPokemons = uselessPokemons.filter(p => p.pokemon_id != 25);
-
-    if (uselessPokemons.length === 0) {
-    	alert("Congratulations! All your pokemons are useful now!")
-    	return;
-    }
-    data.pokemon = uselessPokemons;
-    sortByID(data);
+    return uselessPokemons;
 }
 
 function timeSince(date) {

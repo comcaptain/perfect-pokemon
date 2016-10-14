@@ -49,6 +49,28 @@ class PokemonServer {
 		});
 	}
 
+	releasePokemons(ids) {
+		var server = this;
+		return new Promise(function(resolve, reject) {
+			server.loadingFunc(true);
+			$.ajax({
+				url: `release/${ids.join(",")}`,
+				dataType: "json",
+			})
+			.done(function(data) {
+				if (data.expired) {
+					reject("Client is expired, please login again");
+				}
+				else {
+					resolve(server.preprocessData(data));
+				}
+			})
+			.always(function() {
+				server.loadingFunc(false);
+			});
+		});
+	}
+
 	getData() {
 		var server = this;
 		return new Promise(function(resolve, reject) {

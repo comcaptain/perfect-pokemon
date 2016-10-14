@@ -58,10 +58,16 @@ app.post('/login', function (req, res) {
 
 app.get("/release/:ids", function(req, res) {
 	var client = clientCache.getClient(req.session.clientKey);
-	if (!client) return;
+	if (!client) {
+		res.send({expired: true});
+		return;
+	}
 	var idList = req.params.ids.split(/\s*,\s*/);
 	idList.forEach(id => client.releasePokemon(id));
-	res.send("success");
+	refreshData(req, res, client).catch(error => {
+		console.error(error);
+		res.send({expired: true})
+	});
 })
 
 function refreshData(req, res, client) {
