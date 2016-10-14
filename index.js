@@ -56,6 +56,14 @@ app.post('/login', function (req, res) {
 	});
 });
 
+app.get("/release/:ids", function(req, res) {
+	var client = clientCache.getClient(req.session.clientKey);
+	if (!client) return;
+	var idList = req.params.ids.split(/\s*,\s*/);
+	idList.forEach(id => client.releasePokemon(id));
+	res.send("success");
+})
+
 function refreshData(req, res, client) {
 	if (client === undefined) client = clientCache.getClient(req.session.clientKey);
 	if (!client) return;
