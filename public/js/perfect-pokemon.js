@@ -1,5 +1,5 @@
-//Caterpie, Weedle, Pidgey, Rattata
-const SHOULD_BE_EVOLVED_FOR_XP_POKEMONS = [10, 16, 19, 13];
+//Caterpie, Weedle, Pidgey, Rattata, Ghost(for Halloween)
+const SHOULD_BE_EVOLVED_FOR_XP_POKEMONS = [10, 16, 19, 13, 92];
 
 
 const pokemonServer = new PokemonServer(function(isLoading) {
@@ -126,7 +126,6 @@ function renderPokemon(pokemon) {
 function generateDetail(pokemon) {
 	return `${printMove(pokemon.move_1, pokemon)}
 ${printMove(pokemon.move_2, pokemon)}
-UUID: ${pokemon.id}
 ID: ${pokemon.pokemon_id}
 Name: ${pokemon.nickname}
 Height: ${pokemon.height_m.toFixed(2)} m
