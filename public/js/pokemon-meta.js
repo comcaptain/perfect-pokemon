@@ -2161,995 +2161,871 @@ const MOVE_INDEX = {
     "name": "Wrap",
     "is_main_move": true,
     "damage": "25",
-    "dps": "5.7",
-    "damage_type": "Normal",
-    "energy": -20
+    "dps": "5.6",
+    "damage_type": "Normal"
   },
   "14": {
     "name": "Hyper Beam",
     "is_main_move": true,
     "damage": "120",
-    "dps": "22.4",
-    "damage_type": "Normal",
-    "energy": -100
+    "dps": "21.8",
+    "damage_type": "Normal"
   },
   "16": {
     "name": "Dark Pulse",
     "is_main_move": true,
     "damage": "45",
-    "dps": "11.5",
-    "damage_type": "Dark",
-    "energy": -33
+    "dps": "11.3",
+    "damage_type": "Dark"
   },
   "18": {
     "name": "Sludge",
     "is_main_move": true,
     "damage": "30",
-    "dps": "9.9",
-    "damage_type": "Poison",
-    "energy": -25
+    "dps": "9.7",
+    "damage_type": "Poison"
   },
   "20": {
     "name": "Vice Grip",
     "is_main_move": true,
     "damage": "25",
-    "dps": "9.9",
-    "damage_type": "Normal",
-    "energy": -20
+    "dps": "9.6",
+    "damage_type": "Normal"
   },
   "21": {
     "name": "Flame Wheel",
     "is_main_move": true,
     "damage": "40",
-    "dps": "8",
-    "damage_type": "Fire",
-    "energy": -25
+    "dps": "7.8",
+    "damage_type": "Fire"
   },
   "22": {
     "name": "Megahorn",
     "is_main_move": true,
     "damage": "80",
-    "dps": "22.2",
-    "damage_type": "Bug",
-    "energy": -100
+    "dps": "21.6",
+    "damage_type": "Bug"
   },
   "24": {
     "name": "Flamethrower",
     "is_main_move": true,
     "damage": "55",
-    "dps": "16.6",
-    "damage_type": "Fire",
-    "energy": -50
+    "dps": "16.2",
+    "damage_type": "Fire"
   },
   "26": {
     "name": "Dig",
     "is_main_move": true,
     "damage": "70",
-    "dps": "11.4",
-    "damage_type": "Ground",
-    "energy": -33
+    "dps": "11.1",
+    "damage_type": "Ground"
   },
   "28": {
     "name": "Cross Chop",
     "is_main_move": true,
     "damage": "60",
-    "dps": "27",
-    "damage_type": "Fighting",
-    "energy": -100
+    "dps": "24",
+    "damage_type": "Fighting"
   },
   "30": {
     "name": "Psybeam",
     "is_main_move": true,
     "damage": "40",
-    "dps": "9.5",
-    "damage_type": "Psychic",
-    "energy": -25
+    "dps": "9.3",
+    "damage_type": "Psychic"
   },
   "31": {
     "name": "Earthquake",
     "is_main_move": true,
     "damage": "100",
-    "dps": "21.8",
-    "damage_type": "Ground",
-    "energy": -100
+    "dps": "21.3",
+    "damage_type": "Ground"
   },
   "32": {
     "name": "Stone Edge",
     "is_main_move": true,
     "damage": "80",
-    "dps": "27.8",
-    "damage_type": "Rock",
-    "energy": -100
+    "dps": "22.2",
+    "damage_type": "Rock"
   },
   "33": {
     "name": "Ice Punch",
     "is_main_move": true,
     "damage": "45",
-    "dps": "11.5",
-    "damage_type": "Ice",
-    "energy": -33
+    "dps": "11.3",
+    "damage_type": "Ice"
   },
   "35": {
     "name": "Discharge",
     "is_main_move": true,
     "damage": "35",
-    "dps": "12",
-    "damage_type": "Electric",
-    "energy": -33
+    "dps": "11.7",
+    "damage_type": "Electric"
   },
   "36": {
     "name": "Flash Cannon",
     "is_main_move": true,
     "damage": "60",
-    "dps": "14",
-    "damage_type": "Steel",
-    "energy": -33
+    "dps": "13.6",
+    "damage_type": "Steel"
   },
   "38": {
     "name": "Drill Peck",
     "is_main_move": true,
     "damage": "40",
-    "dps": "12.8",
-    "damage_type": "Flying",
-    "energy": -33
+    "dps": "12.5",
+    "damage_type": "Flying"
   },
   "39": {
     "name": "Ice Beam",
     "is_main_move": true,
     "damage": "65",
-    "dps": "16.1",
-    "damage_type": "Ice",
-    "energy": -50
+    "dps": "15.7",
+    "damage_type": "Ice"
   },
   "40": {
     "name": "Blizzard",
     "is_main_move": true,
     "damage": "100",
-    "dps": "23.3",
-    "damage_type": "Ice",
-    "energy": -100
+    "dps": "22.7",
+    "damage_type": "Ice"
   },
   "42": {
     "name": "Heat Wave",
     "is_main_move": true,
     "damage": "80",
-    "dps": "19.1",
-    "damage_type": "Fire",
-    "energy": -100
+    "dps": "18.6",
+    "damage_type": "Fire"
   },
   "45": {
     "name": "Aerial Ace",
     "is_main_move": true,
     "damage": "30",
-    "dps": "9",
-    "damage_type": "Flying",
-    "energy": -25
+    "dps": "8.8",
+    "damage_type": "Flying"
   },
   "46": {
     "name": "Drill Run",
     "is_main_move": true,
     "damage": "50",
-    "dps": "14.4",
-    "damage_type": "Ground",
-    "energy": -33
+    "dps": "12.8",
+    "damage_type": "Ground"
   },
   "47": {
     "name": "Petal Blizzard",
     "is_main_move": true,
     "damage": "65",
-    "dps": "18",
-    "damage_type": "Grass",
-    "energy": -50
+    "dps": "17.6",
+    "damage_type": "Grass"
   },
   "49": {
     "name": "Bug Buzz",
     "is_main_move": true,
     "damage": "75",
-    "dps": "16.2",
-    "damage_type": "Bug",
-    "energy": -50
+    "dps": "15.8",
+    "damage_type": "Bug"
   },
   "50": {
     "name": "Poison Fang",
     "is_main_move": true,
     "damage": "25",
-    "dps": "8.8",
-    "damage_type": "Poison",
-    "energy": -20
+    "dps": "8.6",
+    "damage_type": "Poison"
   },
   "51": {
     "name": "Night Slash",
     "is_main_move": true,
     "damage": "30",
-    "dps": "10.5",
-    "damage_type": "Dark",
-    "energy": -25
+    "dps": "9.4",
+    "damage_type": "Dark"
   },
   "53": {
     "name": "Bubble Beam",
     "is_main_move": true,
     "damage": "30",
-    "dps": "9",
-    "damage_type": "Water",
-    "energy": -25
+    "dps": "8.8",
+    "damage_type": "Water"
   },
   "54": {
     "name": "Submission",
     "is_main_move": true,
     "damage": "30",
-    "dps": "11.8",
-    "damage_type": "Fighting",
-    "energy": -33
+    "dps": "11.5",
+    "damage_type": "Fighting"
   },
   "56": {
     "name": "Low Sweep",
     "is_main_move": true,
     "damage": "30",
-    "dps": "11.2",
-    "damage_type": "Fighting",
-    "energy": -25
+    "dps": "10.9",
+    "damage_type": "Fighting"
   },
   "57": {
     "name": "Aqua Jet",
     "is_main_move": true,
     "damage": "25",
-    "dps": "9",
-    "damage_type": "Water",
-    "energy": -20
+    "dps": "8.8",
+    "damage_type": "Water"
   },
   "58": {
     "name": "Aqua Tail",
     "is_main_move": true,
     "damage": "45",
-    "dps": "16.2",
-    "damage_type": "Water",
-    "energy": -50
+    "dps": "15.8",
+    "damage_type": "Water"
   },
   "59": {
     "name": "Seed Bomb",
     "is_main_move": true,
     "damage": "40",
-    "dps": "14.1",
-    "damage_type": "Grass",
-    "energy": -33
+    "dps": "13.8",
+    "damage_type": "Grass"
   },
   "60": {
     "name": "Psyshock",
     "is_main_move": true,
     "damage": "40",
-    "dps": "12.8",
-    "damage_type": "Psychic",
-    "energy": -33
+    "dps": "12.5",
+    "damage_type": "Psychic"
   },
   "62": {
     "name": "Ancient Power",
     "is_main_move": true,
     "damage": "35",
-    "dps": "8.8",
-    "damage_type": "Rock",
-    "energy": -25
+    "dps": "8.5",
+    "damage_type": "Rock"
   },
   "63": {
     "name": "Rock Tomb",
     "is_main_move": true,
     "damage": "30",
-    "dps": "8.7",
-    "damage_type": "Rock",
-    "energy": -25
+    "dps": "7.7",
+    "damage_type": "Rock"
   },
   "64": {
     "name": "Rock Slide",
     "is_main_move": true,
     "damage": "50",
-    "dps": "13.9",
-    "damage_type": "Rock",
-    "energy": -33
+    "dps": "13.5",
+    "damage_type": "Rock"
   },
   "65": {
     "name": "Power Gem",
     "is_main_move": true,
     "damage": "40",
-    "dps": "12.1",
-    "damage_type": "Rock",
-    "energy": -33
+    "dps": "11.8",
+    "damage_type": "Rock"
   },
   "69": {
     "name": "Ominous Wind",
     "is_main_move": true,
     "damage": "30",
-    "dps": "8.5",
-    "damage_type": "Ghost",
-    "energy": -25
+    "dps": "8.3",
+    "damage_type": "Ghost"
   },
   "70": {
     "name": "Shadow Ball",
     "is_main_move": true,
     "damage": "45",
-    "dps": "12.9",
-    "damage_type": "Ghost",
-    "energy": -33
+    "dps": "12.6",
+    "damage_type": "Ghost"
   },
   "72": {
     "name": "Magnet Bomb",
     "is_main_move": true,
     "damage": "30",
-    "dps": "9.3",
-    "damage_type": "Steel",
-    "energy": -25
+    "dps": "9.1",
+    "damage_type": "Steel"
   },
   "74": {
     "name": "Iron Head",
     "is_main_move": true,
     "damage": "30",
-    "dps": "12.3",
-    "damage_type": "Steel",
-    "energy": -33
+    "dps": "12",
+    "damage_type": "Steel"
   },
   "77": {
     "name": "Thunder Punch",
     "is_main_move": true,
     "damage": "40",
-    "dps": "14.1",
-    "damage_type": "Electric",
-    "energy": -33
+    "dps": "13.8",
+    "damage_type": "Electric"
   },
   "78": {
     "name": "Thunder",
     "is_main_move": true,
     "damage": "100",
-    "dps": "21.4",
-    "damage_type": "Electric",
-    "energy": -100
+    "dps": "20.8",
+    "damage_type": "Electric"
   },
   "79": {
     "name": "Thunderbolt",
     "is_main_move": true,
     "damage": "55",
-    "dps": "17.6",
-    "damage_type": "Electric",
-    "energy": -50
+    "dps": "17.2",
+    "damage_type": "Electric"
   },
   "80": {
     "name": "Twister",
     "is_main_move": true,
     "damage": "25",
-    "dps": "8",
-    "damage_type": "Dragon",
-    "energy": -20
+    "dps": "7.8",
+    "damage_type": "Dragon"
   },
   "82": {
     "name": "Dragon Pulse",
     "is_main_move": true,
     "damage": "65",
-    "dps": "16.3",
-    "damage_type": "Dragon",
-    "energy": -50
+    "dps": "15.9",
+    "damage_type": "Dragon"
   },
   "83": {
     "name": "Dragon Claw",
     "is_main_move": true,
     "damage": "35",
-    "dps": "19.7",
-    "damage_type": "Dragon",
-    "energy": -50
+    "dps": "17.5",
+    "damage_type": "Dragon"
   },
   "84": {
     "name": "Disarming Voice",
     "is_main_move": true,
     "damage": "25",
-    "dps": "5.8",
-    "damage_type": "Fairy",
-    "energy": -20
+    "dps": "5.7",
+    "damage_type": "Fairy"
   },
   "85": {
     "name": "Draining Kiss",
     "is_main_move": true,
     "damage": "25",
-    "dps": "7.8",
-    "damage_type": "Fairy",
-    "energy": -20
+    "dps": "7.6",
+    "damage_type": "Fairy"
   },
   "86": {
     "name": "Dazzling Gleam",
     "is_main_move": true,
     "damage": "55",
-    "dps": "12",
-    "damage_type": "Fairy",
-    "energy": -33
+    "dps": "11.7",
+    "damage_type": "Fairy"
   },
   "87": {
     "name": "Moonblast",
     "is_main_move": true,
     "damage": "85",
-    "dps": "18.9",
-    "damage_type": "Fairy",
-    "energy": -100
+    "dps": "18.5",
+    "damage_type": "Fairy"
   },
   "88": {
     "name": "Play Rough",
     "is_main_move": true,
     "damage": "55",
-    "dps": "16.6",
-    "damage_type": "Fairy",
-    "energy": -50
+    "dps": "16.2",
+    "damage_type": "Fairy"
   },
   "89": {
     "name": "Cross Poison",
     "is_main_move": true,
     "damage": "25",
-    "dps": "14.1",
-    "damage_type": "Poison",
-    "energy": -25
+    "dps": "12.5",
+    "damage_type": "Poison"
   },
   "90": {
     "name": "Sludge Bomb",
     "is_main_move": true,
     "damage": "55",
-    "dps": "18.2",
-    "damage_type": "Poison",
-    "energy": -50
+    "dps": "17.7",
+    "damage_type": "Poison"
   },
   "91": {
     "name": "Sludge Wave",
     "is_main_move": true,
     "damage": "70",
-    "dps": "18.4",
-    "damage_type": "Poison",
-    "energy": -100
+    "dps": "17.9",
+    "damage_type": "Poison"
   },
   "92": {
     "name": "Gunk Shot",
     "is_main_move": true,
     "damage": "65",
-    "dps": "19",
-    "damage_type": "Poison",
-    "energy": -100
+    "dps": "18.6",
+    "damage_type": "Poison"
   },
   "94": {
     "name": "Bone Club",
     "is_main_move": true,
     "damage": "25",
-    "dps": "12.2",
-    "damage_type": "Ground",
-    "energy": -25
+    "dps": "11.9",
+    "damage_type": "Ground"
   },
   "95": {
     "name": "Bulldoze",
     "is_main_move": true,
     "damage": "35",
-    "dps": "9.2",
-    "damage_type": "Ground",
-    "energy": -25
+    "dps": "9",
+    "damage_type": "Ground"
   },
   "96": {
     "name": "Mud Bomb",
     "is_main_move": true,
     "damage": "30",
-    "dps": "9.9",
-    "damage_type": "Ground",
-    "energy": -25
+    "dps": "9.7",
+    "damage_type": "Ground"
   },
   "99": {
     "name": "Signal Beam",
     "is_main_move": true,
     "damage": "45",
-    "dps": "12.8",
-    "damage_type": "Bug",
-    "energy": -33
+    "dps": "12.5",
+    "damage_type": "Bug"
   },
   "100": {
     "name": "X-Scissor",
     "is_main_move": true,
     "damage": "35",
-    "dps": "13.8",
+    "dps": "13.5",
     "damage_type": "Bug"
   },
   "101": {
     "name": "Flame Charge",
     "is_main_move": true,
     "damage": "25",
-    "dps": "7.1",
-    "damage_type": "Fire",
-    "energy": -20
+    "dps": "6.9",
+    "damage_type": "Fire"
   },
   "102": {
     "name": "Flame Burst",
     "is_main_move": true,
     "damage": "30",
-    "dps": "11.8",
-    "damage_type": "Fire",
-    "energy": -25
+    "dps": "11.5",
+    "damage_type": "Fire"
   },
   "103": {
     "name": "Fire Blast",
     "is_main_move": true,
     "damage": "100",
-    "dps": "22.3",
-    "damage_type": "Fire",
-    "energy": -100
+    "dps": "21.7",
+    "damage_type": "Fire"
   },
   "104": {
     "name": "Brine",
     "is_main_move": true,
     "damage": "25",
-    "dps": "8.8",
-    "damage_type": "Water",
-    "energy": -25
+    "dps": "8.6",
+    "damage_type": "Water"
   },
   "105": {
     "name": "Water Pulse",
     "is_main_move": true,
     "damage": "35",
-    "dps": "9.4",
-    "damage_type": "Water",
-    "energy": -25
+    "dps": "9.2",
+    "damage_type": "Water"
   },
   "106": {
     "name": "Scald",
     "is_main_move": true,
     "damage": "55",
-    "dps": "12.5",
-    "damage_type": "Water",
-    "energy": -33
+    "dps": "12.2",
+    "damage_type": "Water"
   },
   "107": {
     "name": "Hydro Pump",
     "is_main_move": true,
     "damage": "90",
-    "dps": "21.5",
-    "damage_type": "Water",
-    "energy": -100
+    "dps": "20.9",
+    "damage_type": "Water"
   },
   "108": {
     "name": "Psychic",
     "is_main_move": true,
     "damage": "55",
-    "dps": "17.1",
-    "damage_type": "Psychic",
-    "energy": -50
+    "dps": "16.7",
+    "damage_type": "Psychic"
   },
   "111": {
     "name": "Icy Wind",
     "is_main_move": true,
     "damage": "25",
-    "dps": "6",
-    "damage_type": "Ice",
-    "energy": -20
+    "dps": "5.8",
+    "damage_type": "Ice"
   },
   "115": {
     "name": "Fire Punch",
     "is_main_move": true,
     "damage": "40",
-    "dps": "12.4",
-    "damage_type": "Fire",
-    "energy": -33
+    "dps": "12.1",
+    "damage_type": "Fire"
   },
   "116": {
     "name": "Solar Beam",
     "is_main_move": true,
     "damage": "120",
-    "dps": "22.8",
-    "damage_type": "Grass",
-    "energy": -100
+    "dps": "22.2",
+    "damage_type": "Grass"
   },
   "117": {
     "name": "Leaf Blade",
     "is_main_move": true,
     "damage": "55",
-    "dps": "18.8",
-    "damage_type": "Grass",
-    "energy": -50
+    "dps": "16.7",
+    "damage_type": "Grass"
   },
   "118": {
     "name": "Power Whip",
     "is_main_move": true,
     "damage": "70",
     "dps": "21.2",
-    "damage_type": "Grass",
-    "energy": -100
+    "damage_type": "Grass"
   },
   "121": {
     "name": "Air Cutter",
     "is_main_move": true,
     "damage": "30",
-    "dps": "8.9",
-    "damage_type": "Flying",
-    "energy": -25
+    "dps": "7.9",
+    "damage_type": "Flying"
   },
   "122": {
     "name": "Hurricane",
     "is_main_move": true,
     "damage": "80",
-    "dps": "22.2",
-    "damage_type": "Flying",
-    "energy": -100
+    "dps": "21.6",
+    "damage_type": "Flying"
   },
   "123": {
     "name": "Brick Break",
     "is_main_move": true,
     "damage": "30",
-    "dps": "16.1",
-    "damage_type": "Fighting",
-    "energy": -33
+    "dps": "14.3",
+    "damage_type": "Fighting"
   },
   "125": {
     "name": "Swift",
     "is_main_move": true,
     "damage": "30",
-    "dps": "8.8",
-    "damage_type": "Normal",
-    "energy": -25
+    "dps": "8.6",
+    "damage_type": "Normal"
   },
   "126": {
     "name": "Horn Attack",
     "is_main_move": true,
     "damage": "25",
-    "dps": "9.5",
-    "damage_type": "Normal",
-    "energy": -25
+    "dps": "9.3",
+    "damage_type": "Normal"
   },
   "127": {
     "name": "Stomp",
     "is_main_move": true,
     "damage": "30",
-    "dps": "11.8",
-    "damage_type": "Normal",
-    "energy": -25
+    "dps": "11.5",
+    "damage_type": "Normal"
   },
   "129": {
     "name": "Hyper Fang",
     "is_main_move": true,
     "damage": "35",
-    "dps": "13.8",
-    "damage_type": "Normal",
-    "energy": -33
+    "dps": "13.5",
+    "damage_type": "Normal"
   },
   "131": {
     "name": "Body Slam",
     "is_main_move": true,
     "damage": "40",
-    "dps": "19.9",
-    "damage_type": "Normal",
-    "energy": -50
+    "dps": "19.4",
+    "damage_type": "Normal"
   },
   "133": {
     "name": "Struggle",
     "is_main_move": true,
     "damage": "15",
     "dps": "6.8",
-    "damage_type": "Normal",
-    "energy": -20
+    "damage_type": "Normal"
   },
   "200": {
     "name": "Fury Cutter",
     "is_main_move": false,
     "damage": "3",
     "dps": "7.5",
-    "damage_type": "Bug",
-    "energy": 12
+    "damage_type": "Bug"
   },
   "201": {
     "name": "Bug Bite",
     "is_main_move": false,
     "damage": "5",
     "dps": "11.1",
-    "damage_type": "Bug",
-    "energy": 7
+    "damage_type": "Bug"
   },
   "202": {
     "name": "Bite",
     "is_main_move": false,
     "damage": "6",
     "dps": "12",
-    "damage_type": "Dark",
-    "energy": 7
+    "damage_type": "Dark"
   },
   "203": {
     "name": "Sucker Punch",
     "is_main_move": false,
     "damage": "7",
     "dps": "10",
-    "damage_type": "Dark",
-    "energy": 4
+    "damage_type": "Dark"
   },
   "204": {
     "name": "Dragon Breath",
     "is_main_move": false,
     "damage": "6",
     "dps": "12",
-    "damage_type": "Dragon",
-    "energy": 7
+    "damage_type": "Dragon"
   },
   "205": {
     "name": "Thunder Shock",
     "is_main_move": false,
     "damage": "5",
     "dps": "8.3",
-    "damage_type": "Electric",
-    "energy": 7
+    "damage_type": "Electric"
   },
   "206": {
     "name": "Spark",
     "is_main_move": false,
     "damage": "7",
     "dps": "10",
-    "damage_type": "Electric",
-    "energy": 4
+    "damage_type": "Electric"
   },
   "207": {
     "name": "Low Kick",
     "is_main_move": false,
     "damage": "5",
     "dps": "8.3",
-    "damage_type": "Fighting",
-    "energy": 7
+    "damage_type": "Fighting"
   },
   "208": {
     "name": "Karate Chop",
     "is_main_move": false,
     "damage": "6",
     "dps": "7.5",
-    "damage_type": "Fighting",
-    "energy": 7
+    "damage_type": "Fighting"
   },
   "209": {
     "name": "Ember",
     "is_main_move": false,
     "damage": "10",
     "dps": "9.5",
-    "damage_type": "Fire",
-    "energy": 7
+    "damage_type": "Fire"
   },
   "210": {
     "name": "Wing Attack",
     "is_main_move": false,
     "damage": "9",
     "dps": "12",
-    "damage_type": "Flying",
-    "energy": 7
+    "damage_type": "Flying"
   },
   "211": {
     "name": "Peck",
     "is_main_move": false,
     "damage": "10",
     "dps": "8.7",
-    "damage_type": "Flying",
-    "energy": 10
+    "damage_type": "Flying"
   },
   "212": {
     "name": "Lick",
     "is_main_move": false,
     "damage": "5",
     "dps": "10",
-    "damage_type": "Ghost",
-    "energy": 7
+    "damage_type": "Ghost"
   },
   "213": {
     "name": "Shadow Claw",
     "is_main_move": false,
     "damage": "11",
     "dps": "11.6",
-    "damage_type": "Ghost",
-    "energy": 7
+    "damage_type": "Ghost"
   },
   "214": {
     "name": "Vine Whip",
     "is_main_move": false,
     "damage": "7",
     "dps": "10.8",
-    "damage_type": "Grass",
-    "energy": 7
+    "damage_type": "Grass"
   },
   "215": {
     "name": "Razor Leaf",
     "is_main_move": false,
     "damage": "15",
     "dps": "10.3",
-    "damage_type": "Grass",
-    "energy": 7
+    "damage_type": "Grass"
   },
   "216": {
     "name": "Mud Shot",
     "is_main_move": false,
     "damage": "6",
     "dps": "10.9",
-    "damage_type": "Ground",
-    "energy": 7
+    "damage_type": "Ground"
   },
   "217": {
     "name": "Ice Shard",
     "is_main_move": false,
     "damage": "15",
     "dps": "10.7",
-    "damage_type": "Ice",
-    "energy": 7
+    "damage_type": "Ice"
   },
   "218": {
     "name": "Frost Breath",
     "is_main_move": false,
     "damage": "9",
     "dps": "11.1",
-    "damage_type": "Ice",
-    "energy": 7
+    "damage_type": "Ice"
   },
   "219": {
     "name": "Quick Attack",
     "is_main_move": false,
     "damage": "10",
     "dps": "7.5",
-    "damage_type": "Normal",
-    "energy": 7
+    "damage_type": "Normal"
   },
   "220": {
     "name": "Scratch",
     "is_main_move": false,
     "damage": "6",
     "dps": "12",
-    "damage_type": "Normal",
-    "energy": 7
+    "damage_type": "Normal"
   },
   "221": {
     "name": "Tackle",
     "is_main_move": false,
     "damage": "12",
     "dps": "10.9",
-    "damage_type": "Normal",
-    "energy": 7
+    "damage_type": "Normal"
   },
   "222": {
     "name": "Pound",
     "is_main_move": false,
     "damage": "7",
     "dps": "13",
-    "damage_type": "Normal",
-    "energy": 7
+    "damage_type": "Normal"
   },
   "223": {
     "name": "Cut",
     "is_main_move": false,
     "damage": "12",
     "dps": "10.6",
-    "damage_type": "Normal",
-    "energy": 7
+    "damage_type": "Normal"
   },
   "224": {
     "name": "Poison Jab",
     "is_main_move": false,
     "damage": "12",
     "dps": "11.4",
-    "damage_type": "Poison",
-    "energy": 7
+    "damage_type": "Poison"
   },
   "225": {
     "name": "Acid",
     "is_main_move": false,
     "damage": "10",
     "dps": "9.5",
-    "damage_type": "Poison",
-    "energy": 7
+    "damage_type": "Poison"
   },
   "226": {
     "name": "Psycho Cut",
     "is_main_move": false,
     "damage": "7",
     "dps": "12.3",
-    "damage_type": "Psychic",
-    "energy": 7
+    "damage_type": "Psychic"
   },
   "227": {
     "name": "Rock Throw",
     "is_main_move": false,
     "damage": "12",
     "dps": "8.8",
-    "damage_type": "Rock",
-    "energy": 7
+    "damage_type": "Rock"
   },
   "228": {
     "name": "Metal Claw",
     "is_main_move": false,
     "damage": "8",
     "dps": "12.7",
-    "damage_type": "Steel",
-    "energy": 7
+    "damage_type": "Steel"
   },
   "229": {
     "name": "Bullet Punch",
     "is_main_move": false,
     "damage": "10",
     "dps": "8.3",
-    "damage_type": "Steel",
-    "energy": 7
+    "damage_type": "Steel"
   },
   "230": {
     "name": "Water Gun",
     "is_main_move": false,
     "damage": "6",
     "dps": "12",
-    "damage_type": "Water",
-    "energy": 7
+    "damage_type": "Water"
   },
   "231": {
     "name": "Splash",
     "is_main_move": false,
     "damage": "0",
     "dps": "0",
-    "damage_type": "Water",
-    "energy": 7
+    "damage_type": "Water"
   },
   "233": {
     "name": "Mud Slap",
     "is_main_move": false,
     "damage": "15",
     "dps": "11.1",
-    "damage_type": "Ground",
-    "energy": 9
+    "damage_type": "Ground"
   },
   "234": {
     "name": "Zen Headbutt",
     "is_main_move": false,
     "damage": "12",
     "dps": "11.4",
-    "damage_type": "Psychic",
-    "energy": 4
+    "damage_type": "Psychic"
   },
   "235": {
     "name": "Confusion",
     "is_main_move": false,
     "damage": "15",
     "dps": "9.9",
-    "damage_type": "Psychic",
-    "energy": 7
+    "damage_type": "Psychic"
   },
   "236": {
     "name": "Poison Sting",
     "is_main_move": false,
     "damage": "6",
     "dps": "10.4",
-    "damage_type": "Poison",
-    "energy": 4
+    "damage_type": "Poison"
   },
   "237": {
     "name": "Bubble",
     "is_main_move": false,
     "damage": "25",
     "dps": "10.9",
-    "damage_type": "Water",
-    "energy": 15
+    "damage_type": "Water"
   },
   "238": {
     "name": "Feint Attack",
     "is_main_move": false,
     "damage": "12",
     "dps": "11.5",
-    "damage_type": "Dark",
-    "energy": 7
+    "damage_type": "Dark"
   },
   "239": {
     "name": "Steel Wing",
     "is_main_move": false,
     "damage": "15",
     "dps": "11.3",
-    "damage_type": "Steel",
-    "energy": 4
+    "damage_type": "Steel"
   },
   "240": {
     "name": "Fire Fang",
     "is_main_move": false,
     "damage": "10",
     "dps": "11.9",
-    "damage_type": "Fire",
-    "energy": 4
+    "damage_type": "Fire"
   },
   "241": {
     "name": "Rock Smash",
     "is_main_move": false,
     "damage": "15",
     "dps": "10.6",
-    "damage_type": "Fighting",
-    "energy": 7
+    "damage_type": "Fighting"
   }
 };
-
 
 const TYPE_INDEX = {
   "Normal": {
