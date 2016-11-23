@@ -1772,7 +1772,8 @@ const POKEMON_INDEX = {
     "name": "Ditto",
     "family_id": "132",
     "quick_moves": [
-      222
+      222,
+      242
     ],
     "main_moves": [
       133
@@ -3024,6 +3025,13 @@ const MOVE_INDEX = {
     "damage": "15",
     "dps": "10.6",
     "damage_type": "Fighting"
+  },
+  "242": {
+    "name": "Transform",
+    "is_main_move": false,
+    "damage": "0",
+    "dps": "0",
+    "damage_type": "Normal"
   }
 };
 
@@ -4083,5 +4091,8 @@ const NAME_INDEX = {
   },
   "Struggle": {
     "jp": "わるあがき"
+  },
+  "Transform": {
+    "jp": "へんしん"
   }
 };
