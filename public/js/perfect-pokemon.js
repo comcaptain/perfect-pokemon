@@ -231,7 +231,8 @@ function getUselessPokemons(data) {
         if (SHOULD_BE_EVOLVED_FOR_XP_POKEMONS.includes(parseInt(id))) {
         	let firstPokemon = pokemons[0];
         	let candyCount = firstPokemon.candy_count;
-        	let canEvolvePokemonsCount = Math.floor(candyCount / firstPokemon.evolve_candy);
+        	//let canEvolvePokemonsCount = Math.floor(candyCount / firstPokemon.evolve_candy);
+        	let canEvolvePokemonsCount = getEvolvablePokemonCount(candyCount, firstPokemon.evolve_candy, pokemons.length);
         	if (pokemons.length <= canEvolvePokemonsCount) continue;
         	uselessPokemonsInGroup = uselessPokemonsInGroup.slice(0, (pokemons.length - canEvolvePokemonsCount));
         }
@@ -285,7 +286,24 @@ function getEvolvedForXPPokemonCount(pokemons) {
 		});
 	var count = 0;
 	for (var id in counts) {
-		count += Math.min(counts[id].count, Math.floor(counts[id].candy_count / counts[id].evolve_candy));
+		count += getEvolvablePokemonCount(counts[id].candy_count, counts[id].evolve_candy, counts[id].count);
+		//count += Math.min(counts[id].count, Math.floor(counts[id].candy_count / counts[id].evolve_candy));
 	}
 	return count;
 }
+
+function getEvolvablePokemonCount(candy_count, evolve_candy, pokemon_count) {
+	var depth = Math.floor(Math.log(candy_count) / Math.log(evolve_candy));
+	var remained_candy = candy_count;
+	var count = 0;
+	for(var i = 0; i < depth; i++){
+		count += Math.floor(remained_candy / evolve_candy);
+		remained_candy = Math.floor(remained_candy / evolve_candy) + remained_candy % evolve_candy;
+		if(count >= pokemon_count){
+			break;
+		}
+	}
+	return Math.min(pokemon_count, count);	
+}
+
+
